@@ -5,7 +5,7 @@
   </head>
   <body>
     <h1>Login</h1>
-    <form>
+    <form action=" {% url 'login' %} " method="POST">{% csrf_token %}
       <label for="username">Usuário:</label>
       <input type="text" id="username" name="username"><br><br>
       <label for="password">Senha:</label>

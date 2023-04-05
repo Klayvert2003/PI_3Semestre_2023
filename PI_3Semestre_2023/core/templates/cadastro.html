@@ -5,13 +5,13 @@
   </head>
   <body>
     <h1>Cadastro</h1>
-    <form action=" {% url 'cadastro' %}" method="POST">{% csrf_token %}
+    <form action=" {% url 'cadastro' %} " method="POST">{% csrf_token %}
       <label for="username">E-Mail:</label>
       <input type="text" id="username" name="username"><br><br>
       <label for="email">Usuário:</label>
-      <input type="text" id="password" name="email"><br><br>
+      <input type="text" id="email" name="email"><br><br>
       <label for="password">Senha:</label>
-      <input type="password" id="password" name="senha"><br><br>
+      <input type="password" id="password" name="password"><br><br>
       <input type="submit" value="Cadastrar">
     </form>
   </body>
