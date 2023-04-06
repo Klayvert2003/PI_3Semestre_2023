@@ -2,17 +2,24 @@
 <html>
   <head>
     <title>Tela de Cadastro</title>
+    <link rel="stylesheet" href="../static/css/style.css">
   </head>
   <body>
-    <h1>Cadastro</h1>
     <form action=" {% url 'cadastro' %} " method="POST">{% csrf_token %}
-      <label for="email">E-Mail:</label>
-      <input type="text" id="email" name="email"><br><br>
-      <label for="username">Usuário:</label>
-      <input type="text" id="username" name="username"><br><br>
-      <label for="password">Senha:</label>
-      <input type="password" id="password" name="password"><br><br>
-      <input type="submit" value="Cadastrar">
+      <h1>Cadastro</h1>
+      <div>
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email" class="form-input">
+      </div>
+      <div>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" class="form-input">
+      </div>
+      <div>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" class="form-input">
+      </div>
+      <button type="submit" class="submit-button">Cadastrar</button>
     </form>
   </body>
 </html>
