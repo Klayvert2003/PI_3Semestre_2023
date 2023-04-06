@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as login_django
+from core.static.conexao import ConexaoMongoDB
+
+conexao = ConexaoMongoDB()
 
 def cadastro(request):
     if request.method == 'GET':
@@ -17,7 +20,9 @@ def cadastro(request):
             return HttpResponse('Já existe um usuário com este username!!!')
         
         user = User.objects.create_user(username=username, email=email, password=password)
-        user.save()
+        
+        credentials = {"user": user.username, "email": user.email, "password": user.password}
+        conexao.collection.insert_one(credentials)
 
         return HttpResponse("Usuário cadastrado!")
 
