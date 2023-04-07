@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as login_django
 from database.conexao import ConexaoMongoDB
-from PI_3Semestre_2023.api.correiosAPI import CEP
+from api.correiosAPI import BuscaCEP
 
 conexao = ConexaoMongoDB()
 
@@ -52,11 +52,16 @@ def login(request):
             return HttpResponse('Email ou senha inválidos')
         
 def cep(request):
+    if request.method == 'GET':
+        return render(request, 'cep.html')
+    
     cep = request.POST.get('cep')
-    a = CEP.pegaCEP()
-    if request.method == 'GET':
-        return render(request, 'teste.html')
+    try:
+        BuscaCEP.buscar_endereco(cep=cep)
+    except:
+        return HttpResponse('CEP inválido!!!')
 
-def a(request):
-    if request.method == 'GET':
-        return render(request, 'novo_teste.html')
+    # Se houver conteúdo no campo cep(e ele for válido)é feita a requisição 
+    # então é retornado o html pronto com os dados da API
+    if cep:
+        return render(request, 'novo_cep.html')
