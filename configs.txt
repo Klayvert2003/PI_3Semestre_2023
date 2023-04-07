@@ -1,7 +1,7 @@
 Para utilizar o serviço do PostgreSQL:
 Necessário ter o docker instalado, tutorial nos links abaixo:
 
-Linux:
+Linux: 
 https://docs.docker.com/desktop/install/ubuntu/
 ou
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-pt
