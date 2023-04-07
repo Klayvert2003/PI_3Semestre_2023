@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teste API</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body>
+    <form action=" {% url 'cep' %} " method="POST">{% csrf_token %}
+      <h1>Teste API</h1>
+      <div>
+        <label>CEP:</label>
+        <input id="cep" class="form-input">
+        <button type="submit" class="submit-button">Verifica CEP</button>
+      </div>
+      <div>
+        <label>Rua:</label>
+        <input id="rua" class="form-input">
+      </div>
+      <div>
+        <label>Bairro:</label>
+        <input id="bairro" class="form-input">
+      </div>
+      <div>
+        <label>Cidade:</label>
+        <input id="cidade" class="form-input">
+      </div>
+      <button type="submit" class="submit-button">Cadastrar</button>
+    </form>
+  </body>
+</html>
