@@ -1,0 +1,43 @@
+Para utilizar o serviço do PostgreSQL:
+Necessário ter o docker instalado, tutorial nos links abaixo:
+
+Linux:
+https://docs.docker.com/desktop/install/ubuntu/
+ou
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-pt
+
+Windows:
+https://docs.docker.com/desktop/install/windows-install/
+
+1º Para inicializar o docker com o postgres executar o seguinte comando(com docker já instalado):
+	sudo docker pull postgres (instala o container com o serviço de PostgreSQL)
+	sudo docker run -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres
+2º Caso não inicie por conta de ja haver um serviço de postgres sendo utilizado rodar o seguinte comando para ver: 
+	sudo lsof -i :5432
+3º Se realmente houver um processo executar o seguinte comando para matar o processo: 
+	sudo kill (numero PID)
+
+4º então execute o primeiro comando novamente
+	sudo docker run -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres
+	
+	
+Instalação MongoDB para Linux no link abaixo:
+https://www.vultr.com/docs/install-and-configure-mongodb-database-server-on-ubuntu-20-04
+
+Para utilizar o serviço de MongoDB(linux):
+
+1º Executar o seguinte comando para iniciar:
+	sudo systemctl start mongod
+	
+
+IMPORTANTE: sempre use o comando pip install -r requirements.txt após clonar o projeto pela primeira vez, ele vai instalar todas as dependências e libs utilizadas no projeto.
+
+Iniciando projeto: va até o local do arquivo manage.py(com a virtualenv ativa) e execute:
+	python manage.py migrate (cria as tabelas no banco de dados PostgreSQL)
+	python manage.py runserver (inicializa o servidor próprio do Django pra visualizar o site)
+
+
+
+
+
+
