@@ -30,7 +30,14 @@ Para utilizar o serviço de MongoDB(linux):
 	sudo systemctl start mongod
 	
 
-IMPORTANTE: sempre use o comando pip install -r requirements.txt após clonar o projeto pela primeira vez, ele vai instalar todas as dependências e libs utilizadas no projeto.
+IMPORTANTE: 
+
+Executar o comando: virtualenv venv
+OBS: se não tiver virtualenv baixado é só dar pip install virtualenv
+Ativando a venv no Windows - cd venv\Scripts -> depois executar activate.bat
+Ativando a venv no Linux - source venv\bin\activate
+
+Com a venv ativa, executar o comando pip install -r requirements.txt após clonar o projeto pela primeira vez, ele vai instalar todas as dependências e libs utilizadas no projeto.
 
 Iniciando projeto: va até o local do arquivo manage.py(com a virtualenv ativa) e execute:
 	python manage.py migrate (cria as tabelas no banco de dados PostgreSQL)
