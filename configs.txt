@@ -34,6 +34,8 @@ IMPORTANTE:
 
 Executar o comando: virtualenv venv
 OBS: se não tiver virtualenv baixado é só dar pip install virtualenv
+Para criar a virtualvenv executar: virtualenv venv(executar no mesmo diretório do projeto)
+
 Ativando a venv no Windows - cd venv\Scripts -> depois executar activate.bat
 Ativando a venv no Linux - source venv\bin\activate
 
