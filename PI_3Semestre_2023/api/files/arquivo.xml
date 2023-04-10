@@ -1,0 +1,3252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfOrganization xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://feedingamerica.org/">
+  <Organization>
+    <BeginDt>2008-04-04T14:46:54</BeginDt>
+    <EndDt xsi:nil="true" />
+    <UpdateDt>2020-02-11T16:11:43.067</UpdateDt>
+    <UpdateUserID xsi:nil="true" />
+    <ListFipsCounty>
+      <LocalFindings>
+        <FipsCode>20001</FipsCode>
+        <CountyName>ALLEN</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>12503</COUNTY_POP>
+        <COUNTY_FI_RATE>0.133</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1660</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.520</LOW_PCT>
+        <BTWN_PCT>0.210</BTWN_PCT>
+        <HI_PCT>0.270</HI_PCT>
+        <WT_ANNUAL_DOLLARS>809000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.03</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.197</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>550</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.840</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.160</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20003</FipsCode>
+        <CountyName>ANDERSON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>7877</COUNTY_POP>
+        <COUNTY_FI_RATE>0.117</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>920</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.490</LOW_PCT>
+        <BTWN_PCT>0.140</BTWN_PCT>
+        <HI_PCT>0.370</HI_PCT>
+        <WT_ANNUAL_DOLLARS>487000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.29</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.157</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>320</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.610</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.400</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20007</FipsCode>
+        <CountyName>BARBER</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>4493</COUNTY_POP>
+        <COUNTY_FI_RATE>0.136</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>610</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.520</LOW_PCT>
+        <BTWN_PCT>0.130</BTWN_PCT>
+        <HI_PCT>0.350</HI_PCT>
+        <WT_ANNUAL_DOLLARS>307000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.12</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.212</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>240</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.760</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.240</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20009</FipsCode>
+        <CountyName>BARTON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>26209</COUNTY_POP>
+        <COUNTY_FI_RATE>0.115</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>3020</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.500</LOW_PCT>
+        <BTWN_PCT>0.250</BTWN_PCT>
+        <HI_PCT>0.250</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1533000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.15</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.165</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>1030</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.800</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.200</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20011</FipsCode>
+        <CountyName>BOURBON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>14539</COUNTY_POP>
+        <COUNTY_FI_RATE>0.128</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1860</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.530</LOW_PCT>
+        <BTWN_PCT>0.310</BTWN_PCT>
+        <HI_PCT>0.160</HI_PCT>
+        <WT_ANNUAL_DOLLARS>933000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.12</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.189</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>700</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.930</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.070</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20015</FipsCode>
+        <CountyName>BUTLER</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>66890</COUNTY_POP>
+        <COUNTY_FI_RATE>0.105</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>7050</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.370</LOW_PCT>
+        <BTWN_PCT>0.190</BTWN_PCT>
+        <HI_PCT>0.440</HI_PCT>
+        <WT_ANNUAL_DOLLARS>3817000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.36</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.152</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>2600</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.630</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.370</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20017</FipsCode>
+        <CountyName>CHASE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2604</COUNTY_POP>
+        <COUNTY_FI_RATE>0.093</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>240</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.360</LOW_PCT>
+        <BTWN_PCT>0.380</BTWN_PCT>
+        <HI_PCT>0.260</HI_PCT>
+        <WT_ANNUAL_DOLLARS>116000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.99</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.142</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>80</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.660</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.350</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20019</FipsCode>
+        <CountyName>CHAUTAUQUA</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>3280</COUNTY_POP>
+        <COUNTY_FI_RATE>0.160</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>530</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.540</LOW_PCT>
+        <BTWN_PCT>0.270</BTWN_PCT>
+        <HI_PCT>0.190</HI_PCT>
+        <WT_ANNUAL_DOLLARS>282000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.30</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.232</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>160</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.810</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.190</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20021</FipsCode>
+        <CountyName>CHEROKEE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>20017</COUNTY_POP>
+        <COUNTY_FI_RATE>0.134</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2690</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.500</LOW_PCT>
+        <BTWN_PCT>0.310</BTWN_PCT>
+        <HI_PCT>0.190</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1495000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.45</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.190</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>900</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.870</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.130</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20023</FipsCode>
+        <CountyName>CHEYENNE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2639</COUNTY_POP>
+        <COUNTY_FI_RATE>0.096</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>250</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.470</LOW_PCT>
+        <BTWN_PCT>0.230</BTWN_PCT>
+        <HI_PCT>0.300</HI_PCT>
+        <WT_ANNUAL_DOLLARS>130000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.24</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.160</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>90</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.720</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.280</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20025</FipsCode>
+        <CountyName>CLARK</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2006</COUNTY_POP>
+        <COUNTY_FI_RATE>0.101</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>200</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.390</LOW_PCT>
+        <BTWN_PCT>0.200</BTWN_PCT>
+        <HI_PCT>0.410</HI_PCT>
+        <WT_ANNUAL_DOLLARS>97000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.00</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.143</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>70</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.650</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.350</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20029</FipsCode>
+        <CountyName>CLOUD</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>8831</COUNTY_POP>
+        <COUNTY_FI_RATE>0.104</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>920</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.510</LOW_PCT>
+        <BTWN_PCT>0.320</BTWN_PCT>
+        <HI_PCT>0.170</HI_PCT>
+        <WT_ANNUAL_DOLLARS>447000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.02</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.140</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>300</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.980</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.020</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20031</FipsCode>
+        <CountyName>COFFEY</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>8218</COUNTY_POP>
+        <COUNTY_FI_RATE>0.115</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>950</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.420</LOW_PCT>
+        <BTWN_PCT>0.180</BTWN_PCT>
+        <HI_PCT>0.400</HI_PCT>
+        <WT_ANNUAL_DOLLARS>453000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.96</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.173</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>300</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.610</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.390</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20033</FipsCode>
+        <CountyName>COMANCHE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>1759</COUNTY_POP>
+        <COUNTY_FI_RATE>0.106</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>190</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.310</LOW_PCT>
+        <BTWN_PCT>0.150</BTWN_PCT>
+        <HI_PCT>0.540</HI_PCT>
+        <WT_ANNUAL_DOLLARS>92000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.00</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.128</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>40</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.320</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.680</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20035</FipsCode>
+        <CountyName>COWLEY</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>35090</COUNTY_POP>
+        <COUNTY_FI_RATE>0.127</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>4470</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.460</LOW_PCT>
+        <BTWN_PCT>0.240</BTWN_PCT>
+        <HI_PCT>0.300</HI_PCT>
+        <WT_ANNUAL_DOLLARS>2181000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.03</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.194</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>1610</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.770</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.230</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20037</FipsCode>
+        <CountyName>CRAWFORD</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>38874</COUNTY_POP>
+        <COUNTY_FI_RATE>0.143</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>5560</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.600</LOW_PCT>
+        <BTWN_PCT>0.150</BTWN_PCT>
+        <HI_PCT>0.260</HI_PCT>
+        <WT_ANNUAL_DOLLARS>2703000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.02</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.204</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>1720</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.800</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.200</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20039</FipsCode>
+        <CountyName>DECATUR</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2826</COUNTY_POP>
+        <COUNTY_FI_RATE>0.133</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>380</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.490</LOW_PCT>
+        <BTWN_PCT>0.130</BTWN_PCT>
+        <HI_PCT>0.380</HI_PCT>
+        <WT_ANNUAL_DOLLARS>195000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.18</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.210</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>120</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.590</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.410</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20041</FipsCode>
+        <CountyName>DICKINSON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>18614</COUNTY_POP>
+        <COUNTY_FI_RATE>0.106</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1970</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.400</LOW_PCT>
+        <BTWN_PCT>0.270</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>994000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.13</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.148</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>640</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.660</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.340</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20047</FipsCode>
+        <CountyName>EDWARDS</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2822</COUNTY_POP>
+        <COUNTY_FI_RATE>0.081</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>230</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.420</LOW_PCT>
+        <BTWN_PCT>0.430</BTWN_PCT>
+        <HI_PCT>0.140</HI_PCT>
+        <WT_ANNUAL_DOLLARS>112000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.03</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.124</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>80</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.960</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.040</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20049</FipsCode>
+        <CountyName>ELK</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2502</COUNTY_POP>
+        <COUNTY_FI_RATE>0.135</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>340</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.540</LOW_PCT>
+        <BTWN_PCT>0.300</BTWN_PCT>
+        <HI_PCT>0.160</HI_PCT>
+        <WT_ANNUAL_DOLLARS>171000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.12</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.186</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>100</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.880</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.120</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20051</FipsCode>
+        <CountyName>ELLIS</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>28747</COUNTY_POP>
+        <COUNTY_FI_RATE>0.098</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2820</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.500</LOW_PCT>
+        <BTWN_PCT>0.160</BTWN_PCT>
+        <HI_PCT>0.350</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1480000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.26</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.115</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>710</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.580</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.420</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20053</FipsCode>
+        <CountyName>ELLSWORTH</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>6176</COUNTY_POP>
+        <COUNTY_FI_RATE>0.088</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>540</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.320</LOW_PCT>
+        <BTWN_PCT>0.270</BTWN_PCT>
+        <HI_PCT>0.410</HI_PCT>
+        <WT_ANNUAL_DOLLARS>262000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.02</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.131</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>150</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.790</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.210</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20055</FipsCode>
+        <CountyName>FINNEY</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>36451</COUNTY_POP>
+        <COUNTY_FI_RATE>0.080</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2920</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.540</LOW_PCT>
+        <BTWN_PCT>0.330</BTWN_PCT>
+        <HI_PCT>0.130</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1365000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.90</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.151</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>1670</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.920</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.080</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20057</FipsCode>
+        <CountyName>FORD</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>33718</COUNTY_POP>
+        <COUNTY_FI_RATE>0.074</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2480</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.630</LOW_PCT>
+        <BTWN_PCT>0.370</BTWN_PCT>
+        <HI_PCT>0.000</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1212000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.03</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.142</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>1440</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.950</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.050</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20061</FipsCode>
+        <CountyName>GEARY</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>33309</COUNTY_POP>
+        <COUNTY_FI_RATE>0.133</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>4430</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.540</LOW_PCT>
+        <BTWN_PCT>0.160</BTWN_PCT>
+        <HI_PCT>0.310</HI_PCT>
+        <WT_ANNUAL_DOLLARS>2229000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.13</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.236</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>2440</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.730</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.270</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20063</FipsCode>
+        <CountyName>GOVE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2650</COUNTY_POP>
+        <COUNTY_FI_RATE>0.097</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>260</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.380</LOW_PCT>
+        <BTWN_PCT>0.410</BTWN_PCT>
+        <HI_PCT>0.220</HI_PCT>
+        <WT_ANNUAL_DOLLARS>139000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.32</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.127</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>80</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.930</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.070</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20065</FipsCode>
+        <CountyName>GRAHAM</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2464</COUNTY_POP>
+        <COUNTY_FI_RATE>0.106</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>260</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.680</LOW_PCT>
+        <BTWN_PCT>0.140</BTWN_PCT>
+        <HI_PCT>0.180</HI_PCT>
+        <WT_ANNUAL_DOLLARS>138000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.29</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.161</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>80</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>1.000</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.000</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20067</FipsCode>
+        <CountyName>GRANT</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>7324</COUNTY_POP>
+        <COUNTY_FI_RATE>0.076</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>560</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.470</LOW_PCT>
+        <BTWN_PCT>0.310</BTWN_PCT>
+        <HI_PCT>0.220</HI_PCT>
+        <WT_ANNUAL_DOLLARS>258000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.87</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.142</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>320</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.730</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.270</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20069</FipsCode>
+        <CountyName>GRAY</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>6020</COUNTY_POP>
+        <COUNTY_FI_RATE>0.047</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>290</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.320</LOW_PCT>
+        <BTWN_PCT>0.420</BTWN_PCT>
+        <HI_PCT>0.270</HI_PCT>
+        <WT_ANNUAL_DOLLARS>142000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.03</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.084</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>150</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.880</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.120</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20071</FipsCode>
+        <CountyName>GREELEY</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>1156</COUNTY_POP>
+        <COUNTY_FI_RATE>0.096</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>110</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.450</LOW_PCT>
+        <BTWN_PCT>0.310</BTWN_PCT>
+        <HI_PCT>0.240</HI_PCT>
+        <WT_ANNUAL_DOLLARS>51000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.89</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.166</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>50</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.840</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.160</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20073</FipsCode>
+        <CountyName>GREENWOOD</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>6010</COUNTY_POP>
+        <COUNTY_FI_RATE>0.123</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>740</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.520</LOW_PCT>
+        <BTWN_PCT>0.270</BTWN_PCT>
+        <HI_PCT>0.210</HI_PCT>
+        <WT_ANNUAL_DOLLARS>358000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.01</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.176</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>230</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.920</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.080</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20075</FipsCode>
+        <CountyName>HAMILTON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2552</COUNTY_POP>
+        <COUNTY_FI_RATE>0.063</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>160</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.520</LOW_PCT>
+        <BTWN_PCT>0.440</BTWN_PCT>
+        <HI_PCT>0.040</HI_PCT>
+        <WT_ANNUAL_DOLLARS>75000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.89</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.115</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>90</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.940</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.060</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20077</FipsCode>
+        <CountyName>HARPER</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>5506</COUNTY_POP>
+        <COUNTY_FI_RATE>0.125</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>690</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.490</LOW_PCT>
+        <BTWN_PCT>0.240</BTWN_PCT>
+        <HI_PCT>0.280</HI_PCT>
+        <WT_ANNUAL_DOLLARS>344000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.09</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.177</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>240</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.870</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.130</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20079</FipsCode>
+        <CountyName>HARVEY</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>34434</COUNTY_POP>
+        <COUNTY_FI_RATE>0.103</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>3550</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.420</LOW_PCT>
+        <BTWN_PCT>0.230</BTWN_PCT>
+        <HI_PCT>0.350</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1881000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.29</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.153</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>1270</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.830</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.170</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20081</FipsCode>
+        <CountyName>HASKELL</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>3990</COUNTY_POP>
+        <COUNTY_FI_RATE>0.067</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>270</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.500</LOW_PCT>
+        <BTWN_PCT>0.440</BTWN_PCT>
+        <HI_PCT>0.060</HI_PCT>
+        <WT_ANNUAL_DOLLARS>128000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.94</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.120</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>140</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>1.000</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.000</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20083</FipsCode>
+        <CountyName>HODGEMAN</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>1872</COUNTY_POP>
+        <COUNTY_FI_RATE>0.090</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>170</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.370</LOW_PCT>
+        <BTWN_PCT>0.150</BTWN_PCT>
+        <HI_PCT>0.480</HI_PCT>
+        <WT_ANNUAL_DOLLARS>83000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.03</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.155</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>60</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.490</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.510</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20089</FipsCode>
+        <CountyName>JEWELL</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2854</COUNTY_POP>
+        <COUNTY_FI_RATE>0.119</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>340</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.570</LOW_PCT>
+        <BTWN_PCT>0.210</BTWN_PCT>
+        <HI_PCT>0.230</HI_PCT>
+        <WT_ANNUAL_DOLLARS>177000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.23</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.193</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>110</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.720</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.280</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20093</FipsCode>
+        <CountyName>KEARNY</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>3863</COUNTY_POP>
+        <COUNTY_FI_RATE>0.105</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>410</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.480</LOW_PCT>
+        <BTWN_PCT>0.280</BTWN_PCT>
+        <HI_PCT>0.250</HI_PCT>
+        <WT_ANNUAL_DOLLARS>189000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.87</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.162</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>180</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.730</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.270</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20095</FipsCode>
+        <CountyName>KINGMAN</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>7173</COUNTY_POP>
+        <COUNTY_FI_RATE>0.092</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>660</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.320</LOW_PCT>
+        <BTWN_PCT>0.250</BTWN_PCT>
+        <HI_PCT>0.430</HI_PCT>
+        <WT_ANNUAL_DOLLARS>331000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.11</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.140</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>220</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.580</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.420</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20097</FipsCode>
+        <CountyName>KIOWA</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2483</COUNTY_POP>
+        <COUNTY_FI_RATE>0.090</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>220</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.470</LOW_PCT>
+        <BTWN_PCT>0.200</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>107000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.03</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.126</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>80</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.750</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.250</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20099</FipsCode>
+        <CountyName>LABETTE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>19938</COUNTY_POP>
+        <COUNTY_FI_RATE>0.138</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2750</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.520</LOW_PCT>
+        <BTWN_PCT>0.190</BTWN_PCT>
+        <HI_PCT>0.290</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1524000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.44</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.199</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>950</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.750</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.250</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20101</FipsCode>
+        <CountyName>LANE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>1523</COUNTY_POP>
+        <COUNTY_FI_RATE>0.105</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>160</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.500</LOW_PCT>
+        <BTWN_PCT>0.190</BTWN_PCT>
+        <HI_PCT>0.310</HI_PCT>
+        <WT_ANNUAL_DOLLARS>75000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.89</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.158</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>60</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.680</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.320</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20105</FipsCode>
+        <CountyName>LINCOLN</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>3013</COUNTY_POP>
+        <COUNTY_FI_RATE>0.099</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>300</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.480</LOW_PCT>
+        <BTWN_PCT>0.140</BTWN_PCT>
+        <HI_PCT>0.380</HI_PCT>
+        <WT_ANNUAL_DOLLARS>146000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.02</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.137</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>100</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.920</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.090</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20107</FipsCode>
+        <CountyName>LINN</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>9687</COUNTY_POP>
+        <COUNTY_FI_RATE>0.136</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1320</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.500</LOW_PCT>
+        <BTWN_PCT>0.200</BTWN_PCT>
+        <HI_PCT>0.300</HI_PCT>
+        <WT_ANNUAL_DOLLARS>760000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.58</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.190</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>410</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.720</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.280</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20109</FipsCode>
+        <CountyName>LOGAN</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2789</COUNTY_POP>
+        <COUNTY_FI_RATE>0.105</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>290</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.500</LOW_PCT>
+        <BTWN_PCT>0.170</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>136000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.91</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.150</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>100</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.850</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.150</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20111</FipsCode>
+        <CountyName>LYON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>33237</COUNTY_POP>
+        <COUNTY_FI_RATE>0.104</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>3450</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.580</LOW_PCT>
+        <BTWN_PCT>0.180</BTWN_PCT>
+        <HI_PCT>0.230</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1662000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.99</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.155</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>1150</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.670</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.330</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20113</FipsCode>
+        <CountyName>MC PHERSON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>28557</COUNTY_POP>
+        <COUNTY_FI_RATE>0.089</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2550</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.390</LOW_PCT>
+        <BTWN_PCT>0.210</BTWN_PCT>
+        <HI_PCT>0.390</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1380000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.36</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.117</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>740</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.800</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.200</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20115</FipsCode>
+        <CountyName>MARION</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>11865</COUNTY_POP>
+        <COUNTY_FI_RATE>0.093</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1100</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.410</LOW_PCT>
+        <BTWN_PCT>0.380</BTWN_PCT>
+        <HI_PCT>0.200</HI_PCT>
+        <WT_ANNUAL_DOLLARS>577000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.26</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.127</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>320</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>1.000</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.000</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20119</FipsCode>
+        <CountyName>MEADE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>4120</COUNTY_POP>
+        <COUNTY_FI_RATE>0.075</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>310</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.450</LOW_PCT>
+        <BTWN_PCT>0.250</BTWN_PCT>
+        <HI_PCT>0.300</HI_PCT>
+        <WT_ANNUAL_DOLLARS>148000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.96</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.118</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>120</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.880</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.120</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20123</FipsCode>
+        <CountyName>MITCHELL</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>6053</COUNTY_POP>
+        <COUNTY_FI_RATE>0.108</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>650</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.440</LOW_PCT>
+        <BTWN_PCT>0.240</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>316000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.02</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.143</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>190</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.860</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.140</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20125</FipsCode>
+        <CountyName>MONTGOMERY</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>32114</COUNTY_POP>
+        <COUNTY_FI_RATE>0.150</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>4820</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.580</LOW_PCT>
+        <BTWN_PCT>0.180</BTWN_PCT>
+        <HI_PCT>0.250</HI_PCT>
+        <WT_ANNUAL_DOLLARS>2400000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.09</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.238</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>1800</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.810</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.200</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20127</FipsCode>
+        <CountyName>MORRIS</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>5551</COUNTY_POP>
+        <COUNTY_FI_RATE>0.101</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>560</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.390</LOW_PCT>
+        <BTWN_PCT>0.280</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>270000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.99</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.139</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>160</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.670</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.330</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20129</FipsCode>
+        <CountyName>MORTON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2656</COUNTY_POP>
+        <COUNTY_FI_RATE>0.120</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>320</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.520</LOW_PCT>
+        <BTWN_PCT>0.330</BTWN_PCT>
+        <HI_PCT>0.160</HI_PCT>
+        <WT_ANNUAL_DOLLARS>155000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.01</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.183</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>120</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.900</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.100</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20133</FipsCode>
+        <CountyName>NEOSHO</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>16008</COUNTY_POP>
+        <COUNTY_FI_RATE>0.139</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2220</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.500</LOW_PCT>
+        <BTWN_PCT>0.220</BTWN_PCT>
+        <HI_PCT>0.280</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1123000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.14</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.212</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>830</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.790</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.210</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20135</FipsCode>
+        <CountyName>NESS</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2838</COUNTY_POP>
+        <COUNTY_FI_RATE>0.092</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>260</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.510</LOW_PCT>
+        <BTWN_PCT>0.170</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>136000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.26</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.147</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>90</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.910</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.090</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20137</FipsCode>
+        <CountyName>NORTON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>5416</COUNTY_POP>
+        <COUNTY_FI_RATE>0.085</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>460</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.330</LOW_PCT>
+        <BTWN_PCT>0.290</BTWN_PCT>
+        <HI_PCT>0.380</HI_PCT>
+        <WT_ANNUAL_DOLLARS>235000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.17</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.113</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>120</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.910</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.090</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20141</FipsCode>
+        <CountyName>OSBORNE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>3494</COUNTY_POP>
+        <COUNTY_FI_RATE>0.110</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>380</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.460</LOW_PCT>
+        <BTWN_PCT>0.180</BTWN_PCT>
+        <HI_PCT>0.360</HI_PCT>
+        <WT_ANNUAL_DOLLARS>202000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.31</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.157</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>120</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.680</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.320</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20143</FipsCode>
+        <CountyName>OTTAWA</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>5776</COUNTY_POP>
+        <COUNTY_FI_RATE>0.096</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>560</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.470</LOW_PCT>
+        <BTWN_PCT>0.150</BTWN_PCT>
+        <HI_PCT>0.380</HI_PCT>
+        <WT_ANNUAL_DOLLARS>272000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.02</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.143</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>190</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.680</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.320</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20145</FipsCode>
+        <CountyName>PAWNEE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>6539</COUNTY_POP>
+        <COUNTY_FI_RATE>0.113</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>740</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.340</LOW_PCT>
+        <BTWN_PCT>0.310</BTWN_PCT>
+        <HI_PCT>0.350</HI_PCT>
+        <WT_ANNUAL_DOLLARS>379000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.18</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.165</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>180</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>1.000</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.000</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20147</FipsCode>
+        <CountyName>PHILLIPS</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>5297</COUNTY_POP>
+        <COUNTY_FI_RATE>0.114</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>600</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.460</LOW_PCT>
+        <BTWN_PCT>0.130</BTWN_PCT>
+        <HI_PCT>0.410</HI_PCT>
+        <WT_ANNUAL_DOLLARS>316000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.28</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.191</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>230</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.630</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.370</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20151</FipsCode>
+        <CountyName>PRATT</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>9324</COUNTY_POP>
+        <COUNTY_FI_RATE>0.093</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>860</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.450</LOW_PCT>
+        <BTWN_PCT>0.340</BTWN_PCT>
+        <HI_PCT>0.220</HI_PCT>
+        <WT_ANNUAL_DOLLARS>432000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.12</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.120</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>280</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.990</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.010</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20153</FipsCode>
+        <CountyName>RAWLINS</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2490</COUNTY_POP>
+        <COUNTY_FI_RATE>0.102</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>250</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.470</LOW_PCT>
+        <BTWN_PCT>0.340</BTWN_PCT>
+        <HI_PCT>0.190</HI_PCT>
+        <WT_ANNUAL_DOLLARS>135000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.36</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.131</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>70</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.920</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.080</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20155</FipsCode>
+        <CountyName>RENO</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>62421</COUNTY_POP>
+        <COUNTY_FI_RATE>0.113</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>7040</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.470</LOW_PCT>
+        <BTWN_PCT>0.230</BTWN_PCT>
+        <HI_PCT>0.300</HI_PCT>
+        <WT_ANNUAL_DOLLARS>3511000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.10</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.169</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>2370</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.850</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.160</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20157</FipsCode>
+        <CountyName>REPUBLIC</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>4607</COUNTY_POP>
+        <COUNTY_FI_RATE>0.089</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>410</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.500</LOW_PCT>
+        <BTWN_PCT>0.160</BTWN_PCT>
+        <HI_PCT>0.340</HI_PCT>
+        <WT_ANNUAL_DOLLARS>220000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.34</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.134</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>130</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.770</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.230</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20159</FipsCode>
+        <CountyName>RICE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>9532</COUNTY_POP>
+        <COUNTY_FI_RATE>0.110</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1050</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.430</LOW_PCT>
+        <BTWN_PCT>0.190</BTWN_PCT>
+        <HI_PCT>0.390</HI_PCT>
+        <WT_ANNUAL_DOLLARS>524000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.10</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.161</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>340</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.680</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.320</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20163</FipsCode>
+        <CountyName>ROOKS</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>4985</COUNTY_POP>
+        <COUNTY_FI_RATE>0.090</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>450</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.370</LOW_PCT>
+        <BTWN_PCT>0.340</BTWN_PCT>
+        <HI_PCT>0.280</HI_PCT>
+        <WT_ANNUAL_DOLLARS>237000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.28</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.126</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>140</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.930</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.070</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20165</FipsCode>
+        <CountyName>RUSH</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2953</COUNTY_POP>
+        <COUNTY_FI_RATE>0.098</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>290</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.420</LOW_PCT>
+        <BTWN_PCT>0.250</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>152000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.26</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.125</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>80</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.440</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.560</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20167</FipsCode>
+        <CountyName>RUSSELL</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>6896</COUNTY_POP>
+        <COUNTY_FI_RATE>0.110</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>760</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.470</LOW_PCT>
+        <BTWN_PCT>0.220</BTWN_PCT>
+        <HI_PCT>0.320</HI_PCT>
+        <WT_ANNUAL_DOLLARS>406000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.32</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.179</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>270</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.710</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.300</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20169</FipsCode>
+        <CountyName>SALINE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>54384</COUNTY_POP>
+        <COUNTY_FI_RATE>0.113</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>6170</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.450</LOW_PCT>
+        <BTWN_PCT>0.280</BTWN_PCT>
+        <HI_PCT>0.270</HI_PCT>
+        <WT_ANNUAL_DOLLARS>2997000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.02</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.165</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>2100</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.870</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.130</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20171</FipsCode>
+        <CountyName>SCOTT</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>4893</COUNTY_POP>
+        <COUNTY_FI_RATE>0.076</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>370</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.510</LOW_PCT>
+        <BTWN_PCT>0.480</BTWN_PCT>
+        <HI_PCT>0.020</HI_PCT>
+        <WT_ANNUAL_DOLLARS>174000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.92</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.094</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>130</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>1.000</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.000</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20173</FipsCode>
+        <CountyName>SEDGWICK</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>515416</COUNTY_POP>
+        <COUNTY_FI_RATE>0.129</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>66610</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.480</LOW_PCT>
+        <BTWN_PCT>0.160</BTWN_PCT>
+        <HI_PCT>0.360</HI_PCT>
+        <WT_ANNUAL_DOLLARS>33725000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.14</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.210</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>27830</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.670</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.330</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20175</FipsCode>
+        <CountyName>SEWARD</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>21902</COUNTY_POP>
+        <COUNTY_FI_RATE>0.080</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1760</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.590</LOW_PCT>
+        <BTWN_PCT>0.340</BTWN_PCT>
+        <HI_PCT>0.070</HI_PCT>
+        <WT_ANNUAL_DOLLARS>840000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.96</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.166</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>1130</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.900</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.100</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20179</FipsCode>
+        <CountyName>SHERIDAN</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2515</COUNTY_POP>
+        <COUNTY_FI_RATE>0.070</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>180</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.410</LOW_PCT>
+        <BTWN_PCT>0.320</BTWN_PCT>
+        <HI_PCT>0.270</HI_PCT>
+        <WT_ANNUAL_DOLLARS>96000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.32</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.103</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>60</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.950</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.050</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20181</FipsCode>
+        <CountyName>SHERMAN</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>5904</COUNTY_POP>
+        <COUNTY_FI_RATE>0.082</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>480</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.350</LOW_PCT>
+        <BTWN_PCT>0.170</BTWN_PCT>
+        <HI_PCT>0.480</HI_PCT>
+        <WT_ANNUAL_DOLLARS>226000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.93</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.129</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>180</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.440</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.560</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20183</FipsCode>
+        <CountyName>SMITH</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>3594</COUNTY_POP>
+        <COUNTY_FI_RATE>0.095</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>340</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.430</LOW_PCT>
+        <BTWN_PCT>0.290</BTWN_PCT>
+        <HI_PCT>0.280</HI_PCT>
+        <WT_ANNUAL_DOLLARS>179000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.26</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.131</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>90</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.690</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.310</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20185</FipsCode>
+        <CountyName>STAFFORD</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>4125</COUNTY_POP>
+        <COUNTY_FI_RATE>0.096</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>400</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.570</LOW_PCT>
+        <BTWN_PCT>0.110</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>203000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.15</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.121</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>120</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.780</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.220</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20187</FipsCode>
+        <CountyName>STANTON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2030</COUNTY_POP>
+        <COUNTY_FI_RATE>0.100</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>200</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.530</LOW_PCT>
+        <BTWN_PCT>0.160</BTWN_PCT>
+        <HI_PCT>0.310</HI_PCT>
+        <WT_ANNUAL_DOLLARS>93000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.89</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.206</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>120</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.610</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.390</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20189</FipsCode>
+        <CountyName>STEVENS</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>5498</COUNTY_POP>
+        <COUNTY_FI_RATE>0.096</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>530</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.470</LOW_PCT>
+        <BTWN_PCT>0.450</BTWN_PCT>
+        <HI_PCT>0.080</HI_PCT>
+        <WT_ANNUAL_DOLLARS>252000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.96</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.159</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>260</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>1.000</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.000</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20191</FipsCode>
+        <CountyName>SUMNER</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>22928</COUNTY_POP>
+        <COUNTY_FI_RATE>0.132</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>3030</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.480</LOW_PCT>
+        <BTWN_PCT>0.220</BTWN_PCT>
+        <HI_PCT>0.310</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1524000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.12</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.190</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>1060</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.750</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.250</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20193</FipsCode>
+        <CountyName>THOMAS</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>7748</COUNTY_POP>
+        <COUNTY_FI_RATE>0.081</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>630</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.410</LOW_PCT>
+        <BTWN_PCT>0.200</BTWN_PCT>
+        <HI_PCT>0.390</HI_PCT>
+        <WT_ANNUAL_DOLLARS>295000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.91</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.097</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>170</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.570</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.430</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20195</FipsCode>
+        <CountyName>TREGO</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2802</COUNTY_POP>
+        <COUNTY_FI_RATE>0.082</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>230</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.350</LOW_PCT>
+        <BTWN_PCT>0.270</BTWN_PCT>
+        <HI_PCT>0.380</HI_PCT>
+        <WT_ANNUAL_DOLLARS>122000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.29</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.115</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>60</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.640</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.360</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20199</FipsCode>
+        <CountyName>WALLACE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>1583</COUNTY_POP>
+        <COUNTY_FI_RATE>0.115</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>180</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.470</LOW_PCT>
+        <BTWN_PCT>0.310</BTWN_PCT>
+        <HI_PCT>0.220</HI_PCT>
+        <WT_ANNUAL_DOLLARS>84000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.89</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.160</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>60</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>1.000</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.000</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20203</FipsCode>
+        <CountyName>WICHITA</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>2112</COUNTY_POP>
+        <COUNTY_FI_RATE>0.079</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>170</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.380</LOW_PCT>
+        <BTWN_PCT>0.290</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>80000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.92</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.113</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>60</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.490</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.510</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20205</FipsCode>
+        <CountyName>WILSON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>8600</COUNTY_POP>
+        <COUNTY_FI_RATE>0.140</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1210</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.490</LOW_PCT>
+        <BTWN_PCT>0.270</BTWN_PCT>
+        <HI_PCT>0.240</HI_PCT>
+        <WT_ANNUAL_DOLLARS>602000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.09</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.201</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>410</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.830</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.170</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20207</FipsCode>
+        <CountyName>WOODSON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>3117</COUNTY_POP>
+        <COUNTY_FI_RATE>0.131</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>410</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.460</LOW_PCT>
+        <BTWN_PCT>0.270</BTWN_PCT>
+        <HI_PCT>0.270</HI_PCT>
+        <WT_ANNUAL_DOLLARS>197000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.99</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.181</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>110</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.640</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.360</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+    </ListFipsCounty>
+    <ListPDOs />
+    <POP_COUNT>1490175</POP_COUNT>
+    <FI_AGGREGATE>0.117</FI_AGGREGATE>
+    <PUBLIC_FI>173730</PUBLIC_FI>
+    <WT_ANNUAL_DOLLARS>0</WT_ANNUAL_DOLLARS>
+    <COST_PER_MEAL>0.00</COST_PER_MEAL>
+    <Twitter>KansasFoodbank</Twitter>
+    <FaceBook>https://www.facebook.com/KansasFoodBank</FaceBook>
+    <SocialUrls>
+      <Facebook>https://www.facebook.com/KansasFoodBank</Facebook>
+      <Twitter>KansasFoodbank</Twitter>
+      <LinkedIn />
+      <Youtube />
+      <Pinterest />
+      <DonateUrl>https://www.kansasfoodbank.org/how-to-help/donate-money/</DonateUrl>
+      <WebUrl>https://benefitsupport.feedingamerica.org/?locationId=X14YWICHI</WebUrl>
+    </SocialUrls>
+    <LogoUrls>
+      <FoodBankLocator>https://foodbanklogos.blob.core.windows.net/foodbanklogos/FoodBankLogo_208_275w.jpg</FoodBankLocator>
+      <OnlineMarketPlace />
+      <SecureConvioMain>https://foodbanklogos.blob.core.windows.net/foodbanklogos/FoodBankLogo_208_275w.jpg</SecureConvioMain>
+    </LogoUrls>
+    <AgencyURL>https://www.kansasfoodbank.org/finding-help</AgencyURL>
+    <VolunteerURL>https://www.kansasfoodbank.org/how-to-help/volunteer/</VolunteerURL>
+    <VolunteerPhone> </VolunteerPhone>
+    <CHILD_FI_COUNT>66970</CHILD_FI_COUNT>
+    <CHILD_FI_PCT>0.182</CHILD_FI_PCT>
+    <CHILD_FI_BELOW_PCT>0.741</CHILD_FI_BELOW_PCT>
+    <CHILD_FI_ABOVE_PCT>0.259</CHILD_FI_ABOVE_PCT>
+    <EntityID>157</EntityID>
+    <OrganizationID>208</OrganizationID>
+    <FullName>Kansas Food Bank</FullName>
+    <MailAddress>
+      <BeginDt>0001-01-01T00:00:00</BeginDt>
+      <EndDt xsi:nil="true" />
+      <UpdateDt>0001-01-01T00:00:00</UpdateDt>
+      <UpdateUserID xsi:nil="true" />
+      <AddressID>157</AddressID>
+      <Longitude>-97.313981</Longitude>
+      <Latitude>37.6860706</Latitude>
+      <Address1>1919 E. Douglas</Address1>
+      <Address2 />
+      <City>Wichita</City>
+      <State>KS</State>
+      <Zip>67211</Zip>
+      <ZipPlus4>    </ZipPlus4>
+      <FullZip>67211</FullZip>
+    </MailAddress>
+    <Phone>316.265.3663</Phone>
+    <Fax>316.265.9747</Fax>
+    <Type>MBR</Type>
+    <Region>North</Region>
+    <DistributionFlag>false</DistributionFlag>
+    <URL>www.kansasfoodbank.org</URL>
+    <DemographicStats>
+      <NumberOfCounties xsi:nil="true" />
+    </DemographicStats>
+    <OperationsStats>
+      <VolunteerHours xsi:nil="true" />
+    </OperationsStats>
+    <FoodDistributionProgStats>
+      <PreparedFoods xsi:nil="true" />
+      <FreshProduce xsi:nil="true" />
+      <Fish xsi:nil="true" />
+      <RepackBulk xsi:nil="true" />
+      <Salvage xsi:nil="true" />
+      <MobilePantry xsi:nil="true" />
+      <BrownBag xsi:nil="true" />
+      <PurchaseProgram xsi:nil="true" />
+      <TefapProgram xsi:nil="true" />
+      <CsfpProgram xsi:nil="true" />
+      <DisasterProgram xsi:nil="true" />
+      <DeliveryProgram xsi:nil="true" />
+      <AfterSchoolSnacks xsi:nil="true" />
+      <CACFP xsi:nil="true" />
+      <CommunityKitchen xsi:nil="true" />
+      <NonFoodDistribution xsi:nil="true" />
+      <PantryShopping xsi:nil="true" />
+      <ProductionKitchen xsi:nil="true" />
+      <SFSP xsi:nil="true" />
+      <OtherService />
+      <SeniorCongregate xsi:nil="true" />
+      <SeniorMealDelivery xsi:nil="true" />
+      <Composting xsi:nil="true" />
+      <Grower xsi:nil="true" />
+      <SchoolPantries xsi:nil="true" />
+      <WIC xsi:nil="true" />
+      <Reclamation xsi:nil="true" />
+      <OnSiteClientPantry xsi:nil="true" />
+      <OnSiteAgencyShopping xsi:nil="true" />
+      <OnSiteCongregateFeeding xsi:nil="true" />
+      <MealsOnWheels xsi:nil="true" />
+      <FarmOrchardRaiseFish xsi:nil="true" />
+      <CommunityGarden xsi:nil="true" />
+    </FoodDistributionProgStats>
+    <ClientSupportProgStats>
+      <EligibilityCounselng xsi:nil="true" />
+      <FoodStampOutreach xsi:nil="true" />
+      <JobTraining xsi:nil="true" />
+      <LegalAssistance xsi:nil="true" />
+      <NutritionEducation xsi:nil="true" />
+      <ShortTermFinAssist xsi:nil="true" />
+      <UtilityHeatAssistance xsi:nil="true" />
+      <HousingAssistance xsi:nil="true" />
+    </ClientSupportProgStats>
+    <NationalProgStats>
+      <BackPack xsi:nil="true" />
+      <KidsCafes xsi:nil="true" />
+    </NationalProgStats>
+    <PoundageStats>
+      <TotalPoundage>17147072</TotalPoundage>
+      <Meals>14157380</Meals>
+      <ShowMeals>true</ShowMeals>
+    </PoundageStats>
+    <AgenciesServedStats>
+      <EmergencyBox xsi:nil="true" />
+      <SoupKitchens xsi:nil="true" />
+      <Shelters xsi:nil="true" />
+      <Residential xsi:nil="true" />
+      <DayCare xsi:nil="true" />
+      <MultiService xsi:nil="true" />
+      <Senior xsi:nil="true" />
+      <Rehabilitation xsi:nil="true" />
+      <YouthPrograms xsi:nil="true" />
+      <Other xsi:nil="true" />
+    </AgenciesServedStats>
+    <SubType>FB</SubType>
+    <ED>
+      <BeginDt>2008-10-10T00:00:00</BeginDt>
+      <EndDt xsi:nil="true" />
+      <UpdateDt>2020-02-11T16:11:43.19</UpdateDt>
+      <UpdateUserID xsi:nil="true" />
+      <EntityID>108</EntityID>
+      <FirstName>Brian</FirstName>
+      <LastName>Walker</LastName>
+      <MInitial> </MInitial>
+      <FullName>Brian   Walker</FullName>
+      <LegalName>Walker, Brian  </LegalName>
+      <Gender>Male</Gender>
+      <Title>President &amp; CEO</Title>
+      <Phone1main>3162654421</Phone1main>
+      <Phone1ext>          </Phone1ext>
+      <Phone1>316.265.4421</Phone1>
+      <Fax>316.265.9747</Fax>
+      <Email>bwalker@kansasfoodbank.org</Email>
+      <OrganizationEntityID>208</OrganizationEntityID>
+    </ED>
+    <MediaContact>
+      <BeginDt>2008-10-10T00:00:00</BeginDt>
+      <EndDt xsi:nil="true" />
+      <UpdateDt>2020-02-11T16:11:43.19</UpdateDt>
+      <UpdateUserID xsi:nil="true" />
+      <EntityID>318</EntityID>
+      <FirstName>Brian</FirstName>
+      <LastName>Walker</LastName>
+      <MInitial> </MInitial>
+      <FullName>Brian   Walker</FullName>
+      <LegalName>Walker, Brian  </LegalName>
+      <Gender>Male</Gender>
+      <Title>President &amp; CEO</Title>
+      <Phone1main>3162653663</Phone1main>
+      <Phone1ext>          </Phone1ext>
+      <Phone1>316.265.3663</Phone1>
+      <Fax>316.265.9747</Fax>
+      <Email>bwalker@kansasfoodbank.org</Email>
+      <OrganizationEntityID>208</OrganizationEntityID>
+    </MediaContact>
+  </Organization>
+  <Organization>
+    <BeginDt>2008-04-04T14:46:54</BeginDt>
+    <EndDt xsi:nil="true" />
+    <UpdateDt>2022-07-01T17:44:03.627</UpdateDt>
+    <UpdateUserID xsi:nil="true" />
+    <ListFipsCounty>
+      <LocalFindings>
+        <FipsCode>20027</FipsCode>
+        <CountyName>CLAY</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>8030</COUNTY_POP>
+        <COUNTY_FI_RATE>0.102</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>820</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.440</LOW_PCT>
+        <BTWN_PCT>0.220</BTWN_PCT>
+        <HI_PCT>0.340</HI_PCT>
+        <WT_ANNUAL_DOLLARS>412000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.12</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.137</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>250</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.690</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.310</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20045</FipsCode>
+        <CountyName>DOUGLAS</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>121304</COUNTY_POP>
+        <COUNTY_FI_RATE>0.115</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>13900</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.550</LOW_PCT>
+        <BTWN_PCT>0.120</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>8094000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.62</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.144</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>3190</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.580</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.420</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20059</FipsCode>
+        <CountyName>FRANKLIN</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>25643</COUNTY_POP>
+        <COUNTY_FI_RATE>0.111</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2860</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.390</LOW_PCT>
+        <BTWN_PCT>0.270</BTWN_PCT>
+        <HI_PCT>0.340</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1514000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.29</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.154</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>940</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.730</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.270</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20085</FipsCode>
+        <CountyName>JACKSON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>13249</COUNTY_POP>
+        <COUNTY_FI_RATE>0.110</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1460</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.420</LOW_PCT>
+        <BTWN_PCT>0.180</BTWN_PCT>
+        <HI_PCT>0.400</HI_PCT>
+        <WT_ANNUAL_DOLLARS>734000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.12</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.173</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>570</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.660</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.340</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20087</FipsCode>
+        <CountyName>JEFFERSON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>18974</COUNTY_POP>
+        <COUNTY_FI_RATE>0.082</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1560</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.320</LOW_PCT>
+        <BTWN_PCT>0.250</BTWN_PCT>
+        <HI_PCT>0.430</HI_PCT>
+        <WT_ANNUAL_DOLLARS>906000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.61</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.127</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>550</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.710</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.290</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20091</FipsCode>
+        <CountyName>JOHNSON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>597574</COUNTY_POP>
+        <COUNTY_FI_RATE>0.072</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>42860</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.260</LOW_PCT>
+        <BTWN_PCT>0.130</BTWN_PCT>
+        <HI_PCT>0.610</HI_PCT>
+        <WT_ANNUAL_DOLLARS>25357000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.67</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.096</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>13990</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.440</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.560</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20117</FipsCode>
+        <CountyName>MARSHALL</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>9713</COUNTY_POP>
+        <COUNTY_FI_RATE>0.085</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>830</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.440</LOW_PCT>
+        <BTWN_PCT>0.190</BTWN_PCT>
+        <HI_PCT>0.360</HI_PCT>
+        <WT_ANNUAL_DOLLARS>440000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.29</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.122</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>280</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.680</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.330</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20121</FipsCode>
+        <CountyName>MIAMI</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>33740</COUNTY_POP>
+        <COUNTY_FI_RATE>0.087</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2940</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.310</LOW_PCT>
+        <BTWN_PCT>0.140</BTWN_PCT>
+        <HI_PCT>0.560</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1702000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.59</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.119</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>980</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.440</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.560</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20131</FipsCode>
+        <CountyName>NEMAHA</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>10109</COUNTY_POP>
+        <COUNTY_FI_RATE>0.088</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>890</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.340</LOW_PCT>
+        <BTWN_PCT>0.150</BTWN_PCT>
+        <HI_PCT>0.510</HI_PCT>
+        <WT_ANNUAL_DOLLARS>452000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.15</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.112</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>300</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.490</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.510</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20139</FipsCode>
+        <CountyName>OSAGE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>15855</COUNTY_POP>
+        <COUNTY_FI_RATE>0.117</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1850</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.430</LOW_PCT>
+        <BTWN_PCT>0.150</BTWN_PCT>
+        <HI_PCT>0.410</HI_PCT>
+        <WT_ANNUAL_DOLLARS>927000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.11</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.173</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>640</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.630</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.370</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20149</FipsCode>
+        <CountyName>POTTAWATOMIE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>24203</COUNTY_POP>
+        <COUNTY_FI_RATE>0.080</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1950</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.350</LOW_PCT>
+        <BTWN_PCT>0.290</BTWN_PCT>
+        <HI_PCT>0.360</HI_PCT>
+        <WT_ANNUAL_DOLLARS>986000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.14</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.118</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>840</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.740</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.260</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20161</FipsCode>
+        <CountyName>RILEY</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>74059</COUNTY_POP>
+        <COUNTY_FI_RATE>0.127</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>9380</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.620</LOW_PCT>
+        <BTWN_PCT>0.110</BTWN_PCT>
+        <HI_PCT>0.280</HI_PCT>
+        <WT_ANNUAL_DOLLARS>6042000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>4.00</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.176</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>2150</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.750</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.260</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20177</FipsCode>
+        <CountyName>SHAWNEE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>177293</COUNTY_POP>
+        <COUNTY_FI_RATE>0.105</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>18610</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.430</LOW_PCT>
+        <BTWN_PCT>0.170</BTWN_PCT>
+        <HI_PCT>0.400</HI_PCT>
+        <WT_ANNUAL_DOLLARS>9336000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.12</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.169</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>7080</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.640</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.370</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20197</FipsCode>
+        <CountyName>WABAUNSEE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>6877</COUNTY_POP>
+        <COUNTY_FI_RATE>0.084</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>580</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.300</LOW_PCT>
+        <BTWN_PCT>0.250</BTWN_PCT>
+        <HI_PCT>0.440</HI_PCT>
+        <WT_ANNUAL_DOLLARS>295000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.15</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.122</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>200</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.660</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.340</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20201</FipsCode>
+        <CountyName>WASHINGTON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>5474</COUNTY_POP>
+        <COUNTY_FI_RATE>0.088</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>480</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.400</LOW_PCT>
+        <BTWN_PCT>0.260</BTWN_PCT>
+        <HI_PCT>0.350</HI_PCT>
+        <WT_ANNUAL_DOLLARS>255000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.30</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.120</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>140</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.770</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.230</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20209</FipsCode>
+        <CountyName>WYANDOTTE</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>165447</COUNTY_POP>
+        <COUNTY_FI_RATE>0.129</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>21330</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.640</LOW_PCT>
+        <BTWN_PCT>0.160</BTWN_PCT>
+        <HI_PCT>0.210</HI_PCT>
+        <WT_ANNUAL_DOLLARS>10546000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.07</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.253</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>11610</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.820</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.180</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29013</FipsCode>
+        <CountyName>BATES</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>16282</COUNTY_POP>
+        <COUNTY_FI_RATE>0.137</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2220</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.490</LOW_PCT>
+        <BTWN_PCT>0.240</BTWN_PCT>
+        <HI_PCT>0.260</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1055000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.95</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.161</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>610</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.900</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.110</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29033</FipsCode>
+        <CountyName>CARROLL</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>8723</COUNTY_POP>
+        <COUNTY_FI_RATE>0.124</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1080</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.570</LOW_PCT>
+        <BTWN_PCT>0.170</BTWN_PCT>
+        <HI_PCT>0.260</HI_PCT>
+        <WT_ANNUAL_DOLLARS>486000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.79</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.142</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>270</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.800</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.200</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29037</FipsCode>
+        <CountyName>CASS</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>104687</COUNTY_POP>
+        <COUNTY_FI_RATE>0.099</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>10390</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.360</LOW_PCT>
+        <BTWN_PCT>0.150</BTWN_PCT>
+        <HI_PCT>0.490</HI_PCT>
+        <WT_ANNUAL_DOLLARS>5212000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.12</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.117</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>2940</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.660</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.340</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29047</FipsCode>
+        <CountyName>CLAY</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>246480</COUNTY_POP>
+        <COUNTY_FI_RATE>0.100</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>24730</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.390</LOW_PCT>
+        <BTWN_PCT>0.130</BTWN_PCT>
+        <HI_PCT>0.480</HI_PCT>
+        <WT_ANNUAL_DOLLARS>12937000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.25</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.116</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>6920</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.730</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.280</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29083</FipsCode>
+        <CountyName>HENRY</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>21854</COUNTY_POP>
+        <COUNTY_FI_RATE>0.154</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>3370</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.510</LOW_PCT>
+        <BTWN_PCT>0.180</BTWN_PCT>
+        <HI_PCT>0.320</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1526000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.81</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.178</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>860</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.760</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.240</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29095</FipsCode>
+        <CountyName>JACKSON</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>700733</COUNTY_POP>
+        <COUNTY_FI_RATE>0.123</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>86300</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.510</LOW_PCT>
+        <BTWN_PCT>0.100</BTWN_PCT>
+        <HI_PCT>0.390</HI_PCT>
+        <WT_ANNUAL_DOLLARS>45875000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.30</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.190</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>31350</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.690</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.310</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29101</FipsCode>
+        <CountyName>JOHNSON</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>53948</COUNTY_POP>
+        <COUNTY_FI_RATE>0.115</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>6230</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.470</LOW_PCT>
+        <BTWN_PCT>0.200</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>3105000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.10</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.115</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>1330</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.820</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.180</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29107</FipsCode>
+        <CountyName>LAFAYETTE</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>32697</COUNTY_POP>
+        <COUNTY_FI_RATE>0.118</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>3840</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.470</LOW_PCT>
+        <BTWN_PCT>0.210</BTWN_PCT>
+        <HI_PCT>0.320</HI_PCT>
+        <WT_ANNUAL_DOLLARS>2123000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.43</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.138</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>1030</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.900</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.100</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29165</FipsCode>
+        <CountyName>PLATTE</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>102848</COUNTY_POP>
+        <COUNTY_FI_RATE>0.089</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>9150</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.300</LOW_PCT>
+        <BTWN_PCT>0.140</BTWN_PCT>
+        <HI_PCT>0.560</HI_PCT>
+        <WT_ANNUAL_DOLLARS>5504000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.74</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.090</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>2200</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.560</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.440</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29177</FipsCode>
+        <CountyName>RAY</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>22900</COUNTY_POP>
+        <COUNTY_FI_RATE>0.116</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2660</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.430</LOW_PCT>
+        <BTWN_PCT>0.140</BTWN_PCT>
+        <HI_PCT>0.430</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1308000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.05</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.135</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>700</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.690</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.310</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+    </ListFipsCounty>
+    <ListPDOs />
+    <POP_COUNT>2618696</POP_COUNT>
+    <FI_AGGREGATE>0.104</FI_AGGREGATE>
+    <PUBLIC_FI>272270</PUBLIC_FI>
+    <WT_ANNUAL_DOLLARS>0</WT_ANNUAL_DOLLARS>
+    <COST_PER_MEAL>0.00</COST_PER_MEAL>
+    <Twitter>https://twitter.com/HarvestersORG</Twitter>
+    <FaceBook>https://www.facebook.com/harvestersorg</FaceBook>
+    <SocialUrls>
+      <Facebook>https://www.facebook.com/harvestersorg</Facebook>
+      <Twitter>HarvestersORG</Twitter>
+      <LinkedIn />
+      <Youtube />
+      <Pinterest />
+      <DonateUrl>https://www.harvesters.org/how-to-help</DonateUrl>
+      <WebUrl>https://benefitsupport.feedingamerica.org/?locationId=X14YKANSA</WebUrl>
+    </SocialUrls>
+    <LogoUrls>
+      <FoodBankLocator>https://foodbanklogos.blob.core.windows.net/foodbanklogos/FoodBankLogo_40_275w.jpg</FoodBankLocator>
+      <OnlineMarketPlace />
+      <SecureConvioMain>https://foodbanklogos.blob.core.windows.net/foodbanklogos/FoodBankLogo_40_275w.jpg</SecureConvioMain>
+    </LogoUrls>
+    <AgencyURL>https://www.harvesters.org/get-food-assistance</AgencyURL>
+    <VolunteerURL>https://www.harvesters.org/how-to-help/volunteer</VolunteerURL>
+    <VolunteerPhone> </VolunteerPhone>
+    <CHILD_FI_COUNT>91920</CHILD_FI_COUNT>
+    <CHILD_FI_PCT>0.148</CHILD_FI_PCT>
+    <CHILD_FI_BELOW_PCT>0.664</CHILD_FI_BELOW_PCT>
+    <CHILD_FI_ABOVE_PCT>0.336</CHILD_FI_ABOVE_PCT>
+    <EntityID>38</EntityID>
+    <OrganizationID>40</OrganizationID>
+    <FullName>Harvesters - The Community Food Network</FullName>
+    <MailAddress>
+      <BeginDt>0001-01-01T00:00:00</BeginDt>
+      <EndDt xsi:nil="true" />
+      <UpdateDt>0001-01-01T00:00:00</UpdateDt>
+      <UpdateUserID xsi:nil="true" />
+      <AddressID>38</AddressID>
+      <Longitude>-94.516985</Longitude>
+      <Latitude>39.055187</Latitude>
+      <Address1>3801 Topping Avenue</Address1>
+      <Address2 />
+      <City>Kansas City</City>
+      <State>MO</State>
+      <Zip>64129</Zip>
+      <FullZip>64129</FullZip>
+    </MailAddress>
+    <Phone>816.929.3000</Phone>
+    <Fax>816.929.3123</Fax>
+    <Type>MBR</Type>
+    <Region>North</Region>
+    <DistributionFlag>true</DistributionFlag>
+    <URL>www.harvesters.org/</URL>
+    <DemographicStats>
+      <NumberOfCounties xsi:nil="true" />
+    </DemographicStats>
+    <OperationsStats>
+      <VolunteerHours xsi:nil="true" />
+    </OperationsStats>
+    <FoodDistributionProgStats>
+      <PreparedFoods xsi:nil="true" />
+      <FreshProduce xsi:nil="true" />
+      <Fish xsi:nil="true" />
+      <RepackBulk xsi:nil="true" />
+      <Salvage xsi:nil="true" />
+      <MobilePantry xsi:nil="true" />
+      <BrownBag xsi:nil="true" />
+      <PurchaseProgram xsi:nil="true" />
+      <TefapProgram xsi:nil="true" />
+      <CsfpProgram xsi:nil="true" />
+      <DisasterProgram xsi:nil="true" />
+      <DeliveryProgram xsi:nil="true" />
+      <AfterSchoolSnacks xsi:nil="true" />
+      <CACFP xsi:nil="true" />
+      <CommunityKitchen xsi:nil="true" />
+      <NonFoodDistribution xsi:nil="true" />
+      <PantryShopping xsi:nil="true" />
+      <ProductionKitchen xsi:nil="true" />
+      <SFSP xsi:nil="true" />
+      <OtherService />
+      <SeniorCongregate xsi:nil="true" />
+      <SeniorMealDelivery xsi:nil="true" />
+      <Composting xsi:nil="true" />
+      <Grower xsi:nil="true" />
+      <SchoolPantries xsi:nil="true" />
+      <WIC xsi:nil="true" />
+      <Reclamation xsi:nil="true" />
+      <OnSiteClientPantry xsi:nil="true" />
+      <OnSiteAgencyShopping xsi:nil="true" />
+      <OnSiteCongregateFeeding xsi:nil="true" />
+      <MealsOnWheels xsi:nil="true" />
+      <FarmOrchardRaiseFish xsi:nil="true" />
+      <CommunityGarden xsi:nil="true" />
+    </FoodDistributionProgStats>
+    <ClientSupportProgStats>
+      <EligibilityCounselng xsi:nil="true" />
+      <FoodStampOutreach xsi:nil="true" />
+      <JobTraining xsi:nil="true" />
+      <LegalAssistance xsi:nil="true" />
+      <NutritionEducation xsi:nil="true" />
+      <ShortTermFinAssist xsi:nil="true" />
+      <UtilityHeatAssistance xsi:nil="true" />
+      <HousingAssistance xsi:nil="true" />
+    </ClientSupportProgStats>
+    <NationalProgStats>
+      <BackPack xsi:nil="true" />
+      <KidsCafes xsi:nil="true" />
+    </NationalProgStats>
+    <PoundageStats>
+      <TotalPoundage>65503630</TotalPoundage>
+      <Meals>53151662</Meals>
+      <ShowMeals>true</ShowMeals>
+    </PoundageStats>
+    <AgenciesServedStats>
+      <EmergencyBox xsi:nil="true" />
+      <SoupKitchens xsi:nil="true" />
+      <Shelters xsi:nil="true" />
+      <Residential xsi:nil="true" />
+      <DayCare xsi:nil="true" />
+      <MultiService xsi:nil="true" />
+      <Senior xsi:nil="true" />
+      <Rehabilitation xsi:nil="true" />
+      <YouthPrograms xsi:nil="true" />
+      <Other xsi:nil="true" />
+    </AgenciesServedStats>
+    <SubType>FB</SubType>
+    <ED>
+      <BeginDt>2008-10-10T00:00:00</BeginDt>
+      <EndDt xsi:nil="true" />
+      <UpdateDt>2022-07-01T17:44:03.627</UpdateDt>
+      <UpdateUserID xsi:nil="true" />
+      <EntityID>115</EntityID>
+      <FirstName>Stephen</FirstName>
+      <LastName>Davis</LastName>
+      <FullName>Stephen Davis</FullName>
+      <LegalName>Davis, Stephen </LegalName>
+      <Gender>Male</Gender>
+      <Title>President and Chief Executive Officer</Title>
+      <Phone1main>8169293000</Phone1main>
+      <Phone1ext>          </Phone1ext>
+      <Phone1>816.929.3000</Phone1>
+      <Fax>816.929.3123</Fax>
+      <Email>sdavis@harvesters.org</Email>
+      <OrganizationEntityID>40</OrganizationEntityID>
+    </ED>
+    <MediaContact>
+      <BeginDt>2008-10-10T00:00:00</BeginDt>
+      <EndDt xsi:nil="true" />
+      <UpdateDt>2022-07-01T17:44:03.627</UpdateDt>
+      <UpdateUserID xsi:nil="true" />
+      <EntityID>325</EntityID>
+      <FirstName>Sarah</FirstName>
+      <LastName>Biles</LastName>
+      <FullName>Sarah Biles</FullName>
+      <LegalName>Biles, Sarah </LegalName>
+      <Gender>Male</Gender>
+      <Title>Director of Communications</Title>
+      <Phone1main>8169293068</Phone1main>
+      <Phone1ext>          </Phone1ext>
+      <Phone1>816.929.3068</Phone1>
+      <Fax>816.929.3123</Fax>
+      <Email>sbiles@harvesters.org</Email>
+      <OrganizationEntityID>40</OrganizationEntityID>
+    </MediaContact>
+  </Organization>
+  <Organization>
+    <BeginDt>2008-04-04T14:46:54</BeginDt>
+    <EndDt xsi:nil="true" />
+    <UpdateDt>2023-01-23T19:06:00.15</UpdateDt>
+    <UpdateUserID xsi:nil="true" />
+    <ListFipsCounty>
+      <LocalFindings>
+        <FipsCode>20005</FipsCode>
+        <CountyName>ATCHISON</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>16210</COUNTY_POP>
+        <COUNTY_FI_RATE>0.122</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1970</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.410</LOW_PCT>
+        <BTWN_PCT>0.140</BTWN_PCT>
+        <HI_PCT>0.440</HI_PCT>
+        <WT_ANNUAL_DOLLARS>987000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.11</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.166</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>630</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.520</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.480</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20013</FipsCode>
+        <CountyName>BROWN</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>9575</COUNTY_POP>
+        <COUNTY_FI_RATE>0.124</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1190</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.480</LOW_PCT>
+        <BTWN_PCT>0.200</BTWN_PCT>
+        <HI_PCT>0.320</HI_PCT>
+        <WT_ANNUAL_DOLLARS>595000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.10</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.170</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>420</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.760</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.240</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20043</FipsCode>
+        <CountyName>DONIPHAN</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>7616</COUNTY_POP>
+        <COUNTY_FI_RATE>0.115</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>880</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.470</LOW_PCT>
+        <BTWN_PCT>0.090</BTWN_PCT>
+        <HI_PCT>0.440</HI_PCT>
+        <WT_ANNUAL_DOLLARS>440000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.10</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.152</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>220</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.670</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.330</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>20103</FipsCode>
+        <CountyName>LEAVENWORTH</CountyName>
+        <State>KS</State>
+        <COUNTY_POP>81499</COUNTY_POP>
+        <COUNTY_FI_RATE>0.093</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>7540</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.310</LOW_PCT>
+        <BTWN_PCT>0.190</BTWN_PCT>
+        <HI_PCT>0.500</HI_PCT>
+        <WT_ANNUAL_DOLLARS>4043000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.33</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.148</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>2860</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.530</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.480</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29003</FipsCode>
+        <CountyName>ANDREW</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>17554</COUNTY_POP>
+        <COUNTY_FI_RATE>0.094</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1650</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.430</LOW_PCT>
+        <BTWN_PCT>0.190</BTWN_PCT>
+        <HI_PCT>0.390</HI_PCT>
+        <WT_ANNUAL_DOLLARS>789000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.97</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.088</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>360</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.940</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.060</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29005</FipsCode>
+        <CountyName>ATCHISON</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>5180</COUNTY_POP>
+        <COUNTY_FI_RATE>0.119</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>620</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.490</LOW_PCT>
+        <BTWN_PCT>0.260</BTWN_PCT>
+        <HI_PCT>0.260</HI_PCT>
+        <WT_ANNUAL_DOLLARS>323000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.23</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.140</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>140</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.910</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.090</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29021</FipsCode>
+        <CountyName>BUCHANAN</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>87904</COUNTY_POP>
+        <COUNTY_FI_RATE>0.134</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>11790</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.490</LOW_PCT>
+        <BTWN_PCT>0.170</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>5636000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.97</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.161</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>3190</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.800</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.200</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29025</FipsCode>
+        <CountyName>CALDWELL</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>9052</COUNTY_POP>
+        <COUNTY_FI_RATE>0.133</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1200</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.590</LOW_PCT>
+        <BTWN_PCT>0.170</BTWN_PCT>
+        <HI_PCT>0.250</HI_PCT>
+        <WT_ANNUAL_DOLLARS>673000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.48</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.142</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>300</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.940</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.060</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29049</FipsCode>
+        <CountyName>CLINTON</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>20503</COUNTY_POP>
+        <COUNTY_FI_RATE>0.110</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2260</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.390</LOW_PCT>
+        <BTWN_PCT>0.130</BTWN_PCT>
+        <HI_PCT>0.480</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1249000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.43</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.118</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>570</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.680</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.330</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29061</FipsCode>
+        <CountyName>DAVIESS</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>8294</COUNTY_POP>
+        <COUNTY_FI_RATE>0.110</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>910</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.560</LOW_PCT>
+        <BTWN_PCT>0.200</BTWN_PCT>
+        <HI_PCT>0.250</HI_PCT>
+        <WT_ANNUAL_DOLLARS>508000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.47</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.120</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>260</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>1.000</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.000</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29063</FipsCode>
+        <CountyName>DEKALB</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>11872</COUNTY_POP>
+        <COUNTY_FI_RATE>0.103</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1230</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.330</LOW_PCT>
+        <BTWN_PCT>0.140</BTWN_PCT>
+        <HI_PCT>0.540</HI_PCT>
+        <WT_ANNUAL_DOLLARS>686000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.47</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.103</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>210</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.840</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.160</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29075</FipsCode>
+        <CountyName>GENTRY</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>6576</COUNTY_POP>
+        <COUNTY_FI_RATE>0.124</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>810</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.480</LOW_PCT>
+        <BTWN_PCT>0.190</BTWN_PCT>
+        <HI_PCT>0.330</HI_PCT>
+        <WT_ANNUAL_DOLLARS>418000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.21</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.115</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>190</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.960</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.040</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29079</FipsCode>
+        <CountyName>GRUNDY</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>9885</COUNTY_POP>
+        <COUNTY_FI_RATE>0.139</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1370</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.530</LOW_PCT>
+        <BTWN_PCT>0.190</BTWN_PCT>
+        <HI_PCT>0.280</HI_PCT>
+        <WT_ANNUAL_DOLLARS>761000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.45</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.136</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>330</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.900</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.110</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29081</FipsCode>
+        <CountyName>HARRISON</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>8427</COUNTY_POP>
+        <COUNTY_FI_RATE>0.159</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1340</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.610</LOW_PCT>
+        <BTWN_PCT>0.230</BTWN_PCT>
+        <HI_PCT>0.170</HI_PCT>
+        <WT_ANNUAL_DOLLARS>690000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.20</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.176</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>360</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.920</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.080</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29087</FipsCode>
+        <CountyName>HOLT</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>4374</COUNTY_POP>
+        <COUNTY_FI_RATE>0.111</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>490</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.490</LOW_PCT>
+        <BTWN_PCT>0.290</BTWN_PCT>
+        <HI_PCT>0.220</HI_PCT>
+        <WT_ANNUAL_DOLLARS>256000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.24</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.123</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>110</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>1.000</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.000</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29117</FipsCode>
+        <CountyName>LIVINGSTON</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>14969</COUNTY_POP>
+        <COUNTY_FI_RATE>0.116</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>1730</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.450</LOW_PCT>
+        <BTWN_PCT>0.170</BTWN_PCT>
+        <HI_PCT>0.380</HI_PCT>
+        <WT_ANNUAL_DOLLARS>840000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.02</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.112</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>350</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.920</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.080</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29129</FipsCode>
+        <CountyName>MERCER</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>3623</COUNTY_POP>
+        <COUNTY_FI_RATE>0.111</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>400</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.530</LOW_PCT>
+        <BTWN_PCT>0.230</BTWN_PCT>
+        <HI_PCT>0.240</HI_PCT>
+        <WT_ANNUAL_DOLLARS>191000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>2.96</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.099</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>90</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>1.000</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.000</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29147</FipsCode>
+        <CountyName>NODAWAY</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>22199</COUNTY_POP>
+        <COUNTY_FI_RATE>0.121</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>2680</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.570</LOW_PCT>
+        <BTWN_PCT>0.200</BTWN_PCT>
+        <HI_PCT>0.240</HI_PCT>
+        <WT_ANNUAL_DOLLARS>1391000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.22</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.124</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>440</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.940</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.060</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+      <LocalFindings>
+        <FipsCode>29227</FipsCode>
+        <CountyName>WORTH</CountyName>
+        <State>MO</State>
+        <COUNTY_POP>2001</COUNTY_POP>
+        <COUNTY_FI_RATE>0.128</COUNTY_FI_RATE>
+        <COUNTY_POP_FI>260</COUNTY_POP_FI>
+        <LOW_TH>1.300</LOW_TH>
+        <LOW_TH_PROGS>SNAP</LOW_TH_PROGS>
+        <HI_TH>1.850</HI_TH>
+        <HI_TH_PROGS>Other Nutrition Program</HI_TH_PROGS>
+        <LOW_PCT>0.480</LOW_PCT>
+        <BTWN_PCT>0.120</BTWN_PCT>
+        <HI_PCT>0.400</HI_PCT>
+        <WT_ANNUAL_DOLLARS>135000</WT_ANNUAL_DOLLARS>
+        <COST_PER_MEAL>3.23</COST_PER_MEAL>
+        <CHILD_FI_PCT>0.172</CHILD_FI_PCT>
+        <CHILD_FI_COUNT>70</CHILD_FI_COUNT>
+        <CHILD_FI_BELOW_PCT>0.800</CHILD_FI_BELOW_PCT>
+        <CHILD_FI_ABOVE_PCT>0.200</CHILD_FI_ABOVE_PCT>
+      </LocalFindings>
+    </ListFipsCounty>
+    <ListPDOs />
+    <POP_COUNT>347313</POP_COUNT>
+    <FI_AGGREGATE>0.116</FI_AGGREGATE>
+    <PUBLIC_FI>40320</PUBLIC_FI>
+    <WT_ANNUAL_DOLLARS>0</WT_ANNUAL_DOLLARS>
+    <COST_PER_MEAL>0.00</COST_PER_MEAL>
+    <Twitter>https://twitter.com/Second_Harvest</Twitter>
+    <FaceBook>https://www.facebook.com/sec.harv</FaceBook>
+    <SocialUrls>
+      <Facebook>https://www.facebook.com/sec.harv/</Facebook>
+      <Twitter>Second_Harvest</Twitter>
+      <LinkedIn />
+      <Youtube />
+      <Pinterest />
+      <DonateUrl>https://www.shcfb.org/get-involved/donate/</DonateUrl>
+      <WebUrl />
+    </SocialUrls>
+    <LogoUrls>
+      <FoodBankLocator>https://foodbanklogos.blob.core.windows.net/foodbanklogos/FoodBankLogo_193_275w.jpg</FoodBankLocator>
+      <OnlineMarketPlace />
+      <SecureConvioMain>https://foodbanklogos.blob.core.windows.net/foodbanklogos/FoodBankLogo_193_275w.jpg</SecureConvioMain>
+    </LogoUrls>
+    <AgencyURL>https://www.shcfb.org/what-we-do/partner-agencies.html</AgencyURL>
+    <VolunteerURL>https://www.shcfb.org/get-involved/volunteer.html</VolunteerURL>
+    <VolunteerPhone> </VolunteerPhone>
+    <CHILD_FI_COUNT>11100</CHILD_FI_COUNT>
+    <CHILD_FI_PCT>0.142</CHILD_FI_PCT>
+    <CHILD_FI_BELOW_PCT>0.741</CHILD_FI_BELOW_PCT>
+    <CHILD_FI_ABOVE_PCT>0.259</CHILD_FI_ABOVE_PCT>
+    <EntityID>148</EntityID>
+    <OrganizationID>193</OrganizationID>
+    <FullName>Second Harvest Community Food Bank</FullName>
+    <MailAddress>
+      <BeginDt>0001-01-01T00:00:00</BeginDt>
+      <EndDt xsi:nil="true" />
+      <UpdateDt>0001-01-01T00:00:00</UpdateDt>
+      <UpdateUserID xsi:nil="true" />
+      <AddressID>148</AddressID>
+      <Longitude>-94.848303</Longitude>
+      <Latitude>39.783241</Latitude>
+      <Address1>915 Douglas</Address1>
+      <Address2 />
+      <City>St. Joseph</City>
+      <State>MO</State>
+      <Zip>64505</Zip>
+      <FullZip>64505</FullZip>
+    </MailAddress>
+    <Phone>816.364.3663</Phone>
+    <Fax>816.364.6404</Fax>
+    <Type>MBR</Type>
+    <Region>North</Region>
+    <DistributionFlag>false</DistributionFlag>
+    <URL>www.shcfb.org/</URL>
+    <DemographicStats>
+      <NumberOfCounties xsi:nil="true" />
+    </DemographicStats>
+    <OperationsStats>
+      <VolunteerHours xsi:nil="true" />
+    </OperationsStats>
+    <FoodDistributionProgStats>
+      <PreparedFoods xsi:nil="true" />
+      <FreshProduce xsi:nil="true" />
+      <Fish xsi:nil="true" />
+      <RepackBulk xsi:nil="true" />
+      <Salvage xsi:nil="true" />
+      <MobilePantry xsi:nil="true" />
+      <BrownBag xsi:nil="true" />
+      <PurchaseProgram xsi:nil="true" />
+      <TefapProgram xsi:nil="true" />
+      <CsfpProgram xsi:nil="true" />
+      <DisasterProgram xsi:nil="true" />
+      <DeliveryProgram xsi:nil="true" />
+      <AfterSchoolSnacks xsi:nil="true" />
+      <CACFP xsi:nil="true" />
+      <CommunityKitchen xsi:nil="true" />
+      <NonFoodDistribution xsi:nil="true" />
+      <PantryShopping xsi:nil="true" />
+      <ProductionKitchen xsi:nil="true" />
+      <SFSP xsi:nil="true" />
+      <OtherService />
+      <SeniorCongregate xsi:nil="true" />
+      <SeniorMealDelivery xsi:nil="true" />
+      <Composting xsi:nil="true" />
+      <Grower xsi:nil="true" />
+      <SchoolPantries xsi:nil="true" />
+      <WIC xsi:nil="true" />
+      <Reclamation xsi:nil="true" />
+      <OnSiteClientPantry xsi:nil="true" />
+      <OnSiteAgencyShopping xsi:nil="true" />
+      <OnSiteCongregateFeeding xsi:nil="true" />
+      <MealsOnWheels xsi:nil="true" />
+      <FarmOrchardRaiseFish xsi:nil="true" />
+      <CommunityGarden xsi:nil="true" />
+    </FoodDistributionProgStats>
+    <ClientSupportProgStats>
+      <EligibilityCounselng xsi:nil="true" />
+      <FoodStampOutreach xsi:nil="true" />
+      <JobTraining xsi:nil="true" />
+      <LegalAssistance xsi:nil="true" />
+      <NutritionEducation xsi:nil="true" />
+      <ShortTermFinAssist xsi:nil="true" />
+      <UtilityHeatAssistance xsi:nil="true" />
+      <HousingAssistance xsi:nil="true" />
+    </ClientSupportProgStats>
+    <NationalProgStats>
+      <BackPack xsi:nil="true" />
+      <KidsCafes xsi:nil="true" />
+    </NationalProgStats>
+    <PoundageStats>
+      <TotalPoundage>9819441</TotalPoundage>
+      <Meals>8121319</Meals>
+      <ShowMeals>true</ShowMeals>
+    </PoundageStats>
+    <AgenciesServedStats>
+      <EmergencyBox xsi:nil="true" />
+      <SoupKitchens xsi:nil="true" />
+      <Shelters xsi:nil="true" />
+      <Residential xsi:nil="true" />
+      <DayCare xsi:nil="true" />
+      <MultiService xsi:nil="true" />
+      <Senior xsi:nil="true" />
+      <Rehabilitation xsi:nil="true" />
+      <YouthPrograms xsi:nil="true" />
+      <Other xsi:nil="true" />
+    </AgenciesServedStats>
+    <SubType>FB</SubType>
+    <ED>
+      <BeginDt>2008-10-10T00:00:00</BeginDt>
+      <EndDt xsi:nil="true" />
+      <UpdateDt>2023-01-23T19:06:00.15</UpdateDt>
+      <UpdateUserID xsi:nil="true" />
+      <EntityID>162</EntityID>
+      <FirstName>Chad</FirstName>
+      <LastName>Higdon</LastName>
+      <FullName>Chad Higdon</FullName>
+      <LegalName>Higdon, Chad </LegalName>
+      <Gender>Male</Gender>
+      <Title>Chief Executive Officer</Title>
+      <Phone1main>8163643663</Phone1main>
+      <Phone1ext>          </Phone1ext>
+      <Phone1>816.364.3663</Phone1>
+      <Fax>816.364.6404</Fax>
+      <Email>chigdon@shcfb.org</Email>
+      <OrganizationEntityID>193</OrganizationEntityID>
+    </ED>
+    <MediaContact>
+      <BeginDt>2008-10-10T00:00:00</BeginDt>
+      <EndDt xsi:nil="true" />
+      <UpdateDt>2023-01-23T19:06:00.15</UpdateDt>
+      <UpdateUserID xsi:nil="true" />
+      <EntityID>372</EntityID>
+      <FirstName>Michelle</FirstName>
+      <LastName>Fagerstone</LastName>
+      <FullName>Michelle Fagerstone</FullName>
+      <LegalName>Fagerstone, Michelle </LegalName>
+      <Gender>Male</Gender>
+      <Title>Chief Development Officer</Title>
+      <Phone1main>(816) 3643663</Phone1main>
+      <Phone1ext>208       </Phone1ext>
+      <Phone1>(81.6) .3643 X208       </Phone1>
+      <Fax>816.364.6404</Fax>
+      <Email>mfagerstone@shcfb.org</Email>
+      <OrganizationEntityID>193</OrganizationEntityID>
+    </MediaContact>
+  </Organization>
+</ArrayOfOrganization>
