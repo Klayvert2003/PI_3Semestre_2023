@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login as login_django
 from django.contrib.auth.decorators import login_required
 from database.conexao import ConexaoMongoDB
 from api.correiosAPI import BuscaCEP
+from api.GoogleMapsAPI import GoogleMapsAPI
 
 conexao = ConexaoMongoDB()
 
@@ -66,6 +67,19 @@ def cep(request):
     # então é retornado o html pronto com os dados da API
     if cep:
         return render(request, 'novo_cep.html')
+     
+def MapsAPI(request):
+    if request.method == 'GET':
+        return render(request, 'localizacao.html')
+    
+    search = request.POST.get('search')
+    try:
+        GoogleMapsAPI()
+    except:
+        return HttpResponse('Endereço inválido!!!')
+    
+    if search:
+        return render(request, 'nova_localizacao.html')
 
 @login_required(login_url='/auth/login')
 def home(request):
