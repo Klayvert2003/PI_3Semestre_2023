@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aqui é a home</title>
+  </head>
+  <body>
+  </body>
+</html>
+
+     
+def testeMapsAPI(request):
+    if request.method == 'GET':
+        return render(request, 'teste.html')
+    
+    search = request.POST.get('search')
+    # try:
+    GoogleMapsAPI.buscar_endereco()
+    return HttpResponse(GoogleMapsAPI.buscar_endereco())
+    # except:
+    #     return HttpResponse('Endereço inválido!!!')
