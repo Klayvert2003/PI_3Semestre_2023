@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login as login_django
 from django.contrib.auth.decorators import login_required
 from database.conexao import ConexaoMongoDB
 from api.correiosAPI import BuscaCEP
+from api.GoogleMapsAPI import GoogleMapsAPI
 
 conexao = ConexaoMongoDB()
 
@@ -48,7 +49,7 @@ def login(request):
         if user:
             login_django(request, user)
 
-            return HttpResponse('Autenticado')
+            return render(request, 'home.html')
         else:
             return HttpResponse('Email ou senha inválidos')
         
@@ -70,4 +71,4 @@ def cep(request):
 @login_required(login_url='/auth/login')
 def home(request):
     if request.user.is_authenticated:
-        return HttpResponse('home')
+        return render(request, 'home.html')
