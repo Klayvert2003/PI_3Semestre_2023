@@ -5,7 +5,6 @@ from django.contrib.auth import authenticate, login as login_django
 from django.contrib.auth.decorators import login_required
 from database.conexao import ConexaoMongoDB
 from api.correiosAPI import BuscaCEP
-from api.GoogleMapsAPI import GoogleMapsAPI
 
 conexao = ConexaoMongoDB()
 

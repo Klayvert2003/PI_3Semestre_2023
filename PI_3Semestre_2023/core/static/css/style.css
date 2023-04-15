@@ -1,6 +1,6 @@
 /* Estilos para o formulário de login */
 form {
-    background-color: #7e6ec5;
+    background-color: #f4f817;
     border: 5px solid #000000;
     margin: 50px auto;
     padding: 20px;
@@ -29,7 +29,7 @@ form {
 
   body {
     font-family: Arial, sans-serif;
-    background-color: #5734f3;
+    background-color: #F5372A;;
     margin: 0;
     padding: 0;
   }
@@ -39,6 +39,7 @@ form {
     color: #000000;
     margin-top: 0;
   }
+
 
   label { 
     display: block;
@@ -59,7 +60,7 @@ form {
 
   button {
     display: block;
-    background-color: #2332fc;
+    background-color: #ff0000;
     color: #ffffff;
     padding: 10px;
     border: none;
@@ -71,10 +72,34 @@ form {
 
   button.form-input {
     display: block;
-    background-color: #2332fc;
+    background-color: #ff0000;
     color: #ffffff;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+footer {
+  background-color: #F5372A;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
