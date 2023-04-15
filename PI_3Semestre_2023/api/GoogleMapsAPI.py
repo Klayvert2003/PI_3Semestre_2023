@@ -1,11 +1,14 @@
 import requests
 import math
+import os
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
 
+load_dotenv()
 class GoogleMapsAPI():
     def __init__(self, api_key='', url='', calcula_distancia=False):
         self.url = url or 'https://maps.googleapis.com/maps/api/geocode/json' # URL requisição
-        self.api_key = api_key or 'AIzaSyBeah7e05jIyAyfdwqhwOKobmW56OiFDDE' # Chave da API
+        self.api_key = api_key or os.getenv('API_KEY') # Chave da API
         self.calcula_distancia = calcula_distancia # Se for True executa a função CalculaDistancia
 
         if self.calcula_distancia:
