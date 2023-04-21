@@ -3,8 +3,11 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as login_django
 from django.contrib.auth.decorators import login_required
+from bs4 import BeautifulSoup
+# My functions
 from database.conexao import ConexaoMongoDB
 from api.correiosAPI import BuscaCEP
+from api.GoogleMapsAPI import GoogleMapsAPI
 
 def cadastro(request):
     if request.method == 'GET':
@@ -66,16 +69,28 @@ def cep(request):
     if cep:
         return render(request, 'novo_cep.html')
      
-def MapsAPI(request):
+def MapsAPI(request, input_address=''):
     if request.method == 'GET':
         return render(request, 'localizacao.html')
     
-    # search = request.POST.get('search')
-    # try:
-    #     GoogleMapsAPI()
-    # except:
-    #     return HttpResponse('Endereço inválido!!!')
-    
+    client = GoogleMapsAPI()
+    input_address = request.POST.get('search')
+
+    try:
+        enderecos = client.buscar_endereco(address=input_address)
+
+        with open('core/templates/localizacao.html', 'r') as file:
+            html = file.read()
+
+            soup = BeautifulSoup(html, 'html.parser')
+            soup.find('input', {'id': 'search'}).attrs['value'] = enderecos[0]['formatted_address']
+
+        with open('core/templates/nova_localizacao.html', 'w') as file:
+            html = file.write(str(soup.prettify()))
+
+        return render(request, 'nova_localizacao.html')
+    except IndexError:
+        return HttpResponse('Endereço Inválido')
 
 @login_required(login_url='/auth/login')
 def home(request):
