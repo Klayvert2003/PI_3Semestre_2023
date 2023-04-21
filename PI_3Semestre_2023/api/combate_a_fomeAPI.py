@@ -1,5 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
+import pymongo
+
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+db = client["Locations"]
+collection = db["Address"]
 
 """states: AK – Alasca, AL - Alabama, AR - Arkansas, AZ - Arizona, CA - Califórnia, CO - Colorado, CT - Connecticut, DE - Delaware, FL - Flórida, GA - Geórgia, HI - Havaí, IA - Iowa, ID - Idaho, IL - Illinois, IN - Indiana, KS - Kansas, KY - Kentucky, LA - Louisiana, MA - Massachusetts, MD - Maryland, ME - Maine, MI - Michigan, MN - Minnesota, MO - Missouri, MS - Mississippi, MT - Montana, NC - Carolina do Norte, ND - Dakota do Norte, NE - Nebraska, NH - Nova Hampshire, NJ - Nova Jérsei, NM - Novo México, NV - Nevada, NY - Nova Iorque, OH - Ohio, OK - Oklahoma, OR - Oregon, PA - Pensilvânia, RI - Rhode Island, SC - Carolina do Sul, SD - Dakota do Sul, TN - Tennessee, TX - Texas, UT - Utah, VA - Virgínia, VT - Vermont, WA - Washington, WI - Wisconsin, WV - Virgínia Ocidental, WY - Wyoming"""
 
@@ -49,5 +54,13 @@ for state in states:
 
                 print(f'\nA agência é {foodbank_formated}, o site da agência é {agency_formated} e o CEP é {zipcode_formated}')
                 print(f'Para fazer uma doação acesse o site: {donate_url_formated}\n')
+                data = {
+                    'USA-FoodBanks': True,
+                    'agencia': agency_formated,
+                    'nome_foodbank': foodbank_formated,
+                    'cep': zipcode_formated,
+                    'link_donate': donate_url_formated
+                }
+                collection.insert_one(data)
         except:
             print('Não foi possível encontar o zip code')
