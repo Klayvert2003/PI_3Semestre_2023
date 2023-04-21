@@ -1,58 +1,55 @@
-import requests
+import googlemaps
 import math
 import os
-from bs4 import BeautifulSoup
+
 from dotenv import load_dotenv
 
 load_dotenv()
 class GoogleMapsAPI():
-    def __init__(self, api_key='', url='', calcula_distancia=False):
-        self.url = url or 'https://maps.googleapis.com/maps/api/geocode/json' # URL requisição
+    def __init__(self, api_key='', calcula_distancia=False):
         self.api_key = api_key or os.getenv('API_KEY') # Chave da API
-        self.calcula_distancia = calcula_distancia # Se for True executa a função CalculaDistancia
+        self.calcula_distancia = True if calcula_distancia else False # Se for True executa a função CalculaDistancia
 
-        if self.calcula_distancia:
-            def CalculaDistancia(address):
-                response = requests.get(f"{url}?address={address}&key={api_key}")
-                data = response.json()
-                lat1 = data['results'][0]['geometry']['location']['lat']
-                lon1 = data['results'][0]['geometry']['location']['lng']
-                lat2 = -23.5514788
-                lon2 = -46.697471
+    def buscar_endereco(self, address):
+        gmaps = googlemaps.Client(key=self.api_key)
+        geocode_result = gmaps.geocode(address)
 
-                R = 6371e3  # raio médio da Terra em metros
-                phi1 = math.radians(float(lat1))
-                phi2 = math.radians(lat2)
-                deltaPhi = math.radians(lat2 - float(lat1))
-                deltaLambda = math.radians(lon2 - float(lon1))
+        results = []
+        for result in geocode_result:
+            location = result['geometry']['location']
+            latitude = location['lat']
+            longitude = location['lng']
+            result_dict = {
+                'formatted_address': result['formatted_address'],
+                'latitude': latitude,
+                'longitude': longitude,
+                'location_type': result['geometry']['location_type'],
+                'viewport': result['geometry']['viewport'],
+                'types': result['types']
+            }
+            results.append(result_dict)
+        return results
 
-                a = math.sin(deltaPhi / 2) * math.sin(deltaPhi / 2) + \
-                    math.cos(phi1) * math.cos(phi2) * \
-                    math.sin(deltaLambda / 2) * math.sin(deltaLambda / 2)
-                c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    def CalculaDistancia(self, address):
+        gmaps = googlemaps.Client(key=self.api_key)
+        geocode_result = gmaps.geocode(address)
 
-                distancia = R * c / 1000
-                distancia_aprox = round(distancia, 1)
-                print(distancia_aprox)
+        lat1 = geocode_result['results'][0]['geometry']['location']['lat']
+        lon1 = geocode_result['results'][0]['geometry']['location']['lng']
+        lat2 = -23.5514788
+        lon2 = -46.697471
 
-        else:
-            def buscar_endereco(address):
-                response = requests.get(f"{self.url}?address={address}&key={self.api_key}")
+        R = 6371e3  # raio médio da Terra em metros
+        phi1 = math.radians(float(lat1))
+        phi2 = math.radians(lat2)
+        deltaPhi = math.radians(lat2 - float(lat1))
+        deltaLambda = math.radians(lon2 - float(lon1))
 
-                if response.status_code == 200:
-                    data = response.json()
-                    formatted_address = data['results'][0]['formatted_address']
-                    
-                    with open('../core/templates/localizacao.html', 'r') as file:
-                        html = file.read()
+        a = math.sin(deltaPhi / 2) * math.sin(deltaPhi / 2) + \
+            math.cos(phi1) * math.cos(phi2) * \
+            math.sin(deltaLambda / 2) * math.sin(deltaLambda / 2)
+        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
-                    soup = BeautifulSoup(html, 'html.parser')
-                    soup.find('input', {'id': 'search'}).attrs['value'] = formatted_address
-
-                    with open('../core/templates/nova_localizacao.html', 'w') as file:
-                        html = file.write(str(soup.prettify()))
-                        file.close()
-                else:
-                    print('Não foi possível obter os dados.')
-                return address
-                    
+        distancia = R * c / 1000
+        distancia_aprox = round(distancia, 1)
+        print(distancia_aprox)
