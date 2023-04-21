@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as login_django
 from django.contrib.auth.decorators import login_required
+# from core.models import Address
 from bs4 import BeautifulSoup
 # My functions
 from database.conexao import ConexaoMongoDB
@@ -78,6 +79,13 @@ def MapsAPI(request, input_address=''):
 
     try:
         enderecos = client.buscar_endereco(address=input_address)
+        # rua = str(enderecos[0]['formatted_address']).split('-')[0]
+        # bairro = str(enderecos[0]['formatted_address']).split('-')[1].split(',')[0]
+        # cidade = str(enderecos[0]['formatted_address']).split('-')[1].split(',')[1]
+        # cep = str(enderecos[0]['formatted_address']).split(',')[2]
+
+        # db_addres = Address(rua=rua, bairro=bairro, cidade=cidade, cep=cep)
+        # db_addres.save()
 
         with open('core/templates/localizacao.html', 'r') as file:
             html = file.read()
