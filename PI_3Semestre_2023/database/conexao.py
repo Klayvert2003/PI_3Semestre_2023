@@ -1,6 +1,8 @@
 import pymongo
 
 class ConexaoMongoDB():
-    my_client = pymongo.MongoClient('mongodb://localhost:27017')
-    db_name = my_client['Users']
-    collection = db_name['Credentials']
+    def __init__(self, locations=False):
+        self.my_client = pymongo.MongoClient('mongodb://localhost:27017')
+        self.db_name = 'Locations' if locations else 'Users'
+        self.collection_name = 'Address' if locations else 'Credentials'
+        self.collection = self.my_client[self.db_name][self.collection_name]
