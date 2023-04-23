@@ -5,12 +5,12 @@
     <link rel="stylesheet" href="../static/css/style.css">
   </head>
   <body>
-    <form action=" {% url 'cep' %} " method="POST">{% csrf_token %}
+    <form action=" {% url 'maps' %} " method="POST">{% csrf_token %}
       <h1>Cadastrar Endereço</h1>
       <div>
-        <label>CEP:</label>
-        <input id="cep" name="cep" class="form-input">
-        <button type="submit" onclick="buscar_endereco()" class="submit-button">Buscar Endereço</button>
+        <label>Endereço:</label>
+        <input id="search" name="search" class="form-input">
+        <button type="submit" onclick="MapsAPI()" class="submit-button">Buscar Endereço</button>
       </div>
       <br>
       <div>

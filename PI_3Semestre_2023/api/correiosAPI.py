@@ -26,7 +26,7 @@ class BuscaCEP():
             soup.find('input', {'id': 'bairro'}).attrs['value'] = bairro
             soup.find('input', {'id': 'cidade'}).attrs['value'] = cidade
 
-            with open('core/templates/novo_cep.html', 'w') as file:
+            with open('core/templates/novo_cep.html', 'w', encoding='UTF-8') as file:
                 html = file.write(str(soup.prettify()))
                 file.close()
         else:
