@@ -7,5 +7,5 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('', RedirectView.as_view(url='/auth/login')),
+    path('', RedirectView.as_view(url='/home')),
 ]
