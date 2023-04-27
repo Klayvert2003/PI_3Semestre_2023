@@ -3,10 +3,9 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as login_django
 from django.contrib.auth.decorators import login_required
-# from core.models import Address
+from core.models import Address
 from bs4 import BeautifulSoup
 # My functions
-from database.conexao import ConexaoMongoDB
 from api.correiosAPI import BuscaCEP
 from api.GoogleMapsAPI import GoogleMapsAPI
 
@@ -15,8 +14,24 @@ def cadastro(request):
         return render(request, 'cadastro.html')
     else:   
         email = request.POST.get('email')     
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+        username = request.POST.get('usuario')
+        password = request.POST.get('senha')
+        confirm_password = request.POST.get('confirma-senha')
+        if password != confirm_password:
+            return HttpResponse('Senhas divergentes, digite a senha idêntica a inserida anteriormente')
+        
+        nome_instituicao = request.POST.get('nome-instituicao')
+        # cnpj = request.POST.get('cnpj')
+        cep = request.POST.get('cep')
+        rua = request.POST.get('rua')
+        numero = request.POST.get('numero')
+        bairro = request.POST.get('bairro')
+        cidade = request.POST.get('cidade')
+        complemento = request.POST.get('complemento')
+        estado = request.POST.get('estado')
+
+        address = Address.objects.create(nome_instituicao=nome_instituicao, cep=cep, 
+        rua=rua, numero=numero, bairro=bairro, cidade=cidade, complemento=complemento, estado=estado)
         
         user = User.objects.filter(email=email).first()
 
@@ -24,18 +39,6 @@ def cadastro(request):
             return HttpResponse('Já existe um usuário com este email!!!')
         
         user = User.objects.create_user(username=username, email=email, password=password)
-
-        try: # Tratativa para serviço de MongoDB não inicializado
-            credentials = {
-                "user": user.username, 
-                "email": user.email, 
-                "password": user.password,
-                "date_joined": user.date_joined
-            }
-            conexao = ConexaoMongoDB()
-            conexao.collection.insert_one(credentials)
-        except:
-            return HttpResponse("Serviço de MongoDB não inicializado!!!")
 
         return HttpResponse("Usuário cadastrado!")
 
@@ -100,7 +103,7 @@ def MapsAPI(request, input_address=''):
     except IndexError:
         return HttpResponse('Endereço Inválido')
 
-@login_required(login_url='/auth/login')
+# @login_required(login_url='/auth/login')
 def home(request):
-    if request.user.is_authenticated:
-        return render(request, 'home.html')
+    # if request.user.is_authenticated:
+    return render(request, 'home.html')

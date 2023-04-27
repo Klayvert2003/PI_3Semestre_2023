@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/css/style_cadastro.css">
+  <link rel="stylesheet" href="./css/style_cadastro.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <title>Cadastro</title>
 
@@ -38,13 +38,13 @@
           </ul>
         </nav>
       </div>
-      <img class="logo" src="../static/assets/fome.png" alt="">
+      <img class="logo" src="./assets/fome.png" alt="">
     </header>
   </div>
   <div class="row-form">
     <div class="container">
       <h1>Cadastro</h1>
-      <form action="#" method="POST">{% csrf_token %}
+      <form action="#" method="post">
         <div>
           <label for="nome-instituicao">Nome da Instituição:</label>
           <input type="text" id="nome-instituicao" name="nome-instituicao" required>
