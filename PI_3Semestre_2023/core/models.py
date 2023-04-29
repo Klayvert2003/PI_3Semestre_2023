@@ -2,7 +2,7 @@ from django.db import models
 
 class Address(models.Model):
     nome_instituicao = models.CharField('Nome_Instituição', max_length=100)
-    cnpj = models.IntegerField('CNPJ', max_length=18)
+    cnpj = models.IntegerField('CNPJ')
     cep = models.IntegerField('CEP')
     rua = models.CharField('Rua', max_length=100)
     numero = models.IntegerField('Número')
