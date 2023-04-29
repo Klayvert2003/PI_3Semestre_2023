@@ -1,7 +1,8 @@
+from django.views import View
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login as login_django
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 # My functions
 from core.models import DadosInstituicao, DadosUsuarios
@@ -24,10 +25,11 @@ def get_cnpj(cnpj):
 
     return dados
 
-def cadastro_instituicao(request):
-    if request.method == 'GET':
+class CadastroInstituicaoView(View):
+    def get(self, request):
         return render(request, 'cadastro-instituicao.html')
-    else:   
+        
+    def post(self, request): 
         nome_instituicao = request.POST.get('nome-completo')     
         cep = request.POST.get('cep')
         if cep:
@@ -63,10 +65,11 @@ def cadastro_instituicao(request):
 
         return HttpResponse("Usuário cadastrado!")
 
-def cadastro_usuario(request):
-    if request.method == 'GET':
+class CadastroUsuarioView(View):
+    def get(self, request):
         return render(request, 'cadastro-usuario.html')
-    else:
+    
+    def post(self, request):
         nome_completo = request.POST.get('nome-completo')     
         cep = request.POST.get('cep')
         if cep:
@@ -95,17 +98,18 @@ def cadastro_usuario(request):
 
         return HttpResponse("Usuário cadastrado!")
 
-def login(request):
-    if request.method == 'GET':
+class LoginView(View):
+    def get(self, request):
         return render(request, 'login.html')
-    else:
+        
+    def post(self, request):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
         user = authenticate(username=username, password=password)
 
         if user:
-            login_django(request, user)
+            login(request, user)
 
             return render(request, 'home.html')
         else:
