@@ -6,12 +6,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 class GoogleMapsAPI():
-    def __init__(self, api_key='', calcula_distancia=False):
-        self.api_key = api_key or os.getenv('API_KEY') # Chave da API
+    def __init__(self, calcula_distancia=False):
         self.calcula_distancia = True if calcula_distancia else False # Se for True executa a função CalculaDistancia
 
-    def buscar_endereco(self, address):
-        gmaps = googlemaps.Client(key=self.api_key)
+    def buscar_endereco(address):
+        gmaps = googlemaps.Client(key=os.getenv('API_KEY'))
         geocode_result = gmaps.geocode(address)
 
         results = []
