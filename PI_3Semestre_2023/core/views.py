@@ -1,3 +1,5 @@
+from email.policy import HTTP
+from http.client import HTTPResponse
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
@@ -9,36 +11,58 @@ from bs4 import BeautifulSoup
 from api.correiosAPI import BuscaCEP
 from api.GoogleMapsAPI import GoogleMapsAPI
 
-def cadastro(request):
+def cadastro_instituicao(request):
     if request.method == 'GET':
-        return render(request, 'cadastro.html')
+        return render(request, 'cadastro-instituicao.html')
     else:   
-        email = request.POST.get('email')     
-        username = request.POST.get('usuario')
+        nome_completo = request.POST.get('nome-completo')     
+        cep = request.POST.get('cep')
+        cnpj = request.POST.get('cnpj')
+        email = request.POST.get('email')
+        usuario = request.POST.get('usuario')
         password = request.POST.get('senha')
         confirm_password = request.POST.get('confirma-senha')
         if password != confirm_password:
             return HttpResponse('Senhas divergentes, digite a senha idêntica a inserida anteriormente')
-        
-        nome_instituicao = request.POST.get('nome-instituicao')
-        # cnpj = request.POST.get('cnpj')
-        cep = request.POST.get('cep')
-        rua = request.POST.get('rua')
-        numero = request.POST.get('numero')
-        bairro = request.POST.get('bairro')
-        cidade = request.POST.get('cidade')
-        complemento = request.POST.get('complemento')
-        estado = request.POST.get('estado')
 
-        address = Address.objects.create(nome_instituicao=nome_instituicao, cep=cep, 
-        rua=rua, numero=numero, bairro=bairro, cidade=cidade, complemento=complemento, estado=estado)
+        #address = Address.objects.create(nome_instituicao=nome_instituicao, cep=cep, 
+        #rua=rua, numero=numero, bairro=bairro, cidade=cidade, complemento=complemento, estado=estado)
         
         user = User.objects.filter(email=email).first()
-
         if user:
             return HttpResponse('Já existe um usuário com este email!!!')
         
-        user = User.objects.create_user(username=username, email=email, password=password)
+        user = User.objects.create_user(username=usuario, email=email, password=password)
+
+        return HttpResponse("Usuário cadastrado!")
+
+def cadastro_usuario(request):
+    if request.method == 'GET':
+        return render(request, 'cadastro-usuario.html')
+    else:
+        nome_completo = request.POST.get('nome-completo')     
+        cep = request.POST.get('cep')
+        if cep:
+            try:
+                BuscaCEP.buscar_endereco(cep=cep)
+                insere_cep = Address.objects.create()
+            except:
+                return HttpResponse('CEP inválido!!!')
+        email = request.POST.get('email')
+        usuario = request.POST.get('usuario')
+        password = request.POST.get('senha')
+        confirm_password = request.POST.get('confirma-senha')
+        if password != confirm_password:
+            return HttpResponse('Senhas divergentes, digite a senha idêntica a inserida anteriormente')
+
+        #address = Address.objects.create(nome_instituicao=nome_instituicao, cep=cep, 
+        #rua=rua, numero=numero, bairro=bairro, cidade=cidade, complemento=complemento, estado=estado)
+        
+        user = User.objects.filter(email=email).first()
+        if user:
+            return HttpResponse('Já existe um usuário com este email!!!')
+        
+        user = User.objects.create_user(username=usuario, email=email, password=password)
 
         return HttpResponse("Usuário cadastrado!")
 
