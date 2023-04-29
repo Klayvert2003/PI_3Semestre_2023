@@ -3,10 +3,9 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as login_django
 from django.contrib.auth.decorators import login_required
-from bs4 import BeautifulSoup
 # My functions
 from core.models import DadosInstituicao, DadosUsuarios
-from api.correiosAPI import BuscaCEP
+from api.ValidaCNPJ import ValidaCNPJ
 from api.GoogleMapsAPI import GoogleMapsAPI
 
 def get_address(cep):
@@ -20,7 +19,10 @@ def get_address(cep):
     return rua, bairro, cidade, estado
 
 def get_cnpj(cnpj):
-    ...
+    validador = ValidaCNPJ(cnpj=cnpj)
+    dados = validador.BuscaCNPJ()
+
+    return dados
 
 def cadastro_instituicao(request):
     if request.method == 'GET':
@@ -38,10 +40,9 @@ def cadastro_instituicao(request):
         cnpj = request.POST.get('cnpj')
         if cnpj:
             try:
-                cep = str(cnpj).replace('-', '').replace('.', '')
-                get_cnpj(cep=cep)
-            except IndexError:
-                return HttpResponse('Insira apenas números!!!')
+                get_cnpj(cnpj=cnpj)
+            except AttributeError:
+                return HttpResponse('CNPJ Inválido!!!')
 
         email = request.POST.get('email')
         usuario = request.POST.get('usuario')
