@@ -62,6 +62,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 .main-header__menu ul {
+    margin-right: 40px;
     display: flex;
     justify-content: flex-end;
 }
@@ -88,8 +89,9 @@ footer, header, hgroup, menu, nav, section {
 }
 
 .logo {
-  width: 30vh;
-  height: 15vh;
+  margin-left: 20px;
+  width: 40vh;
+  height: 20vh;
   justify-content: flex-end;
   padding-right: 10px;
 }
@@ -235,8 +237,8 @@ h2 {
 
 .login-box-enviar {
   display: inline-block;
-  background: #0e01c5;
-  color: #fff;
+  background: #91e191;
+  color: #024702;
   border: none;
   width: 100%;
   padding: 15px;

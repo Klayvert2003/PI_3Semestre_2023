@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style_cadastro.css">
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css_cadastro_instituicao/style-cadastro-instituicao.css">
   <title>Cadastro</title>
 
 </head>
@@ -15,7 +14,7 @@
   <div class="row-header">
     <header class="main-header">
       <h1 class="main-header__title">
-        <span class="main-header__title--color">Conexão Alimentar</span>
+        <img class="logo" src="../static/assets/fome.jpeg" alt="Logo da Food Connect">  
       </h1>
       <div class="container-menu">
         <nav class="main-header__menu">
@@ -38,49 +37,26 @@
           </ul>
         </nav>
       </div>
-      <img class="logo" src="./assets/fome.png" alt="">
     </header>
   </div>
   <div class="row-form">
     <div class="container">
       <h1>Cadastro</h1>
-      <form action="#" method="post">
+      <form action="{% url 'cadastro-instituicao' %}" method="POST">{% csrf_token %}
         <div>
-          <label for="nome-instituicao">Nome da Instituição:</label>
-          <input type="text" id="nome-instituicao" name="nome-instituicao" required>
+          <label for="nome-completo">Nome Completo:</label>
+          <input type="text" id="nome-completo" name="nome-completo" required>
         </div>
         <div class="form-row">
-          <div class="row-cep">
+          <div>
             <label for="cep">CEP:</label>
-            <input type="text" id="cep" name="cep">
+            <input type="text" id="cep" name="cep" required>
           </div>
-          <div class="row-rua">
-            <label for="rua">Rua:</label>
-            <input type="text" id="rua" name="rua">
+          <div>
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" name="cnpj" required>
           </div>
-          <div class="row-numero">
-            <label for="numero">Número:</label>
-            <input type="text" id="numero" name="numero">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="row-bairro">
-            <label for="bairro">Bairro:</label>
-            <input type="text" id="bairro" name="bairro">
-          </div>
-          <div class="row-cidade">
-            <label for="cidade">Cidade:</label>
-            <input type="text" id="cidade" name="cidade">
-          </div>
-          <div class="row-complemento">
-            <label for="complemento">Complemento:</label>
-            <input type="text" id="complemento" name="complemento">
-          </div>
-          <div class="row-estado">
-            <label for="estado">Estado:</label>
-            <input type="text" id="estado" name="estado">
-          </div>
-        </div>
+        </div>  
         <div>
           <label for="email">E-mail:</label>
           <input type="email" id="email" name="email" required>
@@ -111,7 +87,7 @@
                     <li>Daniel França</li>
                     <li>Douglas Hugo</li>
                     <li>Felipe Vieira</li>
-                    <li>Kleivert Alves</li>
+                    <li>Klayvert Alves</li>
                     <li>Luca Willian Beteghella</li>
                   </ol>
               </p>
