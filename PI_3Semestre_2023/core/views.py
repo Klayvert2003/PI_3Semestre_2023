@@ -9,23 +9,7 @@ from core.models import DadosInstituicao, DadosUsuarios
 from api.ValidaCNPJ import ValidaCNPJ
 from api.GoogleMapsAPI import GoogleMapsAPI
 
-def get_address(cep):
-    address = GoogleMapsAPI
-    data = address.buscar_endereco(address=cep)
-    rua = str(data[0]['formatted_address']).split('-')[0].strip()
-    bairro = str(data[0]['formatted_address']).split('-')[1].split(',')[0].strip()
-    cidade = str(data[0]['formatted_address']).split('-')[1].split(',')[1].strip()
-    estado = str(data[0]['formatted_address']).split('-')[2].split(',')[0].strip()
-
-    return rua, bairro, cidade, estado
-
-def get_cnpj(cnpj):
-    validador = ValidaCNPJ(cnpj=cnpj)
-    dados = validador.BuscaCNPJ()
-
-    return dados
-
-class CadastroInstituicaoView(View):
+class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
     def get(self, request):
         return render(request, 'cadastro-instituicao.html')
         
@@ -35,14 +19,14 @@ class CadastroInstituicaoView(View):
         if cep:
             try:
                 cep = str(cep).replace('-', '').replace('.', '')
-                get_address(cep=cep)
+                address = self.get_address(cep=cep)
             except IndexError:
                 return HttpResponse('Insira apenas números!!!')
             
         cnpj = request.POST.get('cnpj')
         if cnpj:
             try:
-                get_cnpj(cnpj=cnpj)
+                self.BuscaCNPJ(cnpj=cnpj)
             except AttributeError:
                 return HttpResponse('CNPJ Inválido!!!')
 
@@ -54,8 +38,8 @@ class CadastroInstituicaoView(View):
             return HttpResponse('Senhas divergentes, digite a senha idêntica a inserida anteriormente')
 
         dados = DadosInstituicao.objects.create(nome_instituicao=nome_instituicao, cep=cep, cnpj=cnpj, 
-        rua=get_address(cep=cep)[0], bairro=get_address(cep=cep)[1], cidade=get_address(cep=cep)[2], 
-        estado=get_address(cep=cep)[3])
+        rua=address[0], bairro=address[1], cidade=address[2], 
+        estado=address[3])
         
         user = User.objects.filter(email=email).first()
         if user:
@@ -65,7 +49,7 @@ class CadastroInstituicaoView(View):
 
         return HttpResponse("Usuário cadastrado!")
 
-class CadastroUsuarioView(View):
+class CadastroUsuarioView(GoogleMapsAPI, View):
     def get(self, request):
         return render(request, 'cadastro-usuario.html')
     
@@ -75,7 +59,7 @@ class CadastroUsuarioView(View):
         if cep:
             try:
                 cep = str(cep).replace('-', '').replace('.', '')
-                get_address(cep=cep)
+                address = self.get_address(cep=cep)
             except IndexError:
                 return HttpResponse('Insira apenas números!!!')
 
@@ -87,8 +71,8 @@ class CadastroUsuarioView(View):
             return HttpResponse('Senhas divergentes, digite a senha idêntica a inserida anteriormente')
 
         dados = DadosUsuarios.objects.create(nome_usuario=nome_completo, cep=cep, 
-        rua=get_address(cep=cep)[0], bairro=get_address(cep=cep)[1], cidade=get_address(cep=cep)[2], 
-        estado=get_address(cep=cep)[3])
+        rua=address[0], bairro=address[1], cidade=address[2], 
+        estado=address[3])
         
         user = User.objects.filter(email=email).first()
         if user:
