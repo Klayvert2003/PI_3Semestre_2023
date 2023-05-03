@@ -1,0 +1,6 @@
+./__pycache__
+**.pyc
+**.env
+
+# Arquivos dentro da virtualenv python
+venv
