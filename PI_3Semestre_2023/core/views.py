@@ -98,6 +98,11 @@ class LoginView(View):
             return render(request, 'home.html')
         else:
             return HttpResponse('Email ou senha inválidos')
+        
+class InstituicoesView(GoogleMapsAPI, View):
+    def get(self, request):
+        dados = DadosInstituicao.objects.all()
+        return render(request, 'instituicoes.html', {'dados': dados})
 
 # @login_required(login_url='/auth/login')
 def home(request):
