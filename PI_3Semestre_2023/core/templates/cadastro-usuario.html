@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,7 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/css_cadastro_usuario/style-cadastro-usuario.css">
+  <link rel="stylesheet" href="{% static 'css_cadastro_usuario/style-cadastro-usuario.css' %}">
   <title>Cadastro</title>
 
 </head>
@@ -14,19 +15,19 @@
   <div class="row-header">
     <header class="main-header">
       <h1 class="main-header__title">
-        <img class="logo" src="../static/assets/fome.jpeg" alt="Logo da Food Connect">
+        <img class="logo" src="{% static 'assets/fome.jpeg' %}" alt="Logo da Food Connect">
       </h1>
       <div class="container-menu">
         <nav class="main-header__menu">
           <ul>
             <li>
-              <a href="#home" class="nav-link">Home</a>
+              <a href="{% url 'home' %}" class="nav-link">Home</a>
             </li>
             <li>
-              <a href="#instituicoes" class="nav-link">Instituições</a>
+              <a href="{% url 'instituicoes' %}" class="nav-link">Instituições</a>
             </li>
             <li>
-              <a href="#cadastro" class="nav-link">Cadastro</a>
+              <a href="{% url 'cadastro-instituicao' %}" class="nav-link">Cadastro</a>
             </li>
             <li>
               <a href="#sobre" class="nav-link">Sobre nós</a>
@@ -91,11 +92,11 @@
           <address>
               <h2 class="footer__title">Contato</h2>
               <ul>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/danielfransa">danielfransa</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/douglashugo">douglashugo</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Felipe-Vieira-03">Felipe-Vieira-03</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Klayvert2003">Klayvert2003</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/lucabeteghella">lucabeteghella</a> </li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/danielfransa" target="_blank">danielfransa</a></li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/douglashugo" target="_blank">douglashugo</a></li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Felipe-Vieira-03" target="_blank">Felipe-Vieira-03</a></li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Klayvert2003" target="_blank">Klayvert2003</a></li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/lucabeteghella" target="_blank">lucabeteghella</a> </li>
               </ul>
           </address>
       </div>
