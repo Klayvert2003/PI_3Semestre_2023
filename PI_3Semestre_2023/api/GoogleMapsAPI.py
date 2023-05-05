@@ -9,7 +9,7 @@ class GoogleMapsAPI():
     def __init__(self, calcula_distancia=False):
         self.calcula_distancia = True if calcula_distancia else False # Se for True executa a função CalculaDistancia
 
-    def buscar_endereco(self, address):
+    def buscar_endereco(self, address: str)-> str:
         gmaps = googlemaps.Client(key=os.getenv('API_KEY'))
         geocode_result = gmaps.geocode(address)
 
@@ -29,14 +29,16 @@ class GoogleMapsAPI():
             results.append(result_dict)
         return results
     
-    def get_address(self, cep):
+    def get_address(self, cep: str):
         data = self.buscar_endereco(address=cep)
         rua = str(data[0]['formatted_address']).split('-')[0].strip()
         bairro = str(data[0]['formatted_address']).split('-')[1].split(',')[0].strip()
         cidade = str(data[0]['formatted_address']).split('-')[1].split(',')[1].strip()
         estado = str(data[0]['formatted_address']).split('-')[2].split(',')[0].strip()
+        lat = str(data[0]['latitude'])
+        lon = str(data[0]['longitude'])
 
-        return rua, bairro, cidade, estado
+        return rua, bairro, cidade, estado, lat, lon
 
     def CalculaDistancia(self, address):
         gmaps = googlemaps.Client(key=self.api_key)

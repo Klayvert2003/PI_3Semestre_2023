@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
 # My functions
 from core.models import DadosInstituicao, DadosUsuarios
 from api.ValidaCNPJ import ValidaCNPJ
@@ -96,7 +97,9 @@ class LoginView(View):
         if user:
             login(request, user)
 
-            return render(request, 'home-usuario.html')
+            data = list(DadosUsuarios.objects.all().values())
+
+            return JsonResponse(data, safe=False)
         else:
             return HttpResponse('Email ou senha inválidos')
         
@@ -115,3 +118,9 @@ class HomeUsuarios(TemplateView):
     def post(self, request):
         return render(request, 'instituicoes.html')
 
+class teste(GoogleMapsAPI, View):
+    def get(self, request):
+        address = DadosInstituicao.objects.values_list('cep', flat=True).filter()
+        print(address)
+        lat_lon = self.get_address(cep=str(address))
+        return render(request, 'teste.html', {'latitude': lat_lon[4], 'longitude': lat_lon[5]})

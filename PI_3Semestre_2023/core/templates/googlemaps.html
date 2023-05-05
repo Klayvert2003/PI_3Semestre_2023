@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Maps API</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <style>
+    /* Estilo para a janela do mapa */
+    #map-container {
+        border: 1px solid black; /* Define a borda */
+        width: 50%; /* Define a largura */
+        height: 400px; /* Define a altura */
+        float: right; /* Coloca o container à direita */
+        padding: 10px; /* Define o preenchimento interno */
+      }
+      
+      /* Estilo para o mapa */
+      #map {
+        height: 100%;
+      }
+      
+      /* Estilo para o contêiner do mapa */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+  </style>  
+</head>
+<body>
+    <div id="map-container">
+      <div id="map"></div>
+    </div>
+    <!-- Inclua a API do Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt6pYM46xJczDEvdI7dkMWNOhdUmUsRak"></script>
+    <script>
+      function initMap() {
+        // Crie um objeto de mapa e defina a localização e o nível de zoom
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -23.5489, lng: -46.6388},
+          zoom: 15
+        });
+      }
+    </script>
+    <!-- Inicie o mapa -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt6pYM46xJczDEvdI7dkMWNOhdUmUsRak&callback=initMap">
+    </script>
+  </body>
+  
