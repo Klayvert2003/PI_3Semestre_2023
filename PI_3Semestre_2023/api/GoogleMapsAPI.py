@@ -10,7 +10,7 @@ class GoogleMapsAPI():
         self.calcula_distancia = True if calcula_distancia else False # Se for True executa a função CalculaDistancia
 
     def buscar_endereco(self, address):
-        gmaps = googlemaps.Client(key=os.getenv('API_KEY'))
+        gmaps = googlemaps.Client(key='')
         geocode_result = gmaps.geocode(address)
 
         results = []

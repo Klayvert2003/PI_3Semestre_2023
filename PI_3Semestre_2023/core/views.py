@@ -1,5 +1,4 @@
 from django.views import View
-from django.views.generic import TemplateView
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
@@ -96,7 +95,7 @@ class LoginView(View):
         if user:
             login(request, user)
 
-            return render(request, 'home-usuario.html')
+            return render(request, 'home.html')
         else:
             return HttpResponse('Email ou senha inválidos')
         
@@ -105,13 +104,7 @@ class InstituicoesView(GoogleMapsAPI, View):
         dados = DadosInstituicao.objects.all()
         return render(request, 'instituicoes.html', {'dados': dados})
 
-class HomeUsuarios(TemplateView):
-    # @login_required(login_url='/auth/login')
-    def get(self, request):
-        # if request.user.is_authenticated:
-        template_name = 'home-usuario.html'
-        return render(request, template_name)
-        
-    def post(self, request):
-        return render(request, 'instituicoes.html')
-
+# @login_required(login_url='/auth/login')
+def home(request):
+    # if request.user.is_authenticated:
+    return render(request, 'home.html')
