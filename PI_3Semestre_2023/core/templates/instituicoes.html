@@ -7,8 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'css_card_instituicao/style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <title>Instituições</title>
-
 </head>
 
 <body>
@@ -36,56 +38,65 @@
           </ul>
         </nav>
       </div>
-      
     </header>
   </div>
   <div class="conteudo">
     <h1>INSTITUIÇÕES</h1>
-    <form action="{% url 'instituicoes' %}" method="POST">{% csrf_token %}
     <br>
-    {% for dado in dados %}
     <div class="conteudo-card">
-      <div class="card">
-        <h3>{{ dado.nome_instituicao }}</h3>
-        <img src="{% static 'assets/instituicao.jpg' %}" alt="Foto da Instituição">
-        <p>Juntos podemos fazer a diferença! Ajude a combater a fome e o desperdício de alimentos doando para nossa instituição. Cada doação conta e pode mudar a vida de alguém.</p>
-        <input type="button" value="Doe">
+      <form action="{% url 'instituicoes' %}" method="POST">{% csrf_token %}
+        {% for dado in dados %}
+        <div class="card" id="{{ dado.id }}" lat="{{ dado.latitude }}" lon="{{ dado.longitude }}">
+            <h3>{{ dado.nome_instituicao }}</h3>
+            <img src="{% static 'assets/instituicao.jpg' %}" alt="Foto da Instituição">
+            <p>Juntos podemos fazer a diferença! Ajude a combater a fome e o desperdício de alimentos doando para nossa
+              instituição. Cada doação conta e pode mudar a vida de alguém.</p>
+            <input type="button" value="Doe">
+            </div>
+      </form>
+      {% endfor %}
     </div>
   </div>
-  </form>
-  {% endfor %}
-  <div class="row-footer">
-    <footer class="footer">
-      <div class="footer__container">
+  <br>
+  <div>
+    <div class="row-footer">
+      <footer class="footer">
+        <div class="footer__container">
           <section>
-              <h2 class="footer__title">Grupo 3</h2>
-              <p class="footer__about-text">
-                  <ol>
-                    <li>Daniel França</li>
-                    <li>Douglas Hugo</li>
-                    <li>Felipe Vieira</li>
-                    <li>Klayvert Alves</li>
-                    <li>Luca Willian Beteghella</li>
-                  </ol>
-              </p>
+            <h2 class="footer__title">Grupo 3</h2>
+            <p class="footer__about-text">
+            <ol>
+              <li>Daniel França</li>
+              <li>Douglas Hugo</li>
+              <li>Felipe Vieira</li>
+              <li>Klayvert Alves</li>
+              <li>Luca Willian Beteghella</li>
+            </ol>
+            </p>
           </section>
           <address>
-              <h2 class="footer__title">Contato</h2>
-              <ul>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/danielfransa" target="_blank">danielfransa</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/douglashugo" target="_blank">douglashugo</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Felipe-Vieira-03" target="_blank">Felipe-Vieira-03</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Klayvert2003" target="_blank">Klayvert2003</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/lucabeteghella" target="_blank">lucabeteghella</a> </li>
-              </ul>
+            <h2 class="footer__title">Contato</h2>
+            <ul>
+              <li><i class="fa-brands fa-github"></i> <a href="https://github.com/danielfransa"
+                  target="_blank">danielfransa</a></li>
+              <li><i class="fa-brands fa-github"></i> <a href="https://github.com/douglashugo"
+                  target="_blank">douglashugo</a></li>
+              <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Felipe-Vieira-03"
+                  target="_blank">Felipe-Vieira-03</a></li>
+              <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Klayvert2003"
+                  target="_blank">Klayvert2003</a></li>
+              <li><i class="fa-brands fa-github"></i> <a href="https://github.com/lucabeteghella"
+                  target="_blank">lucabeteghella</a> </li>
+            </ul>
           </address>
-      </div>
-      <section class="footer__copyright">
+        </div>
+        <section class="footer__copyright">
           &copy; Todos os direitos reservados
-      </section>
-    </footer>
+        </section>
+      </footer>
+    </div>
   </div>
-
 </body>
 <script src="https://kit.fontawesome.com/e38dd2664d.js" crossorigin="anonymous"></script>
+
 </html>
