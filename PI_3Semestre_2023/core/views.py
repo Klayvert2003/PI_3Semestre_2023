@@ -73,7 +73,7 @@ class CadastroUsuarioView(GoogleMapsAPI, View):
 
         dados = DadosUsuarios.objects.create(nome_usuario=nome_completo, cep=cep, 
         rua=address[0], bairro=address[1], cidade=address[2], 
-        estado=address[3])
+        estado=address[3], latitude=address[4], longitude=address[5])
         
         user = User.objects.filter(email=email).first()
         if user:
