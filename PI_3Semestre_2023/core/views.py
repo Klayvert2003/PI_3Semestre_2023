@@ -1,7 +1,7 @@
 from django.views import View
 from django.views.generic import TemplateView
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
@@ -102,8 +102,13 @@ class LoginView(View):
         
 class InstituicoesView(GoogleMapsAPI, View):
     def get(self, request):
-        dados = DadosInstituicao.objects.all()
-        return render(request, 'instituicoes.html', {'dados': dados})
+        dados = list(DadosInstituicao.objects.all().values())
+        if dados:
+            response = JsonResponse(dados, safe=False)
+            return render(request, 'instituicoes.html', {'dados': dados, 'json': response})
+        else:
+            response = JsonResponse({'mensagem': 'Nenhum dado encontrado.'})
+            return HttpResponse(response, content_type='application/json')
 
 class HomeUsuarios(TemplateView):
     # @login_required(login_url='/auth/login')
