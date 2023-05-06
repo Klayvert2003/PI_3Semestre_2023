@@ -40,7 +40,7 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
 
         dados = DadosInstituicao.objects.create(nome_instituicao=nome_instituicao, cep=cep, cnpj=cnpj, 
         rua=address[0], bairro=address[1], cidade=address[2], 
-        estado=address[3])
+        estado=address[3], latitude=address[4], longitude=address[5])
         
         user = User.objects.filter(email=email).first()
         if user:
@@ -102,13 +102,27 @@ class LoginView(View):
         
 class InstituicoesView(GoogleMapsAPI, View):
     def get(self, request):
-        dados = list(DadosInstituicao.objects.all().values())
+        dados = list(DadosInstituicao.objects.all().values('id', 'latitude', 'longitude'))
         if dados:
             response = JsonResponse(dados, safe=False)
-            return render(request, 'instituicoes.html', {'dados': dados, 'json': response})
+            return render(request, 'instituicoes.html', {'dados': dados})
         else:
             response = JsonResponse({'mensagem': 'Nenhum dado encontrado.'})
             return HttpResponse(response, content_type='application/json')
+
+    def post(self, request):
+        dados = list(DadosInstituicao.objects.all().values('id', 'latitude', 'longitude'))
+        response_list = []
+        for dado in dados:
+            response = {'dados': dado}
+            response_list.append(response)
+        return render(request, 'googlemaps.html', {'dados': response_list})
+
+        
+class Teste(GoogleMapsAPI, TemplateView):
+    def get(self, request):
+        template_name = 'googlemaps.html'
+        return render(request, template_name)
 
 class HomeUsuarios(TemplateView):
     # @login_required(login_url='/auth/login')
