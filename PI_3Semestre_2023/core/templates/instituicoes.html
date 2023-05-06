@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <title>Instituições</title>
-
 </head>
 
 <body>
@@ -42,14 +41,6 @@
 
     </header>
   </div>
-  <script>
-    fetch('instituicoes')
-        .then(response => response.json())
-        .then(data => {
-            // faça o que quiser com o JSON aqui
-            console.log(data);
-        });
-  </script>
   <div class="conteudo">
     <h1>INSTITUIÇÕES</h1>
     <br>
@@ -57,15 +48,16 @@
       <form action="{% url 'instituicoes' %}" method="POST">
         {% csrf_token %}
         {% for dado in dados %}
-        <div class="card" id="{{ dado.id }}" value="{{ dado.cep }}">
+        <div class="card" id="{{ dado.id }}" lat="{{ dado.latitude }}" lon="{{ dado.longitude }}">
             <h3>{{ dado.nome_instituicao }}</h3>
             <img src="{% static 'assets/instituicao.jpg' %}" alt="Foto da Instituição">
             <p>Juntos podemos fazer a diferença! Ajude a combater a fome e o desperdício de alimentos doando para nossa
               instituição. Cada doação conta e pode mudar a vida de alguém.</p>
             <input type="button" value="Doe">
+            <button href="{% url 'teste' %}">aaaaa</button>
           </div>
+          {% endfor %}
       </form>
-      {% endfor %}
     </div>
   </div>
   <br>
@@ -107,7 +99,6 @@
       </footer>
     </div>
   </div>
-
 </body>
 <script src="https://kit.fontawesome.com/e38dd2664d.js" crossorigin="anonymous"></script>
 
