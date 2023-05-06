@@ -1,0 +1,61 @@
+@import url("../css_header_footer/style.css");
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.conteudo {
+  display: grid;
+  font-size: 40px;
+  text-align: center;
+  justify-items: center;
+}
+
+
+.conteudo-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  height: 440px;
+  width: 300px;
+  border: solid;
+  box-shadow: 10px 12px 18px rgba(0, 0, 0, 0.8);
+}
+
+.card p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card img {
+  margin-top: 8px;
+  border: 1px solid;
+  height: 175px;
+  width: 280px;
+
+}
+
+.card input[type="button"] {
+  border-radius: 8px;
+  border-color: #005000;
+  background-color: #91E191;
+  font-size: 55%;
+  font-weight: 600;
+  color: #005000;
+  margin: 15px;
+  width: 200px;
+  height: 40px;
+  box-shadow: 5px 6px 9px rgba(0, 0, 0, 0.8);
+}
+
+.card input[type="button"]:hover {
+  color: #91E191;
+  background-color: #005000;
+  
+}

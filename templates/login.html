@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css_login/style-login.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <title>Login</title>
+
+</head>
+
+<body>
+  <div class="row-header">
+    <header class="main-header">
+      <img class="logo" src="{% static 'assets/fome.jpeg' %}" alt="">
+      <div class="container-menu">
+        <nav class="main-header__menu">
+          <ul>
+            <li>
+              <a href="{% url 'home' %}" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="{% url 'instituicoes' %}" class="nav-link">Instituições</a>
+            </li>
+            <li>
+              <a href="{% url 'cadastro-instituicao' %}" class="nav-link">Cadastro</a>
+            </li>
+            <li>
+              <a href="#sobre" class="nav-link">Sobre nós</a>
+            </li>
+            <li>
+              <a href="#contato" class="nav-link">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div class="conteudo">
+
+    <div class="login-box">
+      <h2>Login</h2>
+      <form action=" {% url 'login' %} " method="POST">{% csrf_token %}
+        <div class="user-box">
+          <input type="text" name="username" id="username" required="">
+          <label for="username">Usuario</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="password" id="password" required="">
+          <label for="password">Senha</label>
+        </div>
+        <div>
+          <p class="cadastrar">Ainda não tem cadastro click <a href=" {% url 'cadastro-instituicao' %} ">aqui</a>!</p>
+        </div>
+        <button class="login-box-enviar" onclick="login()">Enviar</button>
+      </form>
+    </div>
+
+  </div>
+  <div class="row-footer">
+    <footer class="footer">
+      <div class="footer__container">
+        <section>
+          <h2 class="footer__title">Grupo 3</h2>
+          <p class="footer__about-text">
+          <ol>
+            <li>Daniel França</li>
+            <li>Douglas Hugo</li>
+            <li>Felipe Vieira</li>
+            <li>Klayvert Alves</li>
+            <li>Luca Willian Beteghella</li>
+          </ol>
+          </p>
+        </section>
+        <address>
+          <h2 class="footer__title">Contato</h2>
+          <ul>
+            <li><i class="fa-brands fa-github"></i> <a href="https://github.com/danielfransa"
+                target="_blank">danielfransa</a></li>
+            <li><i class="fa-brands fa-github"></i> <a href="https://github.com/douglashugo"
+                target="_blank">douglashugo</a></li>
+            <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Felipe-Vieira-03"
+                target="_blank">Felipe-Vieira-03</a></li>
+            <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Klayvert2003"
+                target="_blank">Klayvert2003</a></li>
+            <li><i class="fa-brands fa-github"></i> <a href="https://github.com/lucabeteghella"
+                target="_blank">lucabeteghella</a> </li>
+          </ul>
+        </address>
+      </div>
+      <section class="footer__copyright">
+        &copy; Todos os direitos reservados
+      </section>
+    </footer>
+  </div>
+
+</body>
+<script src="https://kit.fontawesome.com/e38dd2664d.js" crossorigin="anonymous"></script>
+
+</html>

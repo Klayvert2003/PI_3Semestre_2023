@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css_cadastro_usuario/style-cadastro-usuario.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <title>Cadastro</title>
+
+</head>
+
+<body>
+  <div class="row-header">
+    <header class="main-header">
+      <h1 class="main-header__title">
+        <img class="logo" src="{% static 'assets/fome.jpeg' %}" alt="Logo da Food Connect">
+      </h1>
+      <div class="container-menu">
+        <nav class="main-header__menu">
+          <ul>
+            <li>
+              <a href="{% url 'home' %}" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="{% url 'instituicoes' %}" class="nav-link">Instituições</a>
+            </li>
+            <li>
+              <a href="{% url 'cadastro-instituicao' %}" class="nav-link">Cadastro</a>
+            </li>
+            <li>
+              <a href="#sobre" class="nav-link">Sobre nós</a>
+            </li>
+            <li>
+              <a href="#contato" class="nav-link">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div class="row-form">
+    <div class="container">
+      <h1>Cadastro</h1>
+      <form action="{% url 'cadastro-usuario' %}" method="POST">{% csrf_token %}
+        <div>
+          <label for="nome-completo">Nome Completo:</label>
+          <input type="text" id="nome-completo" name="nome-completo" required>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required>
+          </div>
+        </div>  
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="usuario">Usuário:</label>
+          <input type="text" id="usuario" name="usuario" required>
+        </div>
+        <div>
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required>
+        </div>
+        <div>
+          <label for="confirma-senha">Confirmar senha:</label>
+          <input type="password" id="confirma-senha" name="confirma-senha" required>
+        </div>
+        <input type="submit" value="Cadastrar">
+      </form>
+    </div>
+  </div>
+  <div class="row-footer">
+    <footer class="footer">
+      <div class="footer__container">
+          <section>
+              <h2 class="footer__title">Grupo 3</h2>
+              <p class="footer__about-text">
+                  <ol>
+                    <li>Daniel França</li>
+                    <li>Douglas Hugo</li>
+                    <li>Felipe Vieira</li>
+                    <li>Klayvert Alves</li>
+                    <li>Luca Willian Beteghella</li>
+                  </ol>
+              </p>
+          </section>
+          <address>
+              <h2 class="footer__title">Contato</h2>
+              <ul>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/danielfransa" target="_blank">danielfransa</a></li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/douglashugo" target="_blank">douglashugo</a></li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Felipe-Vieira-03" target="_blank">Felipe-Vieira-03</a></li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Klayvert2003" target="_blank">Klayvert2003</a></li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/lucabeteghella" target="_blank">lucabeteghella</a> </li>
+              </ul>
+          </address>
+      </div>
+      <section class="footer__copyright">
+          &copy; Todos os direitos reservados
+      </section>
+    </footer>
+  </div>
+
+</body>
+<script src="https://kit.fontawesome.com/e38dd2664d.js" crossorigin="anonymous"></script>
+</html>
