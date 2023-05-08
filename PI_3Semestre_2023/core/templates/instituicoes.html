@@ -52,9 +52,10 @@
             <p>Juntos podemos fazer a diferença! Ajude a combater a fome e o desperdício de alimentos doando para nossa
               instituição. Cada doação conta e pode mudar a vida de alguém.</p>
             <input type="button" value="Doe">
+            <a href="#" onclick="verMapa({{ dado.id }})">ver mapa</a>
             </div>
+          {% endfor %}
       </form>
-      {% endfor %}
     </div>
   </div>
   <br>
@@ -96,7 +97,17 @@
       </footer>
     </div>
   </div>
+{% block javascript %}
+<script>
+  function verMapa(id) {
+    var card = document.getElementById(id);
+    var lat = card.getAttribute("lat");
+    var lon = card.getAttribute("lon");
+    var url = "{% url 'card-map' %}?latitude=" + lat + "&longitude=" + lon;
+    window.location.href = url;
+  }
+  </script>
+{% endblock %}  
 </body>
 <script src="https://kit.fontawesome.com/e38dd2664d.js" crossorigin="anonymous"></script>
-
 </html>
