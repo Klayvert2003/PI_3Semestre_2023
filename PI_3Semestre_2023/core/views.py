@@ -61,7 +61,7 @@ class CadastroUsuarioView(GoogleMapsAPI, View):
         if cep:
             try:
                 cep = str(cep).replace('-', '').replace('.', '')
-                address = self.get_address(cep=cep)
+                address = self.__get_address(cep=cep)
             except IndexError:
                 return HttpResponse('Insira apenas números!!!')
 
