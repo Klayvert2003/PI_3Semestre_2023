@@ -1,15 +1,8 @@
 import googlemaps
-import os
-
-from dotenv import load_dotenv
-
-load_dotenv()
+from PI_3Semestre_2023.settings import API_KEY
 class GoogleMapsAPI():
-    def __init__(self):
-        self
-
-    def buscar_endereco(self, address):
-        gmaps = googlemaps.Client(key=os.getenv('API_KEY'))
+    def __buscar_endereco(self, address):
+        gmaps = googlemaps.Client(key=API_KEY)
         geocode_result = gmaps.geocode(address)
 
         results = []
@@ -28,8 +21,8 @@ class GoogleMapsAPI():
             results.append(result_dict)
         return results
     
-    def get_address(self, cep: str):
-        data = self.buscar_endereco(address=cep)
+    def __get_address(self, cep: str):
+        data = self.__buscar_endereco(address=cep)
         rua = str(data[0]['formatted_address']).split('-')[0].strip()
         bairro = str(data[0]['formatted_address']).split('-')[1].split(',')[0].strip()
         cidade = str(data[0]['formatted_address']).split('-')[1].split(',')[1].strip()
@@ -40,7 +33,7 @@ class GoogleMapsAPI():
         return rua, bairro, cidade, estado, lat, lon
     
     def get_complete_address(self, cep: str, num: str):
-        data = self.get_address(cep=cep)
+        data = self.__get_address(cep=cep)
         complete_address = f'{data[0]}, {num}, {data[1]}, {data[2]} - {data[3]}'
         address = GoogleMapsAPI().buscar_endereco(address=complete_address)
         rua = str(address[0]['formatted_address']).split('-')[0].strip()
