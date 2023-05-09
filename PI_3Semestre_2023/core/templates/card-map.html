@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,33 +40,7 @@
   </div>
   {% block javascript %}
   <script src="https://maps.googleapis.com/maps/api/js?key={{ API_KEY }}&callback=initMap" async defer></script>
-<script>
-  function initMap() {
-    var lat = document.querySelector('#lat').textContent;
-    var lon = document.querySelector('#lon').textContent;
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: parseFloat(lat), lng: parseFloat(lon)},
-      zoom: 12,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      disableDefaultUI: true,
-      zoomControl: true,
-      gestureHandling: 'cooperative',
-      styles: [
-        {
-          "featureType": "poi",
-          "stylers": [
-            { "visibility": "on" }
-          ]
-        }
-      ]
-    });
-    var marker = new google.maps.Marker({
-      position: {lat: parseFloat(lat), lng: parseFloat(lon)},
-      map: map,
-      title: 'Minha localização'
-    });
-  }
-</script>
+  <script src="{% static 'js/load_map.js' %}"></script>
   {% endblock %}
 </body>
 </html>
