@@ -9,8 +9,8 @@ class DadosInstituicao(models.Model):
     bairro = models.CharField('Bairro', max_length=100)
     cidade = models.CharField('Cidade', max_length=100)
     estado = models.CharField('Estado', max_length=2)
-    latitude = models.FloatField('Latitude')
-    longitude = models.FloatField('Longitude')
+    latitude = models.CharField('Latitude', max_length=100)
+    longitude = models.CharField('Longitude', max_length=100)
     data_hora_cadastro = models.DateTimeField('Data_Hora_Cadastro', auto_now_add=True)
 
 class DadosUsuarios(models.Model):
