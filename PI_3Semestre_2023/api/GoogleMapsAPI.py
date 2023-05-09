@@ -35,7 +35,7 @@ class GoogleMapsAPI():
     def get_complete_address(self, cep: str, num: str):
         data = self.__get_address(cep=cep)
         complete_address = f'{data[0]}, {num}, {data[1]}, {data[2]} - {data[3]}'
-        address = GoogleMapsAPI().buscar_endereco(address=complete_address)
+        address = GoogleMapsAPI().__buscar_endereco(address=complete_address)
         rua = str(address[0]['formatted_address']).split('-')[0].strip()
         bairro = str(address[0]['formatted_address']).split('-')[1].split(',')[0].strip()
         cidade = str(address[0]['formatted_address']).split('-')[1].split(',')[1].strip()
