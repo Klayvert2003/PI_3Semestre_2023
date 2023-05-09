@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from core.models import DadosInstituicao, DadosUsuarios
 from api.ValidaCNPJ import ValidaCNPJ
 from api.GoogleMapsAPI import GoogleMapsAPI
+from PI_3Semestre_2023.settings import API_KEY
 
 class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
     def get(self, request):
@@ -118,7 +119,8 @@ class CardMapView(View):
         if lat and lon:
             contexto = {
                 'latitude': lat,
-                'longitude': lon
+                'longitude': lon,
+                'API_KEY': API_KEY
             }
             return render(request, 'card-map.html', contexto)
         else:
