@@ -116,7 +116,11 @@
       </section>
     </footer>
   </div>
-
+{% block javascript %}
+  <script src="{% static 'js/jquery-1.2.6.pack.js' %}" type="text/javascript"></script>
+  <script src="{% static 'js/jquery.maskedinput-1.1.4.pack.js' %}" type="text/javascript"></script>
+  <script src="{% static 'js/mask_inputs.js' %}" type="text/javascript"></script>
+{% endblock %}
 </body>
 <script src="https://kit.fontawesome.com/e38dd2664d.js" crossorigin="anonymous"></script>
 </html>
