@@ -178,7 +178,7 @@ iframe {
     text-align: center; 
     padding: 0;
     width: 650px;
-
+    text-decoration: none !important;
 }
 
  .texto_colabora{
