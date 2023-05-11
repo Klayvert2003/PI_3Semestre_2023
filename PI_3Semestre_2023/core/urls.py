@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import LoginView, CadastroInstituicaoView, CadastroUsuarioView, InstituicoesView, HomeUsuarios, CardMapView
+from .views import LoginView, CadastroInstituicaoView, CadastroUsuarioView, InstituicoesView, HomeUsuarios, CardMapView, Index
 
 urlpatterns = [
+    path('index', Index.as_view(), name='index'),
     path('login', LoginView.as_view(), name='login'),
     path('cadastro-instituicao', CadastroInstituicaoView.as_view(), name='cadastro-instituicao'),
     path('cadastro-usuario', CadastroUsuarioView.as_view(), name='cadastro-usuario'),
