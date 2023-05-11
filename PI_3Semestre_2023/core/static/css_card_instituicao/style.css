@@ -41,7 +41,7 @@ body {
 
 }
 
-.card input[type="button"] {
+.card button[type="button"] {
   border-radius: 8px;
   border-color: #005000;
   background-color: #91E191;
@@ -54,8 +54,17 @@ body {
   box-shadow: 5px 6px 9px rgba(0, 0, 0, 0.8);
 }
 
-.card input[type="button"]:hover {
+.card button[type="button"]:hover {
   color: #91E191;
   background-color: #005000;
   
+}
+
+.card a[type="button"] {
+  text-decoration: none;
+  color: #005000;
+}
+
+.card a[type="button"]:hover {
+  color: #91E191;
 }

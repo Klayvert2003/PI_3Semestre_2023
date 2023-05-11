@@ -49,13 +49,11 @@
         <div class="card" id="{{ dado.id }}" lat="{{ dado.latitude }}" lon="{{ dado.longitude }}">
             <h3>{{ dado.nome_instituicao }}</h3>
             <img src="{% static 'assets/instituicao.jpg' %}" alt="Foto da Instituição">
-            <p>Juntos podemos fazer a diferença! Ajude a combater a fome e o desperdício de alimentos doando para nossa
-              instituição. Cada doação conta e pode mudar a vida de alguém.</p>
-            <input type="button" value="Doe">
-            <a href="#" onclick="verMapa({{ dado.id }})">ver mapa</a>
+            <p>Juntos podemos fazer a diferença!</p>
+              <button type="button"><a type="button" href="#" onclick="verMapa({{ dado.id }})">Ver Mapa</a></button>
             </div>
-          {% endfor %}
       </form>
+      {% endfor %}
     </div>
   </div>
   <br>
