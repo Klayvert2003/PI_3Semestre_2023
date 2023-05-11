@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Maps API</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <style>
+    /* Estilo para a janela do mapa */
+    #map-container {
+        border: 1px solid black; /* Define a borda */
+        width: 50%; /* Define a largura */
+        height: 400px; /* Define a altura */
+        float: right; /* Coloca o container à direita */
+        padding: 10px; /* Define o preenchimento interno */
+      }
+      
+      /* Estilo para o mapa */
+      #map {
+        height: 100%;
+      }
+      
+      /* Estilo para o contêiner do mapa */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+  </style>  
+</head>
+<body>
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+  <div>
+    <h1>Informações do Local</h1>
+    <p hidden>Latitude: <span hidden id="lat">{{ latitude }}</span></p>
+    <p hidden>Longitude: <span hidden id="lon">{{ longitude }}</span></p>
+  </div>
+  {% block javascript %}
+  <script src="https://maps.googleapis.com/maps/api/js?key='API=KEY'&callback=initMap" async defer></script>
+  <script src="{% static 'js/load_map.js' %}"></script>
+  {% endblock %}
+</body>
+</html>
