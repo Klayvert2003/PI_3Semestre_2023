@@ -1,3 +1,4 @@
+from turtle import st
 from django.views import View
 from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
@@ -10,6 +11,13 @@ from core.models import DadosInstituicao, DadosUsuarios
 from api.ValidaCNPJ import ValidaCNPJ
 from api.GoogleMapsAPI import GoogleMapsAPI
 from PI_3Semestre_2023.settings import API_KEY
+
+class Index(View):
+    def get(self, request):
+        return render(request, 'index.html')
+    
+    def post(self, request):
+        ...
 
 class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
     def get(self, request):
@@ -52,10 +60,12 @@ class CadastroUsuarioView(GoogleMapsAPI, View):
     def post(self, request):
         nome_completo = request.POST.get('nome-completo')     
         cep = request.POST.get('cep')
-        if cep:
+        num = request.POST.get('num')
+        if cep and num:
             try:
                 cep = str(cep).replace('-', '').replace('.', '')
-                address = self.__get_address(cep=cep)
+                num = str(num)
+                address = GoogleMapsAPI().get_complete_address(cep=cep, num=num)
             except IndexError:
                 return HttpResponse('Insira apenas números!!!')
 
@@ -66,7 +76,7 @@ class CadastroUsuarioView(GoogleMapsAPI, View):
         if password != confirm_password:
             return HttpResponse('Senhas divergentes, digite a senha idêntica a inserida anteriormente')
 
-        dados = DadosUsuarios.objects.create(nome_usuario=nome_completo, cep=cep, 
+        dados = DadosUsuarios.objects.create(nome_usuario=nome_completo, cep=cep, num=num,
         rua=address[0], bairro=address[1], cidade=address[2], 
         estado=address[3])
         
