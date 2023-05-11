@@ -16,20 +16,13 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
         return render(request, 'cadastro-instituicao.html')
         
     def post(self, request): 
-        nome_instituicao = request.POST.get('nome-completo')     
-        cep = request.POST.get('cep')
-        num = request.POST.get('num')
-        if cep and num:
-            try:
-                cep = str(cep).replace('-', '').replace('.', '')
-                address = self.get_complete_address(cep=cep, num=num)
-            except IndexError:
-                return HttpResponse('Insira apenas números!!!')
-            
+        nome_instituicao = request.POST.get('nome-completo')
         cnpj = request.POST.get('cnpj')
         if cnpj:
             try:
-                self.BuscaCNPJ(cnpj=cnpj)
+                cnpj = str(cnpj).replace('.', '').replace('-', '').replace('/', '')
+                infos = self.BuscaCNPJ(cnpj=cnpj)
+                address = self.get_complete_address(cep=infos[0], num=infos[1])
             except AttributeError:
                 return HttpResponse('CNPJ Inválido!!!')
 
@@ -40,7 +33,7 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
         if password != confirm_password:
             return HttpResponse('Senhas divergentes, digite a senha idêntica a inserida anteriormente')
 
-        dados = DadosInstituicao.objects.create(nome_instituicao=nome_instituicao, cep=cep, num=num, cnpj=cnpj, 
+        dados = DadosInstituicao.objects.create(nome_instituicao=nome_instituicao, cep=infos[0], num=infos[1], cnpj=cnpj, 
         rua=address[0], bairro=address[1], cidade=address[2], 
         estado=address[3], latitude=address[4], longitude=address[5])
         
