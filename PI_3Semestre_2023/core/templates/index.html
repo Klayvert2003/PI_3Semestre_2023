@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css_index/style.css' %}">
+  <title>Home do Usuário</title>
+
+</head>
+
+<body>
+  <div class="row-header">
+    <header class="main-header">
+      <h1 class="main-header__title">
+        <img class="logo" src="{% static 'assets/fome.jpeg' %}" alt="">
+      </h1>
+      <div class="container-menu">
+        <nav class="main-header__menu">
+          <ul>
+            <li>
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="{% url 'instituicoes' %}" class="nav-link">Instituições</a>
+            </li>
+            <li>
+              <a href="{% url 'cadastro-usuario' %}" class="nav-link">Cadastro</a>
+            </li>
+            <li>
+              <a href="#sobre" class="nav-link">Sobre nós</a>
+            </li>
+            <li>
+              <a href="#contato" class="nav-link">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div class="conteudo">
+    
+    <h1>Eu sou!!!</h1>
+    <br>
+    
+    <div class="botoes">
+      <div class="button-group">
+      
+        <a href="{% url 'cadastro-instituicao' %}" class="btn">Instituição</a>
+        <a href="{% url 'instituicoes' %}" class="btn">Doador/Voluntário</a>
+      </div>
+    </div>
+      
+        
+
+
+  </div>   
+  <div class="row-footer">
+    <footer class="footer">
+      <div class="footer__container">
+          <section>
+              <h2 class="footer__title">Grupo 3</h2>
+              <p class="footer__about-text">
+                  <ol>
+                    <li>Daniel França</li>
+                    <li>Douglas Hugo</li>
+                    <li>Felipe Vieira</li>
+                    <li>Klayvert Alves</li>
+                    <li>Luca Willian Beteghella</li>
+                  </ol>
+              </p>
+          </section>
+          <address>
+              <h2 class="footer__title">Contato</h2>
+              <ul>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/danielfransa">danielfransa</a></li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/douglashugo">douglashugo</a></li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Felipe-Vieira-03">Felipe-Vieira-03</a></li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Klayvert2003">Klayvert2003</a></li>
+                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/lucabeteghella">lucabeteghella</a> </li>
+              </ul>
+          </address>
+      </div>
+      <section class="footer__copyright">
+          &copy; Todos os direitos reservados
+      </section>
+    </footer>
+  </div>
+
+</body>
+<script src="https://kit.fontawesome.com/e38dd2664d.js" crossorigin="anonymous"></script>
+</html>
