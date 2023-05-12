@@ -47,11 +47,15 @@
       <form action="{% url 'instituicoes' %}" method="POST">{% csrf_token %}
         {% for dado in dados %}
         <div class="card" id="{{ dado.id }}" lat="{{ dado.latitude }}" lon="{{ dado.longitude }}">
+          <div class="card-titulo" style="height: 50px;">
             <h3>{{ dado.nome_instituicao }}</h3>
-            <img src="{% static 'assets/instituicao.jpg' %}" alt="Foto da Instituição">
-            <p>Juntos podemos fazer a diferença!</p>
-              <button type="button"><a type="button" href="#" onclick="verMapa({{ dado.id }})">Ver Mapa</a></button>
-            </div>
+          </div>
+          <img src="{% static 'assets/instituicao.jpg' %}" alt="Foto da Instituição">
+          <p>Juntos podemos fazer a diferença! Ajude a combater a fome e o desperdício de alimentos doando para nossa
+              instituição. Cada doação conta e pode mudar a vida de alguém.
+          </p>
+          <button type="button"><a type="button" href="#" onclick="verMapa({{ dado.id }})">Ver Mapa</a></button> 
+        </div>
       </form>
       {% endfor %}
     </div>
@@ -108,4 +112,15 @@
 {% endblock %}  
 </body>
 <script src="https://kit.fontawesome.com/e38dd2664d.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+  $('.card-titulo').each(function() {
+    while (this.scrollHeight > $(this).height()) {
+      $(this).css('font-size', (parseInt($(this).css('font-size')) - 1) + 'px');
+    }
+  });
+});
+</script>
 </html>
