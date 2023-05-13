@@ -1,201 +1,141 @@
-/*Primeira parte referes-se ao header e footer*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0; 
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+from turtle import st
+from django.views import View
+from django.views.generic import TemplateView
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+# My functions
+from core.models import DadosInstituicao, DadosUsuarios
+from api.ValidaCNPJ import ValidaCNPJ
+from api.GoogleMapsAPI import GoogleMapsAPI
+from PI_3Semestre_2023.settings import API_KEY
 
-.row-header {
-  position: sticky;
-}
-.main-header {
-  /*background-color: #91E191;   */ 
-  padding: 10px 0px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 30px;
-  min-height: 20vh;
-  width: calc(100%)
-  
-}
+class Index(View):
+    def get(self, request):
+        return render(request, 'index.html')
+    
+    def post(self, request):
+        ...
 
-.main-header__title {    
-    font-size: 80px;
-    letter-spacing: -1.5px;
-    color: white;    
-}
+class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
+    def get(self, request):
+        return render(request, 'cadastro-instituicao.html')
+        
+    def post(self, request): 
+        nome_instituicao = request.POST.get('nome-completo')
+        cnpj = request.POST.get('cnpj')
+        if cnpj:
+            try:
+                cnpj = str(cnpj).replace('.', '').replace('-', '').replace('/', '')
+                infos = self.BuscaCNPJ(cnpj=cnpj)
+                address = self.get_complete_address(cep=infos[0], num=infos[1])
+            except AttributeError:
+                return HttpResponse('CNPJ Inválido!!!')
 
-.main-header__title-greem-color {
-    color: #91E191;
-    font-size:70px;
-}
+        email = request.POST.get('email')
+        usuario = request.POST.get('usuario')
+        password = request.POST.get('senha')
+        confirm_password = request.POST.get('confirma-senha')
+        if password != confirm_password:
+            return HttpResponse('Senhas divergentes, digite a senha idêntica a inserida anteriormente')
 
-.main-header__title-red-color {
-  color: #E60000;
-  font-size:70px;
-}
+        dados = DadosInstituicao.objects.create(nome_instituicao=nome_instituicao, cep=infos[0], num=infos[1], cnpj=cnpj, 
+        rua=address[0], bairro=address[1], cidade=address[2], 
+        estado=address[3], latitude=address[4], longitude=address[5])
+        
+        user = User.objects.filter(email=email).first()
+        if user:
+            return HttpResponse('Já existe um usuário com este email!!!')
+        
+        user = User.objects.create_user(username=usuario, email=email, password=password)
 
-.main-header__title--color {
-  color: #005000;
-  font-size:70px;
-}
+        return HttpResponse("Usuário cadastrado!")
 
-.main-header__menu ul {
-    display: flex;
-    justify-content: flex-end;
-}
+class CadastroUsuarioView(GoogleMapsAPI, View):
+    def get(self, request):
+        return render(request, 'cadastro-usuario.html')
+    
+    def post(self, request):
+        nome_completo = request.POST.get('nome-completo')     
+        cep = request.POST.get('cep')
+        num = request.POST.get('num')
+        if cep and num:
+            try:
+                cep = str(cep).replace('-', '').replace('.', '')
+                num = str(num)
+                address = GoogleMapsAPI().get_complete_address(cep=cep, num=num)
+            except IndexError:
+                return HttpResponse('Insira apenas números!!!')
 
-.main-header__menu a {
-    padding: 10px 10px;
-    color: #005000;
-    font-weight: 400;
-    font-size: 22px;
-    text-decoration: none;
-    transition: all .3s ease-in-out;
-}
+        email = request.POST.get('email')
+        usuario = request.POST.get('usuario')
+        password = request.POST.get('senha')
+        confirm_password = request.POST.get('confirma-senha')
+        if password != confirm_password:
+            return HttpResponse('Senhas divergentes, digite a senha idêntica a inserida anteriormente')
 
-.main-header__menu a:hover {
-    background-color: #005000;;
-    color: #fff;
-}
+        dados = DadosUsuarios.objects.create(nome_usuario=nome_completo, cep=cep, num=num,
+        rua=address[0], bairro=address[1], cidade=address[2], 
+        estado=address[3])
+        
+        user = User.objects.filter(email=email).first()
+        if user:
+            return HttpResponse('Já existe um usuário com este email!!!')
+        
+        user = User.objects.create_user(username=usuario, email=email, password=password)
 
-.container-menu {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    flex: 1;
-}
+        return HttpResponse("Usuário cadastrado!")
 
-.logo {
-  width: 30vh;
-  height: 15vh;
-  justify-content: flex-end;
-  padding-right: 10px;
-}
+class LoginView(View):
+    def get(self, request):
+        return render(request, 'login.html')
+        
+    def post(self, request):
+        username = request.POST.get('username')
+        password = request.POST.get('password')
 
-ol, ul {
-	list-style: none;
-}
+        user = authenticate(username=username, password=password)
 
-.footer {
-  background-color: #005000;        
-  color: #91E191;;
-  font-size: 16px;
-}
+        if user:
+            login(request, user)
 
-.footer__container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
-  padding: 10px;
-}
+            return render(request, 'home-usuario.html')
+        else:
+            return HttpResponse('Email ou senha inválidos')
+        
+class InstituicoesView(GoogleMapsAPI, View):
+    def get(self, request):
+        dados = list(DadosInstituicao.objects.all().values('id', 'nome_instituicao', 'latitude', 'longitude'))
 
-.footer__copyright {
-  text-align: center;
-  margin-top: 8px;
-  background-color: #bbffbb;    
-  font-weight: bold;
-  padding: 8px;
-  color: gray;
-}
+        return render(request, 'instituicoes.html', {'dados': dados})
 
-.footer__title {
-  font-size: 22px;
-  font-weight: bold;
-  color: #91E191;
-  margin-bottom: 5px;
-}
+    def post(self):
+        return redirect('card-map')
 
-.footer__about-text {
-  width: 400px;
-  text-align: justify;
-}
+class CardMapView(View):
+    def get(self, request):
+        lat = request.GET.get('latitude', None)
+        lon = request.GET.get('longitude', None)
 
-.footer i {
-  color: #91E191;
-}
+        if lat and lon:
+            contexto = {
+                'latitude': lat,
+                'longitude': lon,
+                'API_KEY': API_KEY
+            }
+            return render(request, 'card-map.html', contexto)
+        else:
+            return redirect('instituicoes')
 
-.footer a {
-  color: #91E191;
-}
-
-.footer a:visited {
-  color: #fff;
-}
-.footer li {
-  margin: 10px 0;
-}
-
-ol, ul {
-list-style: none;
-}
-
-.conteudo {
-  display: block;
-  text-align: center;
-   font-size: 40px;
-}
-
-iframe {
-    border: 2px solid black;
-    margin: 20px;
-    padding: 10px;
-    background-color: #f2f2f2;
-  }
-
-
- .btn_quero_doar{  
-    font-size: 65px;
-    padding: 5px;
-    border-radius: 10px;
-    background-color: #4CAF50;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 125px;
-    text-align: center; 
-    padding: 0;
-    width: 650px;
-    text-decoration: none !important;
-}
-
- .texto_colabora{
-    align-items: center;
-    align-self: center;
-    text-align: center;
-    margin-left: 2%;
-    font-size: 58px;
-} 
-
-
-.content{
-  justify-content: right;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 50px;
-}
-
+class HomeUsuarios(TemplateView):
+    # @login_required(login_url='/auth/login')
+    def get(self, request):
+        # if request.user.is_authenticated:
+        template_name = 'home-usuario.html'
+        return render(request, template_name)
+        
+    def post(self, request):
+        return render(request, 'instituicoes.html')
 
