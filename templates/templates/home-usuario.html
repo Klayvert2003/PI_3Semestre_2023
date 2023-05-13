@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css_home_usuario/style.css' %}">
+  <title>Home do Usuário</title>
+
+</head>
+
+<body>
+  {% include "./header.html" %}
+  <div class="conteudo">
+    <form action="{% url 'home-usuario' %}" method="POST">{% csrf_token %}
+    <h1>Conheça e contribua com nosso projeto, Ajude pessoas e salve vidas</h1>
+    <br>
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tQER4aVHdqc" title="YouTube video player" frameborder="0"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p> As doações de alimentos são uma das formas mais eficazes de ajudar a combater a fome em nossa comunidade. <br>
+            Infelizmente, muitas pessoas em nossa sociedade ainda sofrem de insegurança alimentar e não têm acesso a alimentos nutritivos e saudáveis.
+            É por isso que é tão importante contribuir com doações de alimentos sempre que possível. <br><br>
+        </p>
+
+        <p> Ao fazer uma doação de alimentos, você está ajudando a fornecer uma refeição para uma pessoa faminta.
+             Pode não parecer muito, mas uma única doação pode fazer uma enorme diferença na vida de alguém que está lutando para sobreviver. 
+             Além disso, muitas organizações sem fins lucrativos que aceitam doações de alimentos distribuem os alimentos para famílias de baixa renda, abrigos para desabrigados e
+              outras instituições que ajudam a comunidade. <br><br>
+        </p>
+            
+        <p> Contribuir com doações de alimentos é uma forma de exercer empatia e solidariedade.
+              Imagine estar em uma situação em que você ou sua família estão sem comida suficiente para se alimentar adequadamente.
+              Agora imagine como seria se alguém chegasse com uma cesta cheia de alimentos nutritivos para ajudar a aliviar essa situação.
+              Esse ato de generosidade e bondade pode fazer uma grande diferença na vida das pessoas. <br><br>
+        </p>
+            
+        <p> Além disso, contribuir com doações de alimentos é uma forma de ajudar a combater o desperdício de alimentos. Infelizmente, muitos alimentos ainda são desperdiçados em nossa sociedade,
+              enquanto muitas pessoas ainda passam fome. Ao fazer uma doação de alimentos, você está ajudando a reduzir o desperdício e a redistribuir alimentos para aqueles que realmente precisam. <br><br>
+        </p>
+            
+        <p> Portanto, se você está procurando uma forma de ajudar a combater a fome em nossa comunidade, considere fazer uma doação de alimentos.
+              Cada doação, por menor que seja, pode fazer uma grande diferença na vida de alguém. Vamos trabalhar juntos para ajudar a tornar o mundo um lugar melhor e mais justo para todos. <br><br>
+        </p>        
+    </div>
+        <h1 class="texto_colabora">Contribua conosco e com pessoas ao redor de você! </h1>
+
+      <div class="content">
+      <br>
+      <a class="btn_quero_doar" href= "{% url 'instituicoes' %}">Quero Colaborar</a> 
+      <br>
+      </div>
+</form>
+
+  </div>   
+  {% include "./footer.html" %}
+
+</body>
+
+</html>
