@@ -37,7 +37,7 @@ footer, header, hgroup, menu, nav, section {
   column-gap: 30px;
   min-height: 20vh;
   width: calc(100%)
-  
+
 }
 
 .main-header__title {    
@@ -197,5 +197,3 @@ iframe {
   align-items: center;
   padding: 50px;
 }
-
-
