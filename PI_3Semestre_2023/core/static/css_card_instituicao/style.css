@@ -87,3 +87,11 @@ footer, header, hgroup, menu, nav, section {
 .card a[type="button"]:hover {
   color: #91E191;
 }
+
+.card-titulo {
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
