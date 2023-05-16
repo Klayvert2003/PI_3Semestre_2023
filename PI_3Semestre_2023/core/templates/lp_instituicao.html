@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,7 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/css_lp_instituicao/style.css">
+  <link rel="stylesheet" href="{% static 'css_lp_instituicao/style.css' %}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
   <div class="row-header">
     <header class="main-header">
       <h1 class="main-header__title">
-        <img class="logo" src="../static/assets/logo.jpg" alt="">
+        <img class="logo" src="{% static 'assets/logo.jpg' %}" alt="">
       </h1>
       <div class="container-menu">
         <nav class="main-header__menu">
@@ -47,8 +48,8 @@
       <h1 class="titleh1 ">Ajude-nos a alimentar aqueles que mais precisam: participe do nosso projeto social agora!
       </h1>
       <section>
-        <div><button class="btn btn-warning" href="#">SE ASSOCIE, JUNTOS SOMOS A
-            ESPERANÇA</button></div>
+        <div><a class="btn btn-warning" href="{% url 'cadastro-instituicao' %}">SE ASSOCIE, JUNTOS SOMOS A
+            ESPERANÇA</a></div>
       </section>
     </div>
 
@@ -63,7 +64,7 @@
     <div class="container-cards">
     <div class="card">
       <div class="card-header">
-        <img src="../static/assets/aperto_mao.png" alt="Solidariedade">
+        <img src="{% static 'assets/aperto_mao.png' %}" alt="Solidariedade">
       </div>
       <div class="card-body">
         <p>Nós acreditamos que todos merecem uma refeição nutritiva e acessível. É por isso que
@@ -71,13 +72,13 @@
           desejam se juntar a nós nessa causa tão importante.</p>
       </div>
       <div class="card-footer">
-        <a href="#">ASSOCIE-SE</a>
+        <a href="{% url 'cadastro-instituicao' %}">ASSOCIE-SE</a>
       </div>
     </div>
 
     <div class="card">
       <div class="card-header">
-        <img src="../static/assets/cesta_brasil.png" alt="Solidariedade">
+        <img src="{% static 'assets/cesta_brasil.png' %}" alt="Solidariedade">
       </div>
       <div class="card-body">
         <p>Nosso projeto funciona através de doações de alimentos e recursos financeiros. Com o apoio
@@ -86,7 +87,7 @@
           pessoas em nosso país.</p>
       </div>
       <div class="card-footer">
-        <a href="#">ASSOCIE-SE</a>
+        <a href="{% url 'cadastro-instituicao' %}">ASSOCIE-SE</a>
       </div>
     </div>
 
@@ -107,7 +108,7 @@
   </div>
   <br class="mbtext">
   <div>
-    <img src="../static/assets/cesta_doacao.png" alt="">
+    <img src="{% static 'assets/cesta_doacao.png' %}" alt="">
   </div>
 
   </div>

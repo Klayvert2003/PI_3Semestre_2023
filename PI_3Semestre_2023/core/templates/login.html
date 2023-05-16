@@ -12,32 +12,7 @@
 </head>
 
 <body>
-  <div class="row-header">
-    <header class="main-header">
-      <img class="logo" src="{% static 'assets/fome.jpeg' %}" alt="">
-      <div class="container-menu">
-        <nav class="main-header__menu">
-          <ul>
-            <li>
-              <a href="{% url 'home-usuario' %}" class="nav-link">Home</a>
-            </li>
-            <li>
-              <a href="{% url 'instituicoes' %}" class="nav-link">Instituições</a>
-            </li>
-            <li>
-              <a href="{% url 'cadastro-instituicao' %}" class="nav-link">Cadastro</a>
-            </li>
-            <li>
-              <a href="#sobre" class="nav-link">Sobre nós</a>
-            </li>
-            <li>
-              <a href="#contato" class="nav-link">Contato</a>
-            </li>
-          </ul>
-        </nav>
-      </div> 
-    </header>
-  </div>
+  {% include "./header.html" %}
   <div class="conteudo">
     
     <div class="login-box">
@@ -59,38 +34,6 @@
     </div>
     
   </div>
-  <div class="row-footer">
-    <footer class="footer">
-      <div class="footer__container">
-          <section>
-              <h2 class="footer__title">Grupo 3</h2>
-              <p class="footer__about-text">
-                  <ol>
-                    <li>Daniel França</li>
-                    <li>Douglas Hugo</li>
-                    <li>Felipe Vieira</li>
-                    <li>Klayvert Alves</li>
-                    <li>Luca Willian Beteghella</li>
-                  </ol>
-              </p>
-          </section>
-          <address>
-              <h2 class="footer__title">Contato</h2>
-              <ul>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/danielfransa" target="_blank">danielfransa</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/douglashugo" target="_blank">douglashugo</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Felipe-Vieira-03" target="_blank">Felipe-Vieira-03</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Klayvert2003" target="_blank">Klayvert2003</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/lucabeteghella" target="_blank">lucabeteghella</a> </li>
-              </ul>
-          </address>
-      </div>
-      <section class="footer__copyright">
-          &copy; Todos os direitos reservados
-      </section>
-    </footer>
-  </div>
-
+  {% include "./footer.html" %}
 </body>
-<script src="https://kit.fontawesome.com/e38dd2664d.js" crossorigin="anonymous"></script>
 </html>

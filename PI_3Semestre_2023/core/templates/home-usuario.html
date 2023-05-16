@@ -12,41 +12,14 @@
 </head>
 
 <body>
-  <div class="row-header">
-    <header class="main-header">
-      <h1 class="main-header__title">
-        <img class="logo" src="{% static 'assets/fome.jpeg' %}" alt="Logo da Food Connect">
-      </h1>
-      <div class="container-menu">
-        <nav class="main-header__menu">
-          <ul>
-            <li>
-              <a href="#" class="nav-link">Home</a>
-            </li>
-            <li>
-              <a href="{% url 'instituicoes' %}" class="nav-link">Instituições</a>
-            </li>
-            <li>
-              <a href="{% url 'cadastro-usuario' %}" class="nav-link">Cadastro</a>
-            </li>
-            <li>
-              <a href="#sobre" class="nav-link">Sobre nós</a>
-            </li>
-            <li>
-              <a href="#contato" class="nav-link">Contato</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  </div>
+  {% include "./header.html" %}
   <div class="conteudo">
     <form action="{% url 'home-usuario' %}" method="POST">{% csrf_token %}
     <h1>Conheça e contribua com nosso projeto, Ajude pessoas e salve vidas</h1>
     <br>
     
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/tQER4aVHdqc" title="YouTube video player" frameborder="0"
-     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe style="border-radius:5px" src="https://www.youtube.com/embed/tQER4aVHdqc" width="80%" height="800" frameBorder="10" allowfullscreen
+      title="Combate a Fome" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <p> As doações de alimentos são uma das formas mais eficazes de ajudar a combater a fome em nossa comunidade. <br>
             Infelizmente, muitas pessoas em nossa sociedade ainda sofrem de insegurança alimentar e não têm acesso a alimentos nutritivos e saudáveis.
             É por isso que é tão importante contribuir com doações de alimentos sempre que possível. <br><br>
@@ -82,38 +55,8 @@
 </form>
 
   </div>   
-  <div class="row-footer">
-    <footer class="footer">
-      <div class="footer__container">
-          <section>
-              <h2 class="footer__title">Grupo 3</h2>
-              <p class="footer__about-text">
-                  <ol>
-                    <li>Daniel França</li>
-                    <li>Douglas Hugo</li>
-                    <li>Felipe Vieira</li>
-                    <li>Klayvert Alves</li>
-                    <li>Luca Willian Beteghella</li>
-                  </ol>
-              </p>
-          </section>
-          <address>
-              <h2 class="footer__title">Contato</h2>
-              <ul>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/danielfransa">danielfransa</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/douglashugo">douglashugo</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Felipe-Vieira-03">Felipe-Vieira-03</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/Klayvert2003">Klayvert2003</a></li>
-                  <li><i class="fa-brands fa-github"></i> <a href="https://github.com/lucabeteghella">lucabeteghella</a> </li>
-              </ul>
-          </address>
-      </div>
-      <section class="footer__copyright">
-          &copy; Todos os direitos reservados
-      </section>
-    </footer>
-  </div>
+  {% include "./footer.html" %}
 
 </body>
-<script src="https://kit.fontawesome.com/e38dd2664d.js" crossorigin="anonymous"></script>
+
 </html>
