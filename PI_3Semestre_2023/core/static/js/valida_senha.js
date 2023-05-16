@@ -13,3 +13,9 @@ confirmarSenhaInput.addEventListener('input', function() {
     confirmarSenhaInput.style.color = 'red';
   }
 });
+
+submitButton.addEventListener('click', function(event) {
+  if (confirmarSenhaInput.value === senhaInput.value) {
+    alert('Usuário Cadastrado!!!');
+  }
+});
