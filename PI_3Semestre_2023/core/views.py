@@ -1,3 +1,5 @@
+from typing import Any
+from django import http
 from django.views import View
 from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
@@ -138,3 +140,7 @@ class HomeUsuarios(TemplateView):
     def post(self, request):
         return render(request, 'instituicoes.html')
 
+class HomeInstituicao(TemplateView):
+    def get(self, request):
+        template_name='lp_instituicao.html'
+        return render(request, template_name)
