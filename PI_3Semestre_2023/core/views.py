@@ -38,10 +38,7 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
         email = request.POST.get('email')
         usuario = request.POST.get('usuario')
         password = request.POST.get('senha')
-        confirm_password = request.POST.get('confirma-senha')
-        if password != confirm_password:
-            return HttpResponse('Senhas divergentes, digite a senha idêntica a inserida anteriormente')
-
+        
         dados = DadosInstituicao.objects.create(nome_instituicao=nome_instituicao, cep=infos[0], num=infos[1], cnpj=cnpj, 
         rua=address[0], bairro=address[1], cidade=address[2], 
         estado=address[3], latitude=address[4], longitude=address[5])
@@ -49,10 +46,10 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
         user = User.objects.filter(email=email).first()
         if user:
             return HttpResponse('Já existe um usuário com este email!!!')
-        
+
         user = User.objects.create_user(username=usuario, email=email, password=password)
 
-        return HttpResponse("Usuário cadastrado!")
+        return redirect('instituicoes')
 
 class CadastroUsuarioView(GoogleMapsAPI, View):
     def get(self, request):
