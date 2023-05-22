@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import LoginView, CadastroInstituicaoView, CadastroUsuarioView, InstituicoesView, HomeUsuarios, HomeInstituicao, CardMapView, Index
+from .views import LoginView, CadastroInstituicaoView, CadastroUsuarioView, InstituicoesView, HomeUsuarios, HomeInstituicao, CardMapView, Index, InfoInstituicao, InfoUsuario
 
 urlpatterns = [
     path('index', Index.as_view(), name='index'),
@@ -10,4 +10,6 @@ urlpatterns = [
     path('home-usuario', HomeUsuarios.as_view(), name='home-usuario'),
     path('home-instituicao', HomeInstituicao.as_view(), name='home-instituicao'),
     path('card-map', CardMapView.as_view(), name='card-map'),
+    path('info-instituicao', InfoInstituicao.as_view(), name='info-instituicao'),
+    path('info-usuario', InfoUsuario.as_view(), name='info-usuario'),
 ]
