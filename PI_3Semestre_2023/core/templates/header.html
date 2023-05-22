@@ -1,60 +1,30 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'css_header/style.css' %}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../static/css_header/style.css">
 
 <div class="row-header">
-    <header class="">
-        <div class="main-header">
-            <img class="logo" src="{% static 'assets/logo.jpg' %}" alt="">
-            <div class="container-menu">
-            <nav class="main-header__menu">
-                <ul>
-                <li>
-                    <a href="{% url 'home-usuario' %}" class="nav-link">Home</a>
-                </li>
-                <li>
-                    <a href="{% url 'instituicoes' %}" class="nav-link">Instituições</a>
-                </li>
-                <li>
-                    <a href="{% url 'cadastro-instituicao' %}" class="nav-link">Cadastro</a>
-                </li>
-                <li>
-                    <a href="#sobre" class="nav-link">Sobre nós</a>
-                </li>
-                <li>
-                    <a href="#contato" class="nav-link">Contato</a>
-                </li>
-                </ul>
-            </nav>
-            </div>
-        </div>
-        <div class="checkbox-container">
-            <div class="checkbox-wrapper">
-                <input type="checkbox" id="toggle">
-                <label class="checkbox" for="toggle">
-                    <div class="trace"></div>
-                    <div class="trace"></div>
-                    <div class="trace"></div>
-                </label>
-                <div class="menu"></div>
-                <nav class="menu-itens">
-                    <ul>
-                        <li>
-                            <a href="#">Login</a>
-                        </li>
-                        <li>
-                            <a href="#">Edit</a>
-                        </li>
-                        <li>
-                            <a href="#">Logout</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+    <header class="main-header">
+        <img class="logo" src="../static/assets/fome.jpeg" alt="">
+        <div class="container-menu">
+        <nav class="main-header__menu">
+            <ul>
+            <li>
+                <a href="{% url 'home-usuario' %}" class="nav-link">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'instituicoes' %}" class="nav-link">Instituições</a>
+            </li>
+            <li>
+                <a href="{% url 'cadastro-instituicao' %}" class="nav-link">Cadastro</a>
+            </li>
+            <li>
+                <a href="#sobre" class="nav-link">Sobre nós</a>
+            </li>
+            <li>
+                <a href="#contato" class="nav-link">Contato</a>
+            </li>
+            </ul>
+        </nav>
         </div>
     </header>
-    
 </div>
 

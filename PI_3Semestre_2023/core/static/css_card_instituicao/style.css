@@ -38,7 +38,6 @@ footer, header, hgroup, menu, nav, section {
 }
 
 .card {
-  justify-content: center;
   border-radius: 8px;
   margin: 10px;
   padding: 10px;
@@ -46,10 +45,10 @@ footer, header, hgroup, menu, nav, section {
   width: 300px;
   border: solid;
   box-shadow: 10px 12px 18px rgba(0, 0, 0, 0.8);
-  max-width: 300px;
 }
 
 .card p {
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -61,22 +60,20 @@ footer, header, hgroup, menu, nav, section {
 
 }
 
-.card a[type="button"] {
-  display: block;
-  width: 200px;
-  height: 40px;
-  border: 1px solid;
+.card button[type="button"] {
   border-radius: 8px;
   border-color: #005000;
   background-color: #91E191;
-  /* font-size: 55%; */
+  font-size: 55%;
   font-weight: 600;
   color: #005000;
   margin: 15px;
+  width: 200px;
+  height: 40px;
   box-shadow: 5px 6px 9px rgba(0, 0, 0, 0.8);
 }
 
-.card a[type="button"]:hover {
+.card button[type="button"]:hover {
   color: #91E191;
   background-color: #005000;
   
@@ -93,16 +90,8 @@ footer, header, hgroup, menu, nav, section {
 
 .card-titulo {
   height: 50px;
-  font-size: 40px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: break-all;
-}
-
-.frase {
-  height: 130px; 
-  width: 300px;
-  font-size: 18px;
-  overflow: hidden;
 }
