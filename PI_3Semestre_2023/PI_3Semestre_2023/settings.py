@@ -70,13 +70,11 @@ WSGI_APPLICATION = 'PI_3Semestre_2023.wsgi.application'
 
 DATABASES = {
         'default': {
-            'ENGINE': 'djongo',
-            'NAME': 'PI',
-            'ENFORCE_SCHEMA': False,
-            'CLIENT': {
-                'host': 'mongodb+srv://pi:12345@cluster.sedyyp2.mongodb.net/?retryWrites=true&w=majority'
-            }  
-        }
+        'ENGINE': 'djongo',
+        'NAME': 'Djongo',
+        'HOST': '127.0.0.1',
+        'PORT': '27017',
+    }
 }
 
 # Password validation
