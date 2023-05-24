@@ -21,8 +21,9 @@ confirmarSenhaInput.addEventListener('input', function() {
 });
 
 submitButton.addEventListener('click', function(event) {
-  if (nomeCompleto.hasChildNodes() || cnpj.hasChildNodes() || cep.hasChildNodes() 
-  || email.hasChildNodes() || usuario.hasChildNodes() || num.hasChildNodes()){
+  if (nomeCompleto.value === '' || cnpj.value === '' || email.value === ''
+  || usuario.value === ''){
+    event.preventDefault();
     submitButton.disabled = true;
   }
   
