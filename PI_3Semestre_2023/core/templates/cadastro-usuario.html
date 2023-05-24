@@ -16,7 +16,7 @@
   <div class="row-form">
     <div class="container">
       <h1>Cadastro</h1>
-      <form action="{% url 'cadastro-usuario' %}" method="POST">{% csrf_token %}
+      <form id="cadastro-usuario" action="{% url 'cadastro-usuario' %}" method="POST">{% csrf_token %}
         <div>
           <label for="nome-completo">Nome Completo:</label>
           <input type="text" id="nome-completo" name="nome-completo" required>
@@ -47,11 +47,12 @@
           <label for="confirma-senha">Confirmar senha:</label>
           <input type="password" id="confirma-senha" name="confirma-senha" required>
         </div>
-        <input type="submit" value="Cadastrar">
+        <input type="submit" id="submit-button" value="Cadastrar">
       </form>
     </div>
   </div>
   {% include "./footer.html" %}
+  <script src="{% static 'js/valida_senha_user.js' %}" type="text/javascript"></script>
 </body>
 
 </html>
