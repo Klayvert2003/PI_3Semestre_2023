@@ -25,8 +25,7 @@ submitButton.addEventListener('click', function(event) {
     event.preventDefault();
     submitButton.disabled = true;
   }
-  
-  if (confirmarSenhaInput.value === senhaInput.value) {
+  else (confirmarSenhaInput.value === senhaInput.value) {
     alert('Usuário Cadastrado!!!');
   }
 });
