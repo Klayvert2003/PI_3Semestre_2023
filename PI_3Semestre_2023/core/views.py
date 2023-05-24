@@ -82,7 +82,7 @@ class CadastroUsuarioView(GoogleMapsAPI, View):
         
         user = User.objects.create_user(username=usuario, email=email, password=password)
 
-        return HttpResponse("Usuário cadastrado!")
+        return redirect("instituicoes")
 
 class LoginView(View):
     def get(self, request):
