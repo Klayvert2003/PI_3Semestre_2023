@@ -46,6 +46,24 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
             return HttpResponse('Já existe um usuário com este email!!!')
 
         user = User.objects.create_user(username=usuario, email=email, password=password)
+        
+        data = {
+            'id': dados.id,
+            'email': email,
+            'nome_instituicao': dados.nome_instituicao,
+            'cep': dados.cep,
+            'num': dados.num,
+            'cnpj': dados.cnpj,
+            'rua': dados.rua,
+            'bairro': dados.bairro,
+            'cidade': dados.cidade,
+            'estado': dados.estado,
+            'latitude': dados.latitude,
+            'longitude': dados.longitude
+        }
+        
+        if dados:
+            return render(request, 'detalhes-instituicao.html', {'dados': data})
 
         return redirect('instituicoes')
 
@@ -140,11 +158,13 @@ class HomeInstituicao(TemplateView):
         template_name='lp_instituicao.html'
         return render(request, template_name)
     
-class InfoInstituicao(TemplateView):
+class DetalhesInstituicao(View):
     def get(self, request):
-        dados = list(DadosInstituicao.objects.all())
-        template_name = 'Informacoes_de_instituicao.html'
-        return render(request, template_name, {'dados': dados})
+        template_name = 'detalhes-instituicao.html'
+        return render(request, template_name)
+    
+    def post(self, request):
+        ...
     
 class InfoUsuario(TemplateView):
     def get(self, request):
