@@ -14,33 +14,34 @@
     <div class="row-form">
       <div class="container">
         <h1>Dados Instituição</h1>
-        <form action="#" method="post">
+        <form  action="{% url 'detalhe-instituicao' %}" method="POST">{% csrf_token %}
+          {% if dados %}
           <div>
             <label for="nome-instituicao">Nome da Instituição:</label>
-            <input type="text" id="nome-instituicao" name="nome-instituicao" required>
+            <input type="text" id="nome-instituicao" name="nome-instituicao" required value=" {{ dados.nome_instituicao }} "> 
           </div>
           <div class="form-row">
             <div class="row-cep">
               <label for="cep">CEP:</label>
-              <input type="text" id="cep" name="cep">
+              <input type="text" id="cep" name="cep" value="{{ dados.cep }}">
             </div>
             <div class="row-rua">
               <label for="rua">Rua:</label>
-              <input type="text" id="rua" name="rua">
+              <input type="text" id="rua" name="rua" value="{{ dados.rua }}">
             </div>
             <div class="row-numero">
               <label for="numero">Número:</label>
-              <input type="text" id="numero" name="numero">
+              <input type="text" id="numero" name="numero" value="{{ dados.num }}">
             </div>
           </div>
           <div class="form-row">
             <div class="row-bairro">
               <label for="bairro">Bairro:</label>
-              <input type="text" id="bairro" name="bairro">
+              <input type="text" id="bairro" name="bairro" value="{{ dados.bairro }}">
             </div>
             <div class="row-cidade">
               <label for="cidade">Cidade:</label>
-              <input type="text" id="cidade" name="cidade">
+              <input type="text" id="cidade" name="cidade" value="{{ dados.cidade }}">
             </div>
             <div class="row-complemento">
               <label for="complemento">Complemento:</label>
@@ -48,7 +49,7 @@
             </div>
             <div class="row-estado">
               <label for="estado">Estado:</label>
-              <input type="text" id="estado" name="estado">
+              <input type="text" id="estado" name="estado" value="{{ dados.estado }}">
             </div>
           </div>
           <div class="form-row">
@@ -70,11 +71,11 @@
           </div>
           <div>
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required value=" {{ dados.email }} ">
           </div>
           <div>
             <label for="cnpj">CNPJ:</label>
-            <input type="text" id="cnpj" name="cnpj" required>
+            <input type="text" id="cnpj" name="cnpj" required value="{{ dados.cnpj }}">
           </div>
           <div>
             <label for="descreva">Descreva a Instituição - (Máximo 250 caracteres)</label><br>
@@ -94,6 +95,7 @@
             <input type="text" id="doacao3" name="doacao3">
           </div>
           <input type="submit" value="Salvar Dados">
+          {% endif %}
         </form>
       </div>
     </div>
