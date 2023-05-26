@@ -37,35 +37,36 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
         usuario = request.POST.get('usuario')
         password = request.POST.get('senha')
         
-        dados = DadosInstituicao.objects.create(nome_instituicao=nome_instituicao, cep=infos[0], num=infos[1], cnpj=cnpj, 
-        rua=address[0], bairro=address[1], cidade=address[2], 
-        estado=address[3], latitude=address[4], longitude=address[5])
+        #dados = DadosInstituicao.objects.create(nome_instituicao=nome_instituicao, cep=infos[0], num=infos[1], cnpj=cnpj, 
+        #rua=address[0], bairro=address[1], cidade=address[2], 
+        #estado=address[3], latitude=address[4], longitude=address[5])
         
-        user = User.objects.filter(email=email).first()
-        if user:
-            return HttpResponse('Já existe um usuário com este email!!!')
+        #user = User.objects.filter(email=email).first()
+        #if user:
+        #    return HttpResponse('Já existe um usuário com este email!!!')
 
-        user = User.objects.create_user(username=usuario, email=email, password=password)
+        #user = User.objects.create_user(username=usuario, email=email, password=password)
         
         data = {
-            'id': dados.id,
+            'usuario': usuario,
+            'senha': password,
             'email': email,
-            'nome_instituicao': dados.nome_instituicao,
-            'cep': dados.cep,
-            'num': dados.num,
-            'cnpj': dados.cnpj,
-            'rua': dados.rua,
-            'bairro': dados.bairro,
-            'cidade': dados.cidade,
-            'estado': dados.estado,
-            'latitude': dados.latitude,
-            'longitude': dados.longitude
+            'nome_instituicao': nome_instituicao,
+            'cep': infos[0],
+            'num': infos[1],
+            'cnpj': cnpj,
+            'rua': address[0],
+            'bairro': address[1],
+            'cidade': address[2],
+            'estado': address[3],
+            'latitude': address[4],
+            'longitude': address[5],
         }
         
-        if dados:
-            return render(request, 'detalhes-instituicao.html', {'dados': data})
+        #if data:
+        return render(request, 'detalhes-instituicao.html', {'dados': data})
 
-        return redirect('instituicoes')
+        #return redirect('instituicoes')
 
 class CadastroUsuarioView(GoogleMapsAPI, View):
     def get(self, request):
@@ -164,7 +165,36 @@ class DetalhesInstituicao(View):
         return render(request, template_name)
     
     def post(self, request):
-        ...
+        usuario = request.POST.get('usuario')
+        password = request.POST.get('senha')
+        nome_instituicao = request.POST.get('nome-instituicao')
+        cep = request.POST.get('cep')
+        rua = request.POST.get('rua')
+        num = request.POST.get('num')
+        bairro = request.POST.get('cidade')
+        cidade = request.POST.get('nome-instituicao')
+        complemento = request.POST.get('complemento')
+        estado = request.POST.get('estado')
+        tel = request.POST.get('telefone')
+        cel = request.POST.get('celular')
+        email = request.POST.get('email')
+        cnpj = request.POST.get('cnpj')
+        descricao = request.POST.get('descreva')
+        forma_ajuda1 = request.POST.get('doacao1')
+        forma_ajuda2 = request.POST.get('doacao2')
+        forma_ajuda3 = request.POST.get('doacao3')
+        
+        DadosInstituicao.objects.create(nome_instituicao=nome_instituicao, cep=cep, num=num, cnpj=cnpj, 
+        rua=rua, bairro=bairro, cidade=cidade, 
+        estado=estado, )
+        #latitude=address[4], longitude=address[5])
+        
+        user = User.objects.filter(email=email).first()
+        if user:
+            return HttpResponse('Já existe um usuário com este email!!!')
+
+        #user = User.objects.create_user(username=usuario, email=email, password=password)
+        #user = User.objects.update(username=usuario, email=email, password=password)
     
 class InfoUsuario(TemplateView):
     def get(self, request):
