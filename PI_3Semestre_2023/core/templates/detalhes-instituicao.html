@@ -102,12 +102,21 @@
             <label for="doacao3">Descreva a 3º forma que o público pode ajudar a Instituição</label>
             <input type="text" id="doacao3" name="doacao3">
           </div>
-          <input type="submit" value="Salvar Dados">
+          <input type="submit" value="Cadastrar Dados">
           {% endif %}
         </form>
       </div>
     </div>
-  </div>   
+  </div>
+{% block javascript %}
+  {% if messages %}
+    {% for message in messages %}
+        <script>
+            alert('{{ message }}')
+        </script>
+    {% endfor %}
+  {% endif %}
+{% endblock %}
   {% include "./footer.html" %}
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

@@ -44,10 +44,19 @@
           <label for="confirma-senha">Confirmar senha:</label>
           <input type="password" id="confirma-senha" name="confirma-senha" required>
         </div>
-        <input type="submit" id="submit-button" value="Cadastrar">
+        <input type="submit" id="submit-button" value="Próximo">
       </form>
     </div>
   </div>
+{% block javascript %}
+  {% if messages %}
+    {% for message in messages %}
+        <script>
+            alert('{{ message }}')
+        </script>
+    {% endfor %}
+  {% endif %}
+{% endblock %}
   {% include "./footer.html" %}
   <script src="{% static 'js/jquery-1.2.6.pack.js' %}" type="text/javascript"></script>
   <script src="{% static 'js/jquery.maskedinput-1.1.4.pack.js' %}" type="text/javascript"></script>

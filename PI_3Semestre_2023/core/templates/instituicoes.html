@@ -24,8 +24,7 @@
           
           <img src="{% static 'assets/instituicao.jpg' %}" alt="Foto da Instituição">
           <div >
-            <p class="frase">Juntos podemos fazer a diferença! Ajude a combater a fome e o desperdício de alimentos doando para nossa
-                instituição. Cada doação conta e pode mudar a vida de alguém.
+            <p class="frase">{{ dado.descricao }}
             </p>
           </div>
           <a type="button" onclick="verMapa({{ dado.id }})">Ver Mapa</a>

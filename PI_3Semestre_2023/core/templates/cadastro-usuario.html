@@ -51,6 +51,15 @@
       </form>
     </div>
   </div>
+  {% block javascript %}
+    {% if messages %}
+      {% for message in messages %}
+          <script>
+              alert('{{ message }}')
+          </script>
+      {% endfor %}
+    {% endif %}
+  {% endblock %}
   {% include "./footer.html" %}
 </body>
 
