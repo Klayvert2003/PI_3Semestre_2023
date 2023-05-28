@@ -78,6 +78,14 @@
             <input type="text" id="cnpj" name="cnpj" required value="{{ dados.cnpj }}">
           </div>
           <div>
+            <label for="cnpj">usuario:</label>
+            <input type="text" id="usuario" name="usuario" required value="{{ dados.usuario }}">
+          </div>
+          <div>
+            <label for="cnpj">senha:</label>
+            <input type="text" id="senha" name="senha" required value="{{ dados.senha }}">
+          </div>
+          <div>
             <label for="descreva">Descreva a Instituição - (Máximo 250 caracteres)</label><br>
             <textarea id="descreva" name="descreva" maxlength="250" rows="4" cols="100"></textarea>
           </div>
@@ -94,12 +102,21 @@
             <label for="doacao3">Descreva a 3º forma que o público pode ajudar a Instituição</label>
             <input type="text" id="doacao3" name="doacao3">
           </div>
-          <input type="submit" value="Salvar Dados">
+          <input type="submit" value="Cadastrar Dados">
           {% endif %}
         </form>
       </div>
     </div>
-  </div>   
+  </div>
+{% block javascript %}
+  {% if messages %}
+    {% for message in messages %}
+        <script>
+            alert('{{ message }}')
+        </script>
+    {% endfor %}
+  {% endif %}
+{% endblock %}
   {% include "./footer.html" %}
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
