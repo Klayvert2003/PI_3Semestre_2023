@@ -1,38 +1,43 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="{% static 'css_informacao_cadastro/style_Informacao.css' %}">
-    <title>Informações de usuário</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+	<title>Informações de usuário</title>
 </head>
+
 <body>
 	<a href="{% url 'home-instituicao' %}">
-	<img src="{% static 'assets/logo.jpg' %}" alt="Logotipo" style="width: 42vh;">
+		<img src="{% static 'assets/logo.jpg' %}" alt="Logotipo" style="width: 42vh;">
 	</a>
-<nav>
-	<ul>
-		<li>
-			<a href="{% url 'home-instituicao' %}">Home</a>
-		</li>
-		<li>
-			<a href="{% url 'instituicoes' %}">Instituições</a>
-		</li>
-		<li>
-			<a href="#sobre">Sobre nós</a>
-		</li>
-		<li>
-			<a href="#contato">Contato</a>
-		</li>
-	</ul>
-</nav>
-<br>
-<br>
-<br> 
-<hr>
-<h1>Informações de Usuário</h1>
+	<nav>
+		<ul>
+			<li>
+				<a href="{% url 'home-instituicao' %}">Home</a>
+			</li>
+			<li>
+				<a href="{% url 'instituicoes' %}">Instituições</a>
+			</li>
+			<li>
+				<a href="#sobre">Sobre nós</a>
+			</li>
+			<li>
+				<a href="#contato">Contato</a>
+			</li>
+		</ul>
+	</nav>
+	<br>
+	<br>
+	<br>
+	<hr>
+	<h1>Informações de Usuário</h1>
 	<table>
 		<thead>
 			<tr>
@@ -54,4 +59,5 @@
 		</tbody>
 	</table>
 </body>
+
 </html>

@@ -15,7 +15,9 @@ time, mark, audio, video {
 	margin: 0; 
 	padding: 0;
 	border: 0;
+	font-size: 100%;
 	vertical-align: baseline;
+  font-family: 'Montserrat', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -46,14 +48,13 @@ body {
   width: 320px;
   height: 420px;
   border: solid;
-  /*background: #91E191;*/
   color: #005000;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
   border-radius: 10px;
   padding: 30px 30px;
 }
 
-h2 {
+.title-card {
   margin: 0;
   padding: 0 0 30px;
   text-align: center;
@@ -106,8 +107,8 @@ h2 {
 
 .login-box-enviar {
   display: inline-block;
-  background: #91e191;
-  color: #024702;
+  color: #91e191;
+  background: #024702;
   border: none;
   width: 100%;
   padding: 15px;
@@ -121,8 +122,8 @@ h2 {
 }
 
 .login-box-enviar:hover {
-  background: #024702;
-  color: #91e191;
+  color: #024702;
+  background: #91e191;
 }
 
 .cadastrar {

@@ -28,7 +28,6 @@ header {
   position: sticky;
 }
 .main-header {
-  /*background-color: #91E191;   */ 
   padding: 10px 0px;
   display: flex;
   flex-flow: row wrap;
@@ -36,7 +35,7 @@ header {
   align-items: center;
   column-gap: 30px;
   min-height: 20vh;
-  width: calc(90%)
+  width: calc(90%);
   
 }
 
@@ -90,9 +89,6 @@ header {
 }
 
 .logo {
-  width: 60vh;
-  height: 24vh;
-  /* width: 80%; */
   margin-left: 5%;
   justify-content: flex-end;
   padding-right: 10px;
@@ -175,7 +171,7 @@ ol, ul {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   z-index: 2;
   opacity: 0;
   visibility: hidden;
