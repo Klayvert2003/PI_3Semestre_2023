@@ -29,55 +29,6 @@ ol, ul {
 	list-style: none;
 }
 
-.footer {
-  background-color: #005000;        
-  color: #91E191;;
-  font-size: 16px;
-}
-
-.footer__container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
-  padding: 10px;
-}
-
-.footer__copyright {
-  text-align: center;
-  margin-top: 8px;
-  background-color: #bbffbb;    
-  font-weight: bold;
-  padding: 8px;
-  color: gray;
-}
-
-.footer__title {
-  font-size: 22px;
-  font-weight: bold;
-  color: #91E191;
-  margin-bottom: 5px;
-}
-
-.footer__about-text {
-  width: 400px;
-  text-align: justify;
-}
-
-.footer i {
-  color: #91E191;
-}
-
-.footer a {
-  color: #91E191;
-}
-
-.footer a:visited {
-  color: #fff;
-}
-.footer li {
-  margin: 10px 0;
-}
-
 ol, ul {
 list-style: none;
 }
@@ -135,7 +86,7 @@ list-style: none;
 }
 
 .btn-warning {
-  background-color: #e84030;
+  background-color: #005000;
   outline: none;
   color: white;
   
@@ -183,7 +134,7 @@ list-style: none;
 .card-footer {
   margin-top: 5px;
   text-align: center;
-  background-color:#e84030;
+  background-color:#005000;
 
 }
 

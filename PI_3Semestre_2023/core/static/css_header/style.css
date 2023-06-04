@@ -26,6 +26,7 @@ header {
 }
 .row-header {
   position: sticky;
+  margin-bottom: 9px;
 }
 .main-header {
   display: flex;

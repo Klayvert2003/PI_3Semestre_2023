@@ -1,0 +1,88 @@
+/*Primeira parte referes-se ao header e footer*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0; 
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+  font-family: 'Montserrat', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+.container {
+    display: flex;  
+}
+
+.content {
+    flex: 1;
+    margin-left: 9%;
+}
+
+.title-contato {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 35%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+  
+.image {
+  flex: 1;
+  background-image: url("../assets/image_contat.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input, textarea {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #005000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .text-contato {
+    text-align: justify;
+    margin-right: 35%;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
