@@ -44,7 +44,7 @@ iframe {
     font-size: 65px;
     padding: 5px;
     border-radius: 10px;
-    background-color: #4CAF50;
+    background-color: #005000;
     color: white;
     display: flex;
     justify-content: center;
@@ -61,7 +61,7 @@ iframe {
     align-self: center;
     text-align: center;
     margin-left: 2%;
-    font-size: 48px;
+    font-size: 28px;
     margin-bottom: 1%;
 } 
 
@@ -93,6 +93,12 @@ iframe {
   text-align: justify;
   padding-left: 2%;
   padding-right: 10%;
+}
+
+.title-usuario {
+  font-size: 30px;
+  margin-bottom: 1%;
+  font-weight: bolder;
 }
 
 
