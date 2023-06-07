@@ -4,6 +4,8 @@ from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.http import HttpResponse
+
 # My functions
 from core.models import DadosInstituicao, DadosUsuarios
 from api.ValidaCNPJ import ValidaCNPJ
@@ -120,10 +122,11 @@ class LoginView(View):
         password = request.POST.get('password')
 
         user = authenticate(username=username, password=password)
-
+        
         if user:
             login(request, user)
             user_id = user.id
+            request.session['user_id'] = user_id
             return render(request, 'home-usuario.html', {'user_id': user_id})
         else:
             messages.error(request, 'Email ou senha inválidos!!!')
@@ -226,3 +229,17 @@ class InfoUsuario(TemplateView):
         dados = list(DadosUsuarios.objects.all())
         template_name = 'Informacoes_de_usuario.html'
         return render(request, template_name, {'dados': dados})
+    
+class DeletarUsuario(View):
+    def deletar_usuario(request):
+        id_usuario = request.session.get('user_id')
+        print(id_usuario)
+        usuario = DadosUsuarios.objects.get(id=id_usuario)  
+        usuario.delete()
+        return redirect('index')            
+
+    
+class MenuUsuario(TemplateView):
+    def get(self, request):
+        template_name='menu-usuario.html'
+        return render(request, template_name)        
