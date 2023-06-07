@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css_card_instituicao/style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css_menu_usuario/style.css' %}">
+  <title>Menu usuário</title>
+</head>
+
+<body>
+  {% include "./header.html" %}
+      <div class="texto-bem-vindo"></div>
+      <h1>Bem-vindo, O que gostaria de fazer?</h1>
+      <div class="conteudo">
+        <div class="botoes">
+          <div class="button-group">
+            <a href="{% url 'deletar-usuario' %}" class="btn-deleta_edita" method="POST">Deletar Usuário</a>           
+            <a href="#"  class="btn-deleta_edita">Editar Usuário</a>
+            </div>
+          </div>
+        </div>
+      </div>          
+
+  {% include "./footer.html" %}
+
+</body>
+
+</html>
