@@ -16,30 +16,7 @@
 </head>
 
 <body>
-  <div class="main-header">
-    <img class="logo" src="{% static 'assets/logo.jpg' %}" alt="">
-    <div class="container-menu">
-    <nav class="main-header__menu">
-        <ul>
-        <li>
-            <a href="{% url 'home-usuario' %}" class="nav-link">Home</a>
-        </li>
-        <li>
-            <a href="{% url 'instituicoes' %}" class="nav-link">Instituições</a>
-        </li>
-        <li>
-            <a href="{% url 'cadastro-usuario' %}" class="nav-link">Cadastro</a>
-        </li>
-        <li>
-            <a href="#sobre" class="nav-link">Sobre nós</a>
-        </li>
-        <li>
-            <a href="#contato" class="nav-link">Contato</a>
-        </li>
-        </ul>
-    </nav>
-    </div>
-</div>
+  {% include "./header.html" %}
   <div class="conteudo">
     <form action="{% url 'home-usuario' %}" method="POST">{% csrf_token %}
     <h1>Conheça e contribua com nosso projeto, Ajude pessoas e salve vidas</h1>
