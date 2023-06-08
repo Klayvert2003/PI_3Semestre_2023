@@ -4,7 +4,6 @@ from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponse
 
 # My functions
 from core.models import DadosInstituicao, DadosUsuarios
@@ -39,16 +38,6 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
         usuario = request.POST.get('usuario')
         password = request.POST.get('senha')
         
-        #dados = DadosInstituicao.objects.create(nome_instituicao=nome_instituicao, cep=infos[0], num=infos[1], cnpj=cnpj, 
-        #rua=address[0], bairro=address[1], cidade=address[2], 
-        #estado=address[3], latitude=address[4], longitude=address[5])
-        
-        #user = User.objects.filter(email=email).first()
-        #if user:
-        #    return HttpResponse('Já existe um usuário com este email!!!')
-
-        #user = User.objects.create_user(username=usuario, email=email, password=password)
-        
         data = {
             'usuario': usuario,
             'senha': password,
@@ -56,6 +45,8 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
             'nome_instituicao': nome_instituicao,
             'cep': infos[0],
             'num': infos[1],
+            'complemento': infos[2],
+            'telefone': infos[3],
             'cnpj': cnpj,
             'rua': address[0],
             'bairro': address[1],
@@ -64,17 +55,11 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
             'latitude': address[4],
             'longitude': address[5],
         }
-        #print(data)
 
-        # for key, value in data.items():
-        #     if not value:
-        #         messages.error(request, 'CNPJ Inválido!!!')
-        #         return redirect('cadastro-instituicao')
-        
-        #if data:
+        request.session['email'] = email
+        request.session['usuario'] = usuario
+        request.session['senha'] = password
         return render(request, 'detalhes-instituicao.html', {'dados': data})
-
-        #return redirect('instituicoes')
 
 class CadastroUsuarioView(GoogleMapsAPI, View):
     def get(self, request):
@@ -96,20 +81,17 @@ class CadastroUsuarioView(GoogleMapsAPI, View):
         email = request.POST.get('email')
         usuario = request.POST.get('usuario')
         password = request.POST.get('senha')
-        #confirm_password = request.POST.get('confirma-senha')
-        # if password != confirm_password:
-        #     return HttpResponse('Senhas divergentes, digite a senha idêntica a inserida anteriormente')
 
-        dados = DadosUsuarios.objects.create(nome_usuario=nome_completo, cep=cep, num=num,
-        rua=address[0], bairro=address[1], cidade=address[2], 
-        estado=address[3])
-        
         user = User.objects.filter(email=email).first()
         if user:
             messages.error(request, 'Já existe um usuário com este email!!!')
             return redirect('cadastro-usuario')
         
         user = User.objects.create_user(username=usuario, email=email, password=password)
+
+        DadosUsuarios.objects.create(id=user.id, nome_usuario=nome_completo, cep=cep, num=num,
+        rua=address[0], bairro=address[1], cidade=address[2], 
+        estado=address[3])
 
         return redirect("instituicoes")
 
@@ -183,19 +165,20 @@ class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
         return render(request, template_name)
     
     def post(self, request):
-        usuario = request.POST.get('usuario')
-        password = request.POST.get('senha')
+        email = request.session.get('email')
+        usuario = request.session.get('usuario')
+        senha = request.session.get('senha')
+        print(email, usuario, senha)
         nome_instituicao = request.POST.get('nome-instituicao')
         cep = request.POST.get('cep')
         rua = request.POST.get('rua')
-        num = request.POST.get('num')
-        bairro = request.POST.get('cidade')
-        cidade = request.POST.get('nome-instituicao')
+        num = request.POST.get('numero')
+        bairro = request.POST.get('bairro')
+        cidade = request.POST.get('cidade')
         complemento = request.POST.get('complemento')
         estado = request.POST.get('estado')
         tel = request.POST.get('telefone')
         cel = request.POST.get('celular')
-        email = request.POST.get('email')
         cnpj = request.POST.get('cnpj')
         if cnpj:
             try:
@@ -209,19 +192,18 @@ class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
         forma_ajuda1 = request.POST.get('doacao1')
         forma_ajuda2 = request.POST.get('doacao2')
         forma_ajuda3 = request.POST.get('doacao3')
-        
-        DadosInstituicao.objects.create(cel=cel, tel=tel, descricao=descricao, forma_ajuda1=forma_ajuda1, 
-        forma_ajuda2=forma_ajuda2, forma_ajuda3=forma_ajuda3,nome_instituicao=nome_instituicao, 
-        cep=cep, num=num, cnpj=cnpj, rua=rua, bairro=bairro, cidade=cidade, estado=estado, 
-        latitude=address[4], longitude=address[5])
-        
         user = User.objects.filter(email=email).first()
         if user:
             messages.error(request, 'Já existe um usuário com este email!!!')
             return redirect('detalhes-instituicao')
 
-        user = User.objects.create_user(username=usuario, email=email, password=password)
-        #user = User.objects.update(username=usuario, email=email, password=password)
+        user = User.objects.create_user(username=usuario, email=email, password=senha)
+        
+        DadosInstituicao.objects.create(id=user.id, email=email, senha=senha, cel=cel, tel=tel, descricao=descricao, forma_ajuda1=forma_ajuda1, 
+        forma_ajuda2=forma_ajuda2, forma_ajuda3=forma_ajuda3, nome_instituicao=nome_instituicao, 
+        cep=cep, num=num, cnpj=cnpj, rua=rua, complemento=complemento, bairro=bairro, cidade=cidade, 
+        estado=estado, latitude=address[4], longitude=address[5])
+        
         return redirect('instituicoes')
     
 class InfoUsuario(TemplateView):
@@ -231,13 +213,31 @@ class InfoUsuario(TemplateView):
         return render(request, template_name, {'dados': dados})
     
 class DeletarUsuario(View):
-    def deletar_usuario(request):
+    @staticmethod
+    def get(request):
         id_usuario = request.session.get('user_id')
-        print(id_usuario)
-        usuario = DadosUsuarios.objects.get(id=id_usuario)  
-        usuario.delete()
-        return redirect('index')            
+        auth_user = User.objects.get(id=id_usuario)
+        usuario = None
+        try:
+            try:
+                usuario = DadosUsuarios.objects.get(id=id_usuario)
+                usuario.delete()
+                print(f'Usuário de id {id_usuario} deletado')
+            except DadosUsuarios.DoesNotExist:
+                print("Usuário não é doador/voluntário.")
+                pass
+            try:
+                usuario = DadosInstituicao.objects.get(id=id_usuario)
+                usuario.delete()
+                print(f'Usuário de id {id_usuario} deletado')
+            except DadosInstituicao.DoesNotExist:
+                print("Usuário não é uma instituição.")
+                pass
+        finally:
+            if auth_user is not None:
+                auth_user.delete()
 
+        return redirect('index')
     
 class MenuUsuario(TemplateView):
     def get(self, request):
