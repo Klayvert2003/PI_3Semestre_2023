@@ -1,0 +1,51 @@
+
+/* Estilo para a janela do mapa */
+#map-container {
+    border: 1px solid black;
+    /* Define a borda */
+    width: 80%;
+    /* Define a largura */
+    height: 400px;
+    /* Define a altura */
+    float: center;
+    /* Coloca o container à direita */
+    padding: 10px;
+    /* Define o preenchimento interno */
+}
+
+h1 {
+    font-size: 35px;
+}
+
+p   {
+    font-size: 22px;
+}
+
+/* Estilo para o mapa */
+#map {
+    height: 100%;
+}
+
+.column {
+    width: 50%;
+    float: left;
+}
+
+.column-map {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    margin: 15px;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

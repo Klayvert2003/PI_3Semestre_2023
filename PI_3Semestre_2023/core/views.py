@@ -231,3 +231,8 @@ class ContatoView(TemplateView):
     def get(self, request):
         template_name='contato.html'
         return render(request, template_name)
+    
+class Test(TemplateView):
+    def get(self, request):
+        template_name = 'Informacoes_de_usuario.html'
+        return render(request, template_name)
