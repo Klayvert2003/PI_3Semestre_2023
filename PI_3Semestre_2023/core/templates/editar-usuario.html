@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css_cadastro_usuario/style-cadastro-usuario.css' %}">
+  <title>Edição</title>
+
+</head>
+
+<body>
+  {% include "./header.html" %}
+  <div class="row-form">
+    <div class="container">
+      <h1>Editar</h1>
+      <form method="post">
+        {% csrf_token %}
+      
+        {% if usuario %}
+        
+        <label>Nome Completo:</label>
+        <input type="text" name="nome-completo" value="{{ usuario.nome_usuario }}">
+        
+        <label>CEP:</label>
+        <input type="text" name="cep" value="{{ usuario.cep }}">
+        
+        <label>Número:</label>
+        <input type="text" name="numero" value="{{ usuario.numero }}">
+        
+        <label>Email:</label>
+        <input type="email" name="email" value="{{ usuario.email }}">
+        
+        <label>Usuário:</label>
+        <input type="text" name="usuario" value="{{ usuario.usuario }}">
+        
+        <label>Senha:</label>
+        <input type="password" name="senha">
+        
+        {% endif%}
+          <input type="submit" value="Salvar">
+      </form>
+    </div> 
+  </div>
+  {% block javascript %}
+    {% if messages %}
+      {% for message in messages %}
+          <script>
+              alert('{{ message }}')
+          </script>
+      {% endfor %}
+    {% endif %}
+  {% endblock %}
+  {% include "./footer.html" %}
+</body>
+
+</html>
