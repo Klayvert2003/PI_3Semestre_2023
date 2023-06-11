@@ -238,7 +238,38 @@ class DeletarUsuario(View):
                 auth_user.delete()
 
         return redirect('index')
-    
+
+class EditarUsuario(View):
+    def get(self, request):
+        try:
+            try:
+                id_usuario = request.session.get('user_id')
+                usuario = DadosUsuarios.objects.filter(id=id_usuario)
+                usuario.update()                
+            except DadosUsuarios.DoesNotExist:
+                print("Usuário não é doador/voluntário.")
+                pass
+            try:
+                usuario = DadosInstituicao.objects.filter(id=id_usuario)   
+            except DadosInstituicao.DoesNotExist:
+                print("Usuário não é uma instituição.")
+                pass
+        finally:
+                        
+            return render(request, 'editar-usuario.html', {'usuario': usuario})
+        
+       
+    def post(self, request):
+        email = request.session.get('email')
+        usuario = request.session.get('usuario')
+        senha = request.session.get('senha')
+        nome_usuario = request.session.get('nome_usuario')
+        cep = request.session.get('cep')
+        numero = request.session.get('numero')
+        return redirect('home-usuario')
+        
+        
+
 class MenuUsuario(TemplateView):
     def get(self, request):
         template_name='menu-usuario.html'
