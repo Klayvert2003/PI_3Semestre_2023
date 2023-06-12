@@ -5,43 +5,69 @@
   <title>Google Maps API</title>
   <meta name="viewport" content="initial-scale=1.0">
   <meta charset="utf-8">
-  <style>
-    /* Estilo para a janela do mapa */
-    #map-container {
-        border: 1px solid black; /* Define a borda */
-        width: 50%; /* Define a largura */
-        height: 400px; /* Define a altura */
-        float: right; /* Coloca o container à direita */
-        padding: 10px; /* Define o preenchimento interno */
-      }
-      
-      /* Estilo para o mapa */
-      #map {
-        height: 100%;
-      }
-      
-      /* Estilo para o contêiner do mapa */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      
-  </style>  
+  <link rel="stylesheet" href="../static/css_card_map/style.css">
 </head>
 {% include "./header.html" %}
 <body>
-  <div id="map-container">
-    <div id="map"></div>
+  <div class="row">
+    <div class="column">
+      <h1>Junte-se à Instituição Mãos Solidárias na luta contra a fome!</h1>
+      <br>
+      <br>
+      <p>Oferecemos refeições nutritivas, capacitamos e levamos esperança a comunidades carentes. Com sua ajuda, transformamos vidas! Faça parte dessa mudança agora!</p>
+    </div>
+    <div class="column">
+      <h1>Dados para Doações</h1>
+      <br>
+      <br>
+      <p>PIX - 77.008.377/0001-11</p>
+      <p>Depósito Bancário:</p>
+      <p>Agência: 0001</p>
+      <p>C/C: 012458-7</p>
+      <p>Banco do Brasil</p>
+    </div>
   </div>
-  <div>
-    <h1>Informações do Local</h1>
-    <p hidden>Latitude: <span hidden id="lat">{{ latitude }}</span></p>
-    <p hidden>Longitude: <span hidden id="lon">{{ longitude }}</span></p>
+  <div class="row">
+    <div class="column">
+      <h1>Localização</h1>
+      <br>
+      <br>
+      <div class='column-map'> 
+        <div id="map-container">
+          <div id="map"></div>
+        </div>
+      </div>
+      <div>
+        <p hidden>Latitude: <span hidden id="lat">{{ latitude }}</span></p>
+        <p hidden>Longitude: <span hidden id="lon">{{ longitude }}</span></p>
+      </div>
+      {% block javascript %}
+      <script src="https://maps.googleapis.com/maps/api/js?key={{ API_KEY }}&callback=initMap" async defer></script>
+      <script src="{% static 'js/load_map.js' %}"></script>
+      {% endblock %}
+    </div>
+    <div class="column">
+      <h1>Voluntariado</h1>
+      <br>
+      <br>
+      <ul>
+        <li>
+          <p>Servimos refeições para pessoas em situação de rua às Quartas e Sextas à noite, das 20h às 22h, no ponto de encontro da nossa sede.</p>
+        </li>
+        <br>
+        <li>
+          <p>Montamos Cestas Básicas aos Sábados na nossa sede, das 9h às 12h.</p>
+        </li>
+        <br>
+        <li>
+          <p>Entrega de Cestas Básicas em nossa sede aos Domingos, das 9h às 12h.</p>
+        </li>
+        <br>
+        <li>
+          <p>Cadastre-se no site e entraremos em contato!</p>
+        </li>
+      </ul>  
+    </div>
   </div>
-  {% block javascript %}
-  <script src="https://maps.googleapis.com/maps/api/js?key={{ API_KEY }}&callback=initMap" async defer></script>
-  <script src="{% static 'js/load_map.js' %}"></script>
-  {% endblock %}
 </body>
 </html>

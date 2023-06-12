@@ -15,17 +15,13 @@ time, mark, audio, video {
 	margin: 0; 
 	padding: 0;
 	border: 0;
+	font-size: 100%;
 	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*daqui pra baixo é do formulario */
 body {
-  font-family: Arial, sans-serif;
   background-color: #fff;
 }
 
@@ -34,16 +30,15 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container {
+.container-usuario {
   border: solid;
-  width: 750px;
+  width: 530px;
   margin: 20px;
-  /*background-color: #91E191;*/
   padding: 20px;
   border-radius: 10px;
 }
 
-h1 {
+.title-form {
   font-size: 32px;
   text-align: center;
   color: #005000;

@@ -1,6 +1,5 @@
 from django.urls import path
-from .views import DeletarUsuario, EditarUsuario, LoginView, LogoutView, CadastroInstituicaoView, CadastroUsuarioView, InstituicoesView, HomeUsuarios, HomeInstituicao, CardMapView, Index, DetalhesInstituicao, InfoUsuario, MenuUsuario
-
+from .views import DeletarUsuario, EditarUsuario, LoginView, LogoutView, CadastroInstituicaoView, CadastroUsuarioView, InstituicoesView, HomeUsuarios, HomeInstituicao, CardMapView, Index, DetalhesInstituicao, InfoUsuario, MenuUsuario, ContatoView
 urlpatterns = [
     path('index', Index.as_view(), name='index'),
     path('login', LoginView.as_view(), name='login'),
@@ -16,4 +15,5 @@ urlpatterns = [
     path('deletar-usuario', DeletarUsuario.as_view(), name='deletar-usuario'),
     path('menu-usuario', MenuUsuario.as_view(), name='menu-usuario'),
     path('editar-usuario', EditarUsuario.as_view(), name='editar-usuario'),
+    path('contato', ContatoView.as_view(), name='contato'),
 ]

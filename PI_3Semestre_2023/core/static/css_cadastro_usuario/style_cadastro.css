@@ -17,6 +17,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	vertical-align: baseline;
+  font-family: 'Montserrat', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -165,7 +166,7 @@ body {
 }
 .container {
   border: solid;
-  width: 750px;
+  width: 620px;
   margin: 20px;
   /*background-color: #91E191;*/
   padding: 20px;

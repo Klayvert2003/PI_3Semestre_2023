@@ -211,7 +211,7 @@ class InfoUsuario(TemplateView):
         dados = list(DadosUsuarios.objects.all())
         template_name = 'Informacoes_de_usuario.html'
         return render(request, template_name, {'dados': dados})
-    
+
 class DeletarUsuario(View):
     @staticmethod
     def get(request):
@@ -363,4 +363,9 @@ class EditarUsuario(View):
 class MenuUsuario(TemplateView):
     def get(self, request):
         template_name='menu-usuario.html'
-        return render(request, template_name)        
+        return render(request, template_name)
+
+class ContatoView(TemplateView):
+    def get(self, request):
+        template_name='contato.html'
+        return render(request, template_name)
