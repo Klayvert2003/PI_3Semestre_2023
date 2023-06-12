@@ -1,0 +1,62 @@
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  .text-title {
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .botoes {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .button-group {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 80px
+  }
+  
+  
+  .btn-deleta_edita {
+    width: 300px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #005000;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .btn-deleta:hover {
+    background-color: #91E191;
+  }
+  
+  /*background-color: #005000;*/
+  
+  .texto-bem-vindo{
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    font-size: 58px;
+  }
+  
+  

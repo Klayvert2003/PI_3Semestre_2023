@@ -41,26 +41,26 @@
                 </label>
                 <div class="menu"></div>
                 <nav class="menu-itens">
-                  <ul>
-                    <li>
-                      <a href="{% url 'login' %}">Login</a>
-                    </li>
-                    <li>
-                      <a href="#">Edit</a>
-                    </li>
-                    <li>
-                      <a href="{% url 'logout' %}">Logout</a>
-                    </li>
-                    {% block javascript %}
-                    {% if messages %}
-                    {% for message in messages %}
-                    <script>
-                      alert('{{ message }}')
-                    </script>
-                    {% endfor %}
-                    {% endif %}
-                    {% endblock %} 
-                  </ul>
+                    <ul>
+                        <li>
+                            <a href="{% url 'login' %}">Login</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'menu-usuario' %}">Edit</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                        {% block javascript %}
+                          {% if messages %}
+                            {% for message in messages %}
+                                <script>
+                                    alert('{{ message }}')
+                                </script>
+                            {% endfor %}
+                          {% endif %}
+                        {% endblock %}
+                    </ul>
                 </nav>
               </div>
             </div>
