@@ -1,59 +1,177 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css_cadastro_usuario/style-cadastro-usuario.css' %}">
-  <title>Edição</title>
-
+  <link rel="stylesheet" href="{% static 'css_detalhes_instituicao/style.css' %}">
+  <title>Edição de Usuário</title>
 </head>
-
 <body>
   {% include "./header.html" %}
-  <div class="row-form">
-    <div class="container">
-      <h1>Editar</h1>
-      <form method="post">
-        {% csrf_token %}
-      
-        {% if usuario %}
-        
-        <label>Nome Completo:</label>
-        <input type="text" name="nome-completo" value="{{ usuario.nome_usuario }}">
-        
-        <label>CEP:</label>
-        <input type="text" name="cep" value="{{ usuario.cep }}">
-        
-        <label>Número:</label>
-        <input type="text" name="numero" value="{{ usuario.numero }}">
-        
-        <label>Email:</label>
-        <input type="email" name="email" value="{{ usuario.email }}">
-        
-        <label>Usuário:</label>
-        <input type="text" name="usuario" value="{{ usuario.usuario }}">
-        
-        <label>Senha:</label>
-        <input type="password" name="senha">
-        
-        {% endif%}
-          <input type="submit" value="Salvar">
-      </form>
-    </div> 
+  <div class="conteudo">
+    <div class="row-form">
+      <div class="container">
+        <h1>Edição dos Dados</h1>
+        <form  action="{% url 'editar-usuario' %}" method="POST">{% csrf_token %}
+          {% if dados_instituicao %}
+          <div>
+            <label for="nome">Nome da Instituição:</label>
+            <input type="text" id="nome" name="nome" required value="{{ dados_instituicao.nome }}">
+          </div>
+          <div class="form-row">
+            <div class="row-cep">
+              <label for="cep">CEP:</label>
+              <input type="text" id="cep" name="cep" value="{{ dados_instituicao.cep }}">
+            </div>
+            <div class="row-rua">
+              <label for="rua">Rua:</label>
+              <input type="text" id="rua" name="rua" value="{{ dados_instituicao.rua }}">
+            </div>
+            <div class="row-numero">
+              <label for="numero">Número:</label>
+              <input type="text" id="numero" name="numero" value="{{ dados_instituicao.num }}">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="row-bairro">
+              <label for="bairro">Bairro:</label>
+              <input type="text" id="bairro" name="bairro" value="{{ dados_instituicao.bairro }}">
+            </div>
+            <div class="row-cidade">
+              <label for="cidade">Cidade:</label>
+              <input type="text" id="cidade" name="cidade" value="{{ dados_instituicao.cidade }}">
+            </div>
+            <div class="row-complemento">
+              <label for="complemento">Complemento:</label>
+              <input type="text" id="complemento" name="complemento" value="{{ dados_instituicao.complemento }}">
+            </div>
+            <div class="row-estado">
+              <label for="estado">Estado:</label>
+              <input type="text" id="estado" name="estado" value="{{ dados_instituicao.estado }}">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="row-telefone">
+              <label for="telefone">Telefone:</label>
+              <input type="text" id="telefone" name="telefone" value="{{ dados_instituicao.tel }}">
+            </div>
+            <div class="row-celular">
+              <label for="celular">Celular:</label>
+              <input type="text" id="celular" name="celular" value="{{ dados_instituicao.cel }}">
+            </div>
+          </div>
+          <div>
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" name="cnpj" required value="{{ dados_instituicao.cnpj }}">
+          </div>
+          <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required value=" {{ dados_instituicao.email }} ">
+          </div>
+          <!--
+          <div>
+            <label for="cnpj">usuario:</label>
+            <input type="text" id="usuario" name="usuario" required value="{{ dados.usuario }}">
+          </div>
+          <div>
+            <label for="cnpj">senha:</label>
+            <input type="text" id="senha" name="senha" required value="{{ dados.senha }}">
+          </div>-->
+          <div>
+            <label for="descreva">Descreva a Instituição - (Máximo 250 caracteres)</label><br>
+            <textarea id="descreva" name="descreva" maxlength="250" rows="4" cols="100">{{ dados_instituicao.descricao }}</textarea>
+          </div>
+          <br>
+          <div>
+            <label for="doacao1">Descreva a 1º forma que o público pode ajudar a Instituição</label>
+            <input type="text" id="doacao1" name="doacao1" value="{{ dados_instituicao.forma_ajuda1 }}">
+          </div>
+          <div>
+            <label for="doacao2">Descreva a 2º forma que o público pode ajudar a Instituição</label>
+            <input type="text" id="doacao2" name="doacao2" value="{{ dados_instituicao.forma_ajuda2 }}">
+          </div>
+          <div>
+            <label for="doacao3">Descreva a 3º forma que o público pode ajudar a Instituição</label>
+            <input type="text" id="doacao3" name="doacao3" value="{{ dados_instituicao.forma_ajuda3 }}">
+          </div>
+          <input type="submit" value="Salvar Dados">
+          {% else %}
+          <div>
+            <label for="nome">Nome do Usuário:</label>
+            <input type="text" id="nome" name="nome" required value=" {{ dados_usuarios.nome }} "> 
+          </div>
+          <div class="form-row">
+            <div class="row-cep">
+              <label for="cep">CEP:</label>
+              <input type="text" id="cep" name="cep" value="{{ dados_usuarios.cep }}">
+            </div>
+            <div class="row-rua">
+              <label for="rua">Rua:</label>
+              <input type="text" id="rua" name="rua" value="{{ dados_usuarios.rua }}">
+            </div>
+            <div class="row-numero">
+              <label for="numero">Número:</label>
+              <input type="text" id="numero" name="numero" value="{{ dados_usuarios.num }}">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="row-bairro">
+              <label for="bairro">Bairro:</label>
+              <input type="text" id="bairro" name="bairro" value="{{ dados_usuarios.bairro }}">
+            </div>
+            <div class="row-cidade">
+              <label for="cidade">Cidade:</label>
+              <input type="text" id="cidade" name="cidade" value="{{ dados_usuarios.cidade }}">
+            </div>
+            <div class="row-complemento">
+              <label for="complemento">Complemento:</label>
+              <input type="text" id="complemento" name="complemento" value="{{ dados_usuarios.complemento }}">
+            </div>
+            <div class="row-estado">
+              <label for="estado">Estado:</label>
+              <input type="text" id="estado" name="estado" value="{{ dados_usuarios.estado }}">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="row-telefone">
+              <label for="telefone">Telefone:</label>
+              <input type="text" id="telefone" name="telefone" value="{{ dados_usuarios.tel }}">
+            </div>
+            <div class="row-celular">
+              <label for="celular">Celular:</label>
+              <input type="text" id="celular" name="celular" value="{{ dados_usuarios.cel }}">
+            </div>
+          </div>
+          <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required value="{{ dados_usuarios.email }}">
+          </div>
+          <!--<div>
+            <label for="cnpj">usuario:</label>
+            <input type="text" id="usuario" name="usuario" required value="{{ dados.usuario }}">
+          </div>
+          <div>
+            <label for="cnpj">senha:</label>
+            <input type="text" id="senha" name="senha" required value="{{ dados.senha }}">
+          </div>-->
+          <input type="submit" value="Salvar Dados">
+          {% endif %}
+        </form>
+      </div>
+    </div>
   </div>
-  {% block javascript %}
-    {% if messages %}
-      {% for message in messages %}
-          <script>
-              alert('{{ message }}')
-          </script>
-      {% endfor %}
-    {% endif %}
-  {% endblock %}
-  {% include "./footer.html" %}
+{% block javascript %}
+  {% if messages %}
+    {% for message in messages %}
+        <script>
+            alert('{{ message }}')
+        </script>
+    {% endfor %}
+  {% endif %}
+{% endblock %}
+{% include "./footer.html" %}
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </html>
