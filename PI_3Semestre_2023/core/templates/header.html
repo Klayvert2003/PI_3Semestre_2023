@@ -1,6 +1,6 @@
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'css_header/style.css' %}">
+<link rel="stylesheet" href="{% static 'css_header2/style.css' %}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -25,12 +25,6 @@
             <a href="{% url 'cadastro-instituicao' %}" class="nav-link flex-item">Cadastro</a>
           </li>
           <li>
-            <a href="#sobre" class="nav-link flex-item">Sobre</a>
-          </li>
-          <li>
-            <a href="{% url 'contato' %}" class="nav-link flex-item">Contato</a>
-          </li>
-          <li>
             <div class="checkbox-container">
               <div class="checkbox-wrapper">
                 <input type="checkbox" id="toggle">
@@ -49,7 +43,13 @@
                             <a href="{% url 'menu-usuario' %}">Edit</a>
                         </li>
                         <li>
-                            <a href="{% url 'logout' %}">Logout</a>
+                          <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                        <li>
+                          <a href="#sobre">Sobre</a>
+                        </li>
+                        <li>
+                          <a href="{% url 'contato' %}">Contato</a>
                         </li>
                         {% block javascript %}
                           {% if messages %}

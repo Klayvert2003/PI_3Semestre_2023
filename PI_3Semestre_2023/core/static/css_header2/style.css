@@ -1,0 +1,231 @@
+/*Primeira parte referes-se ao header e footer*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+.row-header {
+  /* position: sticky; */
+  margin-bottom: 9px;
+}
+.main-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  min-height: 20vh;
+  width: calc(90%);
+
+}
+
+.main-header__title {
+    width: 35%;
+    font-size: 80px;
+    letter-spacing: -1.5px;
+    color: white;
+}
+
+.main-header__title-greem-color {
+    color: #91E191;
+    font-size:70px;
+}
+
+.main-header__title-red-color {
+  color: #E60000;
+  font-size:70px;
+}
+
+.main-header__title--color {
+  color: #005000;
+  font-size:70px;
+}
+
+.main-header__menu ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-header__menu a {
+    padding: 10px 10px;
+    color: #005000;
+    font-weight: 400;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.main-header__menu a:hover {
+    background-color: #005000;;
+    color: #fff;
+}
+
+.container-menu {
+    display: flex;
+    margin-right: 13%;
+    flex-direction: column;
+    row-gap: 20px;
+    flex: 1;
+}
+
+.logo {
+  margin-left: 5%;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+
+/* MENU HAMBURGER */
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 400ms ease-in-out 0;
+}
+
+.checkbox .trace {
+  width: 40px;
+  height: 3px;
+  background-color: #005000;
+  position: absolute;
+  border-radius: 4px;
+  transition: 0.5s ease-in-out;
+}
+
+.checkbox .trace:nth-child(1) {
+  top: 36px;
+  transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(2) {
+  top: 46px;
+  transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(3) {
+  top: 56px;
+  transform: rotate(0);
+}
+
+#toggle {
+  display: none;
+}
+
+/* MENU */
+
+ .menu {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  background: transparent;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 0px #000000;
+  z-index: -1;
+  transition: 400ms ease-in-out 0s;
+}
+
+.menu-itens {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180%;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: 400ms ease-in-out 0;
+}
+
+/* ANIMAÇÃO MENU */
+
+#toggle:checked + .checkbox .trace:nth-child(1) {
+  transform: rotate(230deg);
+  background-color: #005000;
+  top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2) {
+  transform: rotate(360deg);
+  /*transform: translateX(-100); */
+  width: 34px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3) {
+  transform: rotate(-230deg);
+  background-color: #005000;
+  top: 47px;
+}
+
+.menu-itens ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column; /* Adiciona esta linha */
+}
+
+.menu-itens ul li a {
+  margin: 10px 0;
+  color: #005000;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 25px;
+  transition: 400ms ease-in-out 0.2s;
+}
+
+#toggle:checked + .checkbox {
+  background-color: #ffffff;
+}
+
+#toggle:checked ~ .menu {
+  box-shadow: 0px 0px 0px 15vmax #ffffff;
+  z-index: 1;
+}
+
+#toggle:checked ~ .menu-itens {
+  visibility: visible;
+  opacity: 2;
+}
