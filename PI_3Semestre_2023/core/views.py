@@ -28,8 +28,13 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
         if cnpj:
             try:
                 cnpj = str(cnpj).replace('.', '').replace('-', '').replace('/', '')
-                infos = self.BuscaCNPJ(cnpj=cnpj)
-                address = self.get_complete_address(cep=infos[0], num=infos[1])
+                try:
+                    infos = self.BuscaCNPJ(cnpj=cnpj)
+                    address = self.get_complete_address(cep=infos[0], num=infos[1])
+                except TypeError:
+                    if not infos:
+                        messages.error(request, 'CNPJ inválido!!!')
+                        return redirect('cadastro-instituicao')
             except AttributeError:
                 messages.error(request, 'CNPJ Inválido!!!')
                 return redirect('cadastro-instituicao')
@@ -182,12 +187,16 @@ class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
         cnpj = request.POST.get('cnpj')
         if cnpj:
             try:
-                cnpj = str(cnpj).replace('.', '').replace('-', '').replace('/', '')
                 infos = self.BuscaCNPJ(cnpj=cnpj)
                 address = self.get_complete_address(cep=infos[0], num=infos[1])
+            except TypeError:
+                if not infos:
+                    messages.error(request, 'CNPJ inválido!!!')
+                    return redirect('detalhe-instituicao')
+                    # Falta ajustar essa função ainda
             except AttributeError:
                 messages.error(request, 'CNPJ Inválido!!!')
-                return redirect('detalhes-instituicao')
+                return render(request, 'detalhe-instituicao')
         descricao = request.POST.get('descreva')
         forma_ajuda1 = request.POST.get('doacao1')
         forma_ajuda2 = request.POST.get('doacao2')
