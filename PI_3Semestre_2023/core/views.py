@@ -369,3 +369,8 @@ class ContatoView(TemplateView):
     def get(self, request):
         template_name='contato.html'
         return render(request, template_name)
+    
+class SobreView(TemplateView):
+    def get(self, request):
+        template_name='sobre.html'
+        return render(request, template_name)

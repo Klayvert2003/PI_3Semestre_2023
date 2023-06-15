@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css_sobre/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Cadastro</title>
+
+</head>
+
+<body>
+    {% include "./header.html" %}
+
+    <div class="container">
+        <div class="content">
+            <h1 class="title">Sobre Nós</h1>
+            <div class="paragraph">
+                <p>Somos uma plataforma dedicada a facilitar a conexão entre doadores/voluntários e instituições que
+                    fornecem alimentação básica às pessoas mais necessitadas. Através de nossa plataforma, estamos
+                    transformando vidas e garantindo o sustento essencial para aqueles que mais precisam..</p>
+            </div>
+        </div>
+        <div class="containertwo">
+            <div class="missao">
+                <h1>Missão</h1>
+                <p>Nossa missão é garantir alimentação básica para todos. Buscamos transformar vidas através do
+                    fornecimento de sustento essencial e promover a solidariedade em nossa sociedade.</p>
+            </div>
+            <div class="img-missao">
+
+            </div>
+
+        </div>
+        <div class="containerthree">
+            <div class="img-visao">
+
+            </div>
+            <div class="visao">
+                <h1>Visão</h1>
+                <p>Promover um país com alimentação básica para todos.</p>
+            </div>
+        </div>
+        <div class="containerfour">
+            <div class="valores">
+                <h1>Valores</h1>
+                <ul>
+                    <li>
+                        Justiça
+                    </li>
+                    <li>
+                        Comprometimento
+                    </li>
+                    <li>
+                        Confiabilidade
+                    </li>
+                    <li>
+                        Inovação
+                    </li>
+                </ul>
+            </div>
+            <div class="img-valores">
+
+            </div>
+
+        </div>
+
+        <div class="atencao">
+            <h1>Precisamos do seu apoio!</h1>
+            <a href="{% url 'index' %}" class="btn">Doe e faça história</a>
+        </div>
+
+
+
+
+    </div>
+
+    {% include "./footer.html" %}
+</body>
+
+</html>
