@@ -28,7 +28,6 @@ footer, header, hgroup, menu, nav, section {
 .conteudo {
   display: block;
   text-align: center;
-  font-weight: bold;
    /*font-size: 40px;*/ 
 }
 
@@ -77,6 +76,7 @@ iframe {
   text-align: justify;
   padding-left: 10%;
   padding-right: 2%;
+  font-size: 19px;
 }
 
 .column-two {
@@ -85,6 +85,7 @@ iframe {
   text-align: justify;
   padding-left: 2%;
   padding-right: 2%;
+  font-size: 19px;
 }
 
 .column-three {
@@ -93,6 +94,7 @@ iframe {
   text-align: justify;
   padding-left: 2%;
   padding-right: 10%;
+  font-size: 19px;
 }
 
 .title-usuario {

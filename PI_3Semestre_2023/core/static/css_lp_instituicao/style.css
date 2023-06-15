@@ -34,7 +34,6 @@ list-style: none;
 }
 
 .conteudo {
-  font-weight: bold;
   text-align: center;
   
 }
@@ -44,6 +43,7 @@ list-style: none;
   text-align: justify;
   max-width: 50%;
   margin: auto;
+  font-size: 19px;
 }
 
 .titleh1 {
@@ -98,7 +98,7 @@ list-style: none;
 } 
 
 .card p {
-  font-size: 20px;
+  font-size: 19px;
   text-align: justify;
   word-wrap: break-word;
   margin:  14px;
@@ -119,7 +119,7 @@ list-style: none;
   display: flex;
   float: left;
   flex-wrap: wrap; 
-  margin-left: 4%;
+  margin: 2%;
 }
 
 .card-one {
@@ -139,7 +139,7 @@ list-style: none;
 }
 
 .card-body-one {
-  font-size: 20px;
+  font-size: 19px;
   text-align: justify;
   word-wrap: break-word;
   margin:  16px;
@@ -152,7 +152,7 @@ list-style: none;
   justify-content: center;
 }
 
-.paragraph-cpntainer {
+.paragraph-container {
   clear: both;
 }
 
