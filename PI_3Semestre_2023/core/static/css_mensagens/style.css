@@ -1,0 +1,15 @@
+.hidden {
+  display: none;
+}
+
+.msg {
+  position: fixed;
+  top: 120px;
+  right: 60px;
+  font-weight: 600;
+  background-color: #fffd80;
+  color: #005000;
+  padding: 30px;
+  border-radius: 8px;
+  opacity: 0.6;
+}
