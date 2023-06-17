@@ -1,10 +1,13 @@
+# External libs
+import json
+
+# Django libs
 from django.contrib import messages
 from django.views import View
 from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-import json
 
 # My functions
 from core.models import DadosInstituicao, DadosUsuarios
@@ -141,6 +144,7 @@ class LoginView(View):
             login(request, user)
             user_id = user.id
             request.session['user_id'] = user_id
+            messages.success(request, 'Usuário autenticado!!!')
             return render(request, 'home-usuario.html', {'user_id': user_id})
         else:
             messages.error(request, 'Email ou senha inválidos!!!')
@@ -378,7 +382,7 @@ class DetalhesUsuario(GoogleMapsAPI, View):
 
         user = User.objects.create_user(username=usuario, email=email, password=senha)
 
-        DadosUsuarios.objects.create(id=user.id, nome_usuario=nome_completo, cep=cep, 
+        DadosUsuarios.objects.create(id=user.id, nome_usuario=nome_completo, email=email, cep=cep, 
         num=num,rua=address[0], bairro=address[1], cidade=address[2], estado=address[3], 
         disponibilidade=disponibilidades, tel=tel, cel=cel, complemento=complemento)
 
@@ -552,9 +556,36 @@ class ListaContato(TemplateView):
     template_name = 'lista-contato.html'
 
     def get_context_data(self, **kwargs):
-        with open('./core/static/json/dados.json', 'r') as file:
-            contatos = json.load(file)
-
         context = super().get_context_data(**kwargs)
-        context['contatos'] = contatos
+        dados = DadosUsuarios.objects.all().values('nome_usuario', 'email', 'cel', 'disponibilidade')
+
+        contatos_serializados = []
+        for contato in dados:
+            dias_disponiveis = []
+            for dia, horarios in contato['disponibilidade'].items():
+                horarios_disponiveis = [horario for horario, disponivel in horarios.items() if disponivel]
+                if horarios_disponiveis:
+                    dias_disponiveis.append({
+                        'dia': dia,
+                        'horarios': horarios_disponiveis
+                    })
+
+            periodo_disponivel = ""
+            for dia in dias_disponiveis:
+                nome_dia = dia['dia']
+                horarios = ", ".join(dia['horarios'])
+                periodo_disponivel += f"{nome_dia} no(s) período(s) da(s) {horarios}. "
+
+            contato_dict = {
+                'nome_usuario': contato['nome_usuario'],
+                'email': contato['email'],
+                'cel': contato['cel'],
+                'periodo_disponivel': periodo_disponivel
+            }
+            contatos_serializados.append(contato_dict)
+
+        with open('core/static/json/dados.json', 'w') as arquivo_json:
+            json.dump(contatos_serializados, arquivo_json)
+
+        context['contatos'] = contatos_serializados
         return context
