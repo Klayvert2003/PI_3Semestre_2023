@@ -164,14 +164,20 @@ class CardMapView(View):
     def get(self, request):
         lat = request.GET.get('latitude', None)
         lon = request.GET.get('longitude', None)
+        id_instituicao = request.GET.get('id', None)
+        dados = DadosInstituicao.objects.get(id=id_instituicao)
+
+        data = {
+            'nome_instituicao': dados.nome_instituicao,
+            'cnpj': dados.cnpj,
+            'descricao': dados.descricao,
+            'forma_ajuda1': dados.forma_ajuda1,
+            'forma_ajuda2': dados.forma_ajuda2,
+            'forma_ajuda3': dados.forma_ajuda3
+        }
 
         if lat and lon:
-            contexto = {
-                'latitude': lat,
-                'longitude': lon,
-                'API_KEY': API_KEY
-            }
-            return render(request, 'card-map.html', contexto)
+            return render(request, 'card-map.html', {'latitude': lat, 'longitude': lon, 'API_KEY': API_KEY, 'dados': data})
         else:
             return redirect('instituicoes')
 
