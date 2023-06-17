@@ -32,11 +32,7 @@ class HomeInstituicao(TemplateView):
     def get(self, request):
         template_name='lp_instituicao.html'
         return render(request, template_name)
-    
-class MenuUsuario(TemplateView):
-    def get(self, request):
-        template_name='menu-usuario.html'
-        return render(request, template_name)
+
 
 class ContatoView(TemplateView):
     def get(self, request):
