@@ -15,13 +15,111 @@ from api.ValidaCNPJ import ValidaCNPJ
 from api.GoogleMapsAPI import GoogleMapsAPI
 from PI_3Semestre_2023.settings import API_KEY
 
+# Páginas comuns
 class Index(View):
     def get(self, request):
         return render(request, 'index.html')
-    
-    def post(self, request):
-        ...
 
+class HomeUsuarios(TemplateView):
+    def get(self, request):
+        template_name = 'home-usuario.html'
+        return render(request, template_name)
+        
+    def post(self, request):
+        return render(request, 'instituicoes.html')
+
+class HomeInstituicao(TemplateView):
+    def get(self, request):
+        template_name='lp_instituicao.html'
+        return render(request, template_name)
+    
+class MenuUsuario(TemplateView):
+    def get(self, request):
+        template_name='menu-usuario.html'
+        return render(request, template_name)
+
+class ContatoView(TemplateView):
+    def get(self, request):
+        template_name='contato.html'
+        return render(request, template_name)
+
+class SobreView(TemplateView):
+    def get(self, request):
+        template_name='sobre.html'
+        return render(request, template_name)
+
+# Retorna os dados do banco para renderizar o mapa na página seguinte
+class InstituicoesView(GoogleMapsAPI, View):
+    def get(self, request):
+        dados = list(DadosInstituicao.objects.all().values('id', 'nome_instituicao', 'latitude', 'longitude', 'descricao'))
+
+        return render(request, 'instituicoes.html', {'dados': dados})
+
+    def post(self):
+        return redirect('card-map')
+
+# Renderiza o mapa com base nos dados enviados na URL da view acima
+class CardMapView(View):
+    def get(self, request):
+        lat = request.GET.get('latitude', None)
+        lon = request.GET.get('longitude', None)
+        id_instituicao = request.GET.get('id', None)
+        dados = DadosInstituicao.objects.get(id=id_instituicao)
+
+        data = {
+            'nome_instituicao': dados.nome_instituicao,
+            'cnpj': dados.cnpj,
+            'descricao': dados.descricao,
+            'forma_ajuda1': dados.forma_ajuda1,
+            'forma_ajuda2': dados.forma_ajuda2,
+            'forma_ajuda3': dados.forma_ajuda3
+        }
+
+        if lat and lon:
+            return render(request, 'card-map.html', {'latitude': lat, 'longitude': lon, 'API_KEY': API_KEY, 'dados': data})
+        else:
+            return redirect('instituicoes')
+
+# Página que retorna uma tabela com as informações de todos os contatos cadastrados no sistema 
+class ListaContato(TemplateView):
+    template_name = 'lista-contato.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        dados = DadosUsuarios.objects.all().values('nome_usuario', 'email', 'cel', 'disponibilidade')
+
+        contatos_serializados = []
+        for contato in dados:
+            dias_disponiveis = []
+            for dia, horarios in contato['disponibilidade'].items():
+                horarios_disponiveis = [horario for horario, disponivel in horarios.items() if disponivel]
+                if horarios_disponiveis:
+                    dias_disponiveis.append({
+                        'dia': dia,
+                        'horarios': horarios_disponiveis
+                    })
+
+            periodo_disponivel = ""
+            for dia in dias_disponiveis:
+                nome_dia = dia['dia']
+                horarios = ", ".join(dia['horarios'])
+                periodo_disponivel += f"{nome_dia} no(s) período(s) da(s) {horarios}. "
+
+            contato_dict = {
+                'nome_usuario': contato['nome_usuario'],
+                'email': contato['email'],
+                'cel': contato['cel'],
+                'periodo_disponivel': periodo_disponivel
+            }
+            contatos_serializados.append(contato_dict)
+
+        with open('core/static/json/dados.json', 'w') as arquivo_json:
+            json.dump(contatos_serializados, arquivo_json)
+
+        context['contatos'] = contatos_serializados
+        return context
+
+# Etapa inicial do registro de instituição
 class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
     def get(self, request):
         return render(request, 'cadastro-instituicao.html')
@@ -30,6 +128,7 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
         email = request.POST.get('email')
         usuario = request.POST.get('usuario')
         password = request.POST.get('senha')
+        confirm_password = request.POST.get('confirma-senha')
         infos = None
         nome_instituicao = request.POST.get('nome-completo')
         cnpj = request.POST.get('cnpj')
@@ -48,6 +147,24 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
             except AttributeError:
                 messages.error(request, 'CNPJ Inválido!!!')
                 return render(request, 'cadastro-instituicao.html',
+                            {'nome_instituicao': nome_instituicao, 'cnpj': cnpj, 
+                             'email': email, 'usuario': usuario})
+            
+        user = User.objects.filter(email=email).first()
+        if user:
+            messages.warning(request, 'Já existe um usuário com este email!!!')
+            return render(request, 'cadastro-instituicao.html',
+                            {'nome_instituicao': nome_instituicao, 'cnpj': cnpj, 
+                             'email': email, 'usuario': usuario})
+        
+        if password != confirm_password:
+            messages.warning(request, 'Senhas divergentes!!!')
+            return render(request, 'cadastro-instituicao.html',
+                            {'nome_instituicao': nome_instituicao, 'cnpj': cnpj, 
+                             'email': email, 'usuario': usuario})
+        elif len(password) < 8 and len(confirm_password) < 8:
+            messages.warning(request, 'Senha fraca! Digite ao menos 8 caracteres!')
+            return render(request, 'cadastro-instituicao.html',
                             {'nome_instituicao': nome_instituicao, 'cnpj': cnpj, 
                              'email': email, 'usuario': usuario})
         
@@ -74,136 +191,7 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
         request.session['senha'] = password
         return render(request, 'detalhes-instituicao.html', {'dados': data})
 
-class CadastroUsuarioView(GoogleMapsAPI, View):
-    def get(self, request):
-        return render(request, 'cadastro-usuario.html')
-    
-    def post(self, request):
-        nome_completo = request.POST.get('nome-completo')     
-        cep = request.POST.get('cep')
-        num = request.POST.get('num')
-        email = request.POST.get('email')
-        usuario = request.POST.get('usuario')
-        password = request.POST.get('senha')
-        confirm_password = request.POST.get('confirma-senha')
-        address = None
-        if cep and num:
-            try:
-                cep = str(cep).replace('-', '').replace('.', '')
-                try:
-                    address = self.get_complete_address(cep, str(num))
-                except TypeError:
-                    if not address:
-                        messages.error(request, 'CEP ou número inválidos!!!')
-                        return render(
-                            request, 'cadastro-usuario.html', {'nome_completo': nome_completo, 
-                                     'cep': cep, 'num': num, 'email': email, 'usuario': usuario})
-            except IndexError:
-                messages.error(request, 'CEP ou número inválidos!!!')
-                return redirect('cadastro-usuario')
-
-        user = User.objects.filter(email=email).first()
-        if user:
-            messages.error(request, 'Já existe um usuário com este email!!!')
-            return render(
-                request, 'cadastro-usuario.html', {'nome_completo': nome_completo, 
-                         'cep': cep, 'num': num, 'email': email, 'usuario': usuario})
-        
-        if password != confirm_password:
-            messages.error(request, 'Senhas divergentes!!!')
-            return render(
-                request, 'cadastro-usuario.html', {'nome_completo': nome_completo, 
-                         'cep': cep, 'num': num, 'email': email, 'usuario': usuario})
-        
-        data = {
-            'usuario': usuario,
-            'senha': password,
-            'email': email,
-            'nome_completo': nome_completo,
-            'cep': cep,
-            'num': num,
-            'rua': address[0],
-            'bairro': address[1],
-            'cidade': address[2],
-            'estado': address[3]
-        }
-
-        request.session['email'] = email
-        request.session['usuario'] = usuario
-        request.session['senha'] = password
-        return render(request, 'Informacoes_de_usuario.html', {'dados': data})
-
-class LoginView(View):
-    def get(self, request):
-        return render(request, 'login.html')
-        
-    def post(self, request):
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-
-        user = authenticate(username=username, password=password)
-        
-        if user:
-            login(request, user)
-            user_id = user.id
-            request.session['user_id'] = user_id
-            messages.success(request, 'Usuário autenticado!!!')
-            return render(request, 'home-usuario.html', {'user_id': user_id})
-        else:
-            messages.error(request, 'Email ou senha inválidos!!!')
-            return render(request, 'login.html')
-        
-class LogoutView(TemplateView):
-    def get(self, request):
-        messages.success(request, 'Logout Realizado!!!')
-        logout(request)
-        return redirect('index')
-        
-class InstituicoesView(GoogleMapsAPI, View):
-    def get(self, request):
-        dados = list(DadosInstituicao.objects.all().values('id', 'nome_instituicao', 'latitude', 'longitude', 'descricao'))
-
-        return render(request, 'instituicoes.html', {'dados': dados})
-
-    def post(self):
-        return redirect('card-map')
-
-class CardMapView(View):
-    def get(self, request):
-        lat = request.GET.get('latitude', None)
-        lon = request.GET.get('longitude', None)
-        id_instituicao = request.GET.get('id', None)
-        dados = DadosInstituicao.objects.get(id=id_instituicao)
-
-        data = {
-            'nome_instituicao': dados.nome_instituicao,
-            'cnpj': dados.cnpj,
-            'descricao': dados.descricao,
-            'forma_ajuda1': dados.forma_ajuda1,
-            'forma_ajuda2': dados.forma_ajuda2,
-            'forma_ajuda3': dados.forma_ajuda3
-        }
-
-        if lat and lon:
-            return render(request, 'card-map.html', {'latitude': lat, 'longitude': lon, 'API_KEY': API_KEY, 'dados': data})
-        else:
-            return redirect('instituicoes')
-
-class HomeUsuarios(TemplateView):
-    # @login_required(login_url='/auth/login')
-    def get(self, request):
-        # if request.user.is_authenticated:
-        template_name = 'home-usuario.html'
-        return render(request, template_name)
-        
-    def post(self, request):
-        return render(request, 'instituicoes.html')
-
-class HomeInstituicao(TemplateView):
-    def get(self, request):
-        template_name='lp_instituicao.html'
-        return render(request, template_name)
-    
+# Segunda etapa do registro da instituição
 class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
     def get(self, request):
         template_name = 'detalhes-instituicao.html'
@@ -242,7 +230,7 @@ class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
         forma_ajuda3 = request.POST.get('doacao3')
         user = User.objects.filter(email=email).first()
         if user:
-            messages.error(request, 'Já existe um usuário com este email!!!')
+            messages.warning(request, 'Já existe um usuário com este email!!!')
             return redirect('detalhe-instituicao')
 
         address = self.valida_address(cep, num)
@@ -272,7 +260,68 @@ class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
         messages.success(request, 'Instituição Cadastrada com Sucesso!!!')
         
         return redirect('instituicoes')
+
+# Etapa inicial do cadastro de um usuário doador/voluntário
+class CadastroUsuarioView(GoogleMapsAPI, View):
+    def get(self, request):
+        return render(request, 'cadastro-usuario.html')
     
+    def post(self, request):
+        nome_completo = request.POST.get('nome-completo')     
+        cep = request.POST.get('cep')
+        num = request.POST.get('num')
+        email = request.POST.get('email')
+        usuario = request.POST.get('usuario')
+        password = request.POST.get('senha')
+        confirm_password = request.POST.get('confirma-senha')
+        address = None
+        if cep and num:
+            try:
+                cep = str(cep).replace('-', '').replace('.', '')
+                try:
+                    address = self.get_complete_address(cep, str(num))
+                except TypeError:
+                    if not address:
+                        messages.error(request, 'CEP ou número inválidos!!!')
+                        return render(
+                            request, 'cadastro-usuario.html', {'nome_completo': nome_completo, 
+                                     'cep': cep, 'num': num, 'email': email, 'usuario': usuario})
+            except IndexError:
+                messages.error(request, 'CEP ou número inválidos!!!')
+                return redirect('cadastro-usuario')
+
+        user = User.objects.filter(email=email).first()
+        if user:
+            messages.warning(request, 'Já existe um usuário com este email!!!')
+            return render(
+                request, 'cadastro-usuario.html', {'nome_completo': nome_completo, 
+                         'cep': cep, 'num': num, 'email': email, 'usuario': usuario})
+        
+        if password != confirm_password:
+            messages.warning(request, 'Senhas divergentes!!!')
+            return render(
+                request, 'cadastro-usuario.html', {'nome_completo': nome_completo, 
+                         'cep': cep, 'num': num, 'email': email, 'usuario': usuario})
+        
+        data = {
+            'usuario': usuario,
+            'senha': password,
+            'email': email,
+            'nome_completo': nome_completo,
+            'cep': cep,
+            'num': num,
+            'rua': address[0],
+            'bairro': address[1],
+            'cidade': address[2],
+            'estado': address[3]
+        }
+
+        request.session['email'] = email
+        request.session['usuario'] = usuario
+        request.session['senha'] = password
+        return render(request, 'Informacoes_de_usuario.html', {'dados': data})
+
+# Segunda etapa do cadastro de um usuário doador/voluntário
 class DetalhesUsuario(GoogleMapsAPI, View):
     def get(self, request):
         return render(request, 'Informacoes_de_usuario.html')
@@ -393,6 +442,36 @@ class DetalhesUsuario(GoogleMapsAPI, View):
         
         return redirect('home-usuario')
 
+# CRUD
+# Página de login
+class LoginView(View):
+    def get(self, request):
+        return render(request, 'login.html')
+        
+    def post(self, request):
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(username=username, password=password)
+        
+        if user:
+            login(request, user)
+            user_id = user.id
+            request.session['user_id'] = user_id
+            messages.success(request, 'Usuário autenticado!!!')
+            return render(request, 'home-usuario.html', {'user_id': user_id})
+        else:
+            messages.error(request, 'Email ou senha inválidos!!!')
+            return render(request, 'login.html')
+
+# Página de Logout
+class LogoutView(TemplateView):
+    def get(self, request):
+        messages.success(request, 'Logout Realizado!!!')
+        logout(request)
+        return redirect('index')
+
+# Classe que deleta o usuário(ou instituição)
 class DeletarUsuario(View):
     @staticmethod
     def get(request):
@@ -421,6 +500,7 @@ class DeletarUsuario(View):
 
         return redirect('index')
 
+# Classe que edita os dados do usuário(ou instituição)
 class EditarUsuario(View):
     def get(self, request):
         instituicao = None
@@ -539,56 +619,3 @@ class EditarUsuario(View):
         finally:
             messages.success(request, 'Usuário editado com sucesso!!!')
             return redirect('home-usuario')
-
-class MenuUsuario(TemplateView):
-    def get(self, request):
-        template_name='menu-usuario.html'
-        return render(request, template_name)
-
-class ContatoView(TemplateView):
-    def get(self, request):
-        template_name='contato.html'
-        return render(request, template_name)
-    
-class SobreView(TemplateView):
-    def get(self, request):
-        template_name='sobre.html'
-        return render(request, template_name)
-
-class ListaContato(TemplateView):
-    template_name = 'lista-contato.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        dados = DadosUsuarios.objects.all().values('nome_usuario', 'email', 'cel', 'disponibilidade')
-
-        contatos_serializados = []
-        for contato in dados:
-            dias_disponiveis = []
-            for dia, horarios in contato['disponibilidade'].items():
-                horarios_disponiveis = [horario for horario, disponivel in horarios.items() if disponivel]
-                if horarios_disponiveis:
-                    dias_disponiveis.append({
-                        'dia': dia,
-                        'horarios': horarios_disponiveis
-                    })
-
-            periodo_disponivel = ""
-            for dia in dias_disponiveis:
-                nome_dia = dia['dia']
-                horarios = ", ".join(dia['horarios'])
-                periodo_disponivel += f"{nome_dia} no(s) período(s) da(s) {horarios}. "
-
-            contato_dict = {
-                'nome_usuario': contato['nome_usuario'],
-                'email': contato['email'],
-                'cel': contato['cel'],
-                'periodo_disponivel': periodo_disponivel
-            }
-            contatos_serializados.append(contato_dict)
-
-        with open('core/static/json/dados.json', 'w') as arquivo_json:
-            json.dump(contatos_serializados, arquivo_json)
-
-        context['contatos'] = contatos_serializados
-        return context
