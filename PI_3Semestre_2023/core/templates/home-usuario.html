@@ -7,15 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'css_home_usuario/style.css' %}">
-  <link rel="stylesheet" href="{% static 'css_header/style.css' %}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css_header2/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css_mensagens/style.css' %}">
   <title>Home do Usuário</title>
-
 </head>
 
 <body>
+<div class="row-header">
   <header class="main-header">
     <h1 class="main-header__title">
       <a href="#">
@@ -35,12 +36,6 @@
             <a href="{% url 'cadastro-instituicao' %}" class="nav-link flex-item">Cadastro</a>
           </li>
           <li>
-            <a href="#sobre" class="nav-link flex-item">Sobre</a>
-          </li>
-          <li>
-            <a href="{% url 'contato' %}" class="nav-link flex-item">Contato</a>
-          </li>
-          <li>
             <div class="checkbox-container">
               <div class="checkbox-wrapper">
                 <input type="checkbox" id="toggle">
@@ -51,26 +46,23 @@
                 </label>
                 <div class="menu"></div>
                 <nav class="menu-itens">
-                  <ul>
-                    <li>
-                      <a href="{% url 'login' %}">Login</a>
-                    </li>
-                    <li>
-                      <a href="{% url 'menu-usuario' %}">Edit</a>
-                    </li>
-                    <li>
-                      <a href="{% url 'logout' %}">Logout</a>
-                    </li>
-                    {% block javascript %}
-                    {% if messages %}
-                    {% for message in messages %}
-                    <script>
-                      alert('{{ message }}')
-                    </script>
-                    {% endfor %}
-                    {% endif %}
-                    {% endblock %}
-                  </ul>
+                    <ul>
+                        <li>
+                            <a href="{% url 'login' %}">Login</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'menu-usuario' %}">Edit</a>
+                        </li>
+                        <li>
+                          <a href="{% url 'logout' %}">Logout</a>
+                        </li>
+                        <li>
+                          <a href="{%url 'sobre'  %}">Sobre</a>
+                        </li>
+                        <li>
+                          <a href="{% url 'contato' %}">Contato</a>
+                        </li>
+                    </ul>
                 </nav>
               </div>
             </div>
@@ -79,6 +71,8 @@
       </nav>
     </div>
   </header>
+  <div id="confirmation-message" class="hidden">{{ message }}</div>
+</div>
   <div class="conteudo">
     <form action="{% url 'home-usuario' %}" method="POST">{% csrf_token %}
       <h1 class="title-usuario">Conheça e contribua com nosso projeto, ajude pessoas e salve vidas!!!</h1>
