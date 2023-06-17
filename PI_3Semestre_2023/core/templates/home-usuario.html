@@ -85,24 +85,4 @@
   {% include "./footer.html" %}
 
 </body>
-
 </html>
-{% block javascript %}
-      <script>
-        {% if messages %}
-          {% for message in messages %}
-            document.addEventListener("DOMContentLoaded", function () {
-              var confirmationMessage = document.getElementById("confirmation-message");
-              confirmationMessage.textContent = "{{ message }}";
-              confirmationMessage.classList.remove("hidden");
-              confirmationMessage.classList.add("msg");
-
-              setTimeout(function () {
-                confirmationMessage.classList.remove("msg");
-                confirmationMessage.classList.add("hidden");
-              }, 7000); // Tempo em milissegundos
-            });
-          {% endfor %}
-        {% endif %}
-      </script>
-{% endblock %}

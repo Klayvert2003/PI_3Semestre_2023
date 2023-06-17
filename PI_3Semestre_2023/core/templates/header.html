@@ -23,6 +23,9 @@
             <a href="{% url 'instituicoes' %}" class="nav-link">Instituições</a>
           </li>
           <li>
+            <a href="{% url 'lista-contatos' %}" class="nav-link">Lista Voluntários</a>
+          </li>
+          <li>
             <a href="{% url 'cadastro-instituicao' %}" class="nav-link flex-item">Cadastro</a>
           </li>
           <li>
@@ -44,13 +47,13 @@
                             <a href="{% url 'menu-usuario' %}">Edit</a>
                         </li>
                         <li>
-                          <a href="{% url 'logout' %}">Logout</a>
-                        </li>
-                        <li>
                           <a href="{%url 'sobre'  %}">Sobre</a>
                         </li>
                         <li>
                           <a href="{% url 'contato' %}">Contato</a>
+                        </li>
+                        <li>
+                          <a href="{% url 'logout' %}">Logout</a>
                         </li>
                     </ul>
                 </nav>
