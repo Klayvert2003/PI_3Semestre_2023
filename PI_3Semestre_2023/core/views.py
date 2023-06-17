@@ -23,6 +23,7 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
         return render(request, 'cadastro-instituicao.html')
         
     def post(self, request): 
+        infos = None
         nome_instituicao = request.POST.get('nome-completo')
         cnpj = request.POST.get('cnpj')
         if cnpj:
@@ -74,23 +75,51 @@ class CadastroUsuarioView(GoogleMapsAPI, View):
         nome_completo = request.POST.get('nome-completo')     
         cep = request.POST.get('cep')
         num = request.POST.get('num')
-        if cep and num:
-            try:
-                cep = str(cep).replace('-', '').replace('.', '')
-                num = str(num)
-                address = GoogleMapsAPI().get_complete_address(cep=cep, num=num)
-            except IndexError:
-                messages.error(request, 'Insira apenas números!!!')
-                return redirect('cadastro-usuario')
-
         email = request.POST.get('email')
         usuario = request.POST.get('usuario')
         password = request.POST.get('senha')
+        confirm_password = request.POST.get('confirma-senha')
+        address = None
+        if cep and num:
+            try:
+                cep = str(cep).replace('-', '').replace('.', '')
+                try:
+                    address = self.get_complete_address(cep, str(num))
+                except TypeError:
+                    if not address:
+                        messages.error(request, 'CEP ou número inválidos!!!')
+                        return render(
+                            request, 'cadastro-usuario.html', {'nome_completo': nome_completo, 
+                                     'cep': cep, 'num': num, 'email': email, 'usuario': usuario})
+            except IndexError:
+                messages.error(request, 'CEP ou número inválidos!!!')
+                return redirect('cadastro-usuario')
 
         user = User.objects.filter(email=email).first()
         if user:
             messages.error(request, 'Já existe um usuário com este email!!!')
-            return redirect('cadastro-usuario')
+            return render(
+                request, 'cadastro-usuario.html', {'nome_completo': nome_completo, 
+                         'cep': cep, 'num': num, 'email': email, 'usuario': usuario})
+        
+        if password != confirm_password:
+            messages.error(request, 'Senhas divergentes!!!')
+            return render(
+                request, 'cadastro-usuario.html', {'nome_completo': nome_completo, 
+                         'cep': cep, 'num': num, 'email': email, 'usuario': usuario})
+        
+        data = {
+            'usuario': usuario,
+            'senha': password,
+            'email': email,
+            'nome_instituicao': nome_completo,
+            'cep': cep,
+            'num': num,
+            'rua': address[0],
+            'bairro': address[1],
+            'cidade': address[2],
+            'estado': address[3]
+        }
         
         user = User.objects.create_user(username=usuario, email=email, password=password)
 
@@ -173,7 +202,6 @@ class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
         email = request.session.get('email')
         usuario = request.session.get('usuario')
         senha = request.session.get('senha')
-        print(email, usuario, senha)
         nome_instituicao = request.POST.get('nome-instituicao')
         cep = request.POST.get('cep')
         rua = request.POST.get('rua')
@@ -185,6 +213,7 @@ class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
         tel = request.POST.get('telefone')
         cel = request.POST.get('celular')
         cnpj = request.POST.get('cnpj')
+        address = None
         if cnpj:
             try:
                 infos = self.BuscaCNPJ(cnpj=cnpj)
@@ -193,7 +222,6 @@ class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
                 if not infos:
                     messages.error(request, 'CNPJ inválido!!!')
                     return redirect('detalhe-instituicao')
-                    # Falta ajustar essa função ainda
             except AttributeError:
                 messages.error(request, 'CNPJ Inválido!!!')
                 return render(request, 'detalhe-instituicao')
@@ -204,11 +232,28 @@ class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
         user = User.objects.filter(email=email).first()
         if user:
             messages.error(request, 'Já existe um usuário com este email!!!')
-            return redirect('detalhes-instituicao')
+            return redirect('detalhe-instituicao')
+
+        address = self.valida_address(cep, num)
+        if not address:
+            messages.error(request, 'Endereço incorreto!!!')
+            data = {
+                'nome_instituicao': nome_instituicao,
+                'cep': cep,
+                'rua': rua,
+                'num': num,
+                'bairro': bairro,
+                'cidade': cidade,
+                'complemento': complemento,
+                'estado': estado,
+                'tel': tel,
+                'cel': cel
+            }
+            return render(request, 'detalhes-instituicao.html', {'dados': data})
 
         user = User.objects.create_user(username=usuario, email=email, password=senha)
         
-        DadosInstituicao.objects.create(id=user.id, email=email, senha=senha, cel=cel, tel=tel, descricao=descricao, forma_ajuda1=forma_ajuda1, 
+        DadosInstituicao.objects.create(id=user.id, email=email, cel=cel, tel=tel, descricao=descricao, forma_ajuda1=forma_ajuda1, 
         forma_ajuda2=forma_ajuda2, forma_ajuda3=forma_ajuda3, nome_instituicao=nome_instituicao, 
         cep=cep, num=num, cnpj=cnpj, rua=rua, complemento=complemento, bairro=bairro, cidade=cidade, 
         estado=estado, latitude=address[4], longitude=address[5])
@@ -329,7 +374,6 @@ class EditarUsuario(View):
                 usuario = DadosUsuarios.objects.get(id=id_usuario)
                 usuario.email = email
                 usuario.nome_usuario = nome
-                usuario.email = email
                 usuario.cep = cep
                 usuario.num = num
                 usuario.complemento = complemento
