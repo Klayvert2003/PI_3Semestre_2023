@@ -172,3 +172,19 @@ input[type="checkbox"]:checked + .toggle-slider {
 input[type="checkbox"]:checked + .toggle-slider:before {
   transform: translateX(26px);
 }
+
+.btn-deleta_edita {
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #ff0000;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  margin-left: auto;
+  text-decoration: none;
+}
