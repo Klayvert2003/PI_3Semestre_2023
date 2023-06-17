@@ -112,7 +112,7 @@ class CadastroUsuarioView(GoogleMapsAPI, View):
             'usuario': usuario,
             'senha': password,
             'email': email,
-            'nome_instituicao': nome_completo,
+            'nome_completo': nome_completo,
             'cep': cep,
             'num': num,
             'rua': address[0],
@@ -120,14 +120,11 @@ class CadastroUsuarioView(GoogleMapsAPI, View):
             'cidade': address[2],
             'estado': address[3]
         }
-        
-        user = User.objects.create_user(username=usuario, email=email, password=password)
 
-        DadosUsuarios.objects.create(id=user.id, email=email, nome_usuario=nome_completo, cep=cep, num=num,
-        rua=address[0], bairro=address[1], cidade=address[2], 
-        estado=address[3])
-
-        return redirect("instituicoes")
+        request.session['email'] = email
+        request.session['usuario'] = usuario
+        request.session['senha'] = password
+        return render(request, 'Informacoes_de_usuario.html', {'dados': data})
 
 class LoginView(View):
     def get(self, request):
@@ -150,7 +147,7 @@ class LoginView(View):
         
 class LogoutView(TemplateView):
     def get(self, request):
-        messages.success(request, 'Realizando logout!!!')
+        messages.success(request, 'Logout Realizado!!!')
         logout(request)
         return redirect('index')
         
@@ -197,7 +194,7 @@ class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
     def get(self, request):
         template_name = 'detalhes-instituicao.html'
         return render(request, template_name)
-    
+
     def post(self, request):
         email = request.session.get('email')
         usuario = request.session.get('usuario')
@@ -257,14 +254,130 @@ class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
         forma_ajuda2=forma_ajuda2, forma_ajuda3=forma_ajuda3, nome_instituicao=nome_instituicao, 
         cep=cep, num=num, cnpj=cnpj, rua=rua, complemento=complemento, bairro=bairro, cidade=cidade, 
         estado=estado, latitude=address[4], longitude=address[5])
+
+        messages.success(request, 'Instituição Cadastrada com Sucesso!!!')
         
         return redirect('instituicoes')
     
-class InfoUsuario(TemplateView):
+class DetalhesUsuario(GoogleMapsAPI, View):
     def get(self, request):
-        dados = list(DadosUsuarios.objects.all())
-        template_name = 'Informacoes_de_usuario.html'
-        return render(request, template_name, {'dados': dados})
+        return render(request, 'Informacoes_de_usuario.html')
+    
+    def post(self, request):
+        email = request.session.get('email')
+        usuario = request.session.get('usuario')
+        senha = request.session.get('senha')
+        nome_completo = request.POST.get('nome-completo')
+        cep = request.POST.get('cep')
+        rua = request.POST.get('rua')
+        num = request.POST.get('numero')
+        bairro = request.POST.get('bairro')
+        cidade = request.POST.get('cidade')
+        complemento = request.POST.get('complemento')
+        estado = request.POST.get('estado')
+        tel = request.POST.get('telefone')
+        cel = request.POST.get('celular')
+        segunda_manha = request.POST.getlist('segunda_manha')
+        segunda_tarde = request.POST.getlist('segunda_tarde')
+        segunda_noite = request.POST.getlist('segunda_noite')
+        terca_manha = request.POST.getlist('terca_manha')
+        terca_tarde = request.POST.getlist('terca_tarde')
+        terca_noite = request.POST.getlist('terca_noite')
+        quarta_manha = request.POST.getlist('quarta_manha')
+        quarta_tarde = request.POST.getlist('quarta_tarde')
+        quarta_noite = request.POST.getlist('quarta_noite')
+        quinta_manha = request.POST.getlist('quinta_manha')
+        quinta_tarde = request.POST.getlist('quinta_tarde')
+        quinta_noite = request.POST.getlist('quinta_noite')
+        sexta_manha = request.POST.getlist('sexta_manha')
+        sexta_tarde = request.POST.getlist('sexta_tarde')
+        sexta_noite = request.POST.getlist('sexta_noite')
+        sabado_manha = request.POST.getlist('sabado_manha')
+        sabado_tarde = request.POST.getlist('sabado_tarde')
+        sabado_noite = request.POST.getlist('sabado_noite')
+        domingo_manha = request.POST.getlist('domingo_manha')
+        domingo_tarde = request.POST.getlist('domingo_tarde')
+        domingo_noite = request.POST.getlist('domingo_noite')
+
+        disponibilidades = {
+            'segunda': {
+                'manha': bool(segunda_manha),
+                'tarde': bool(segunda_tarde),
+                'noite': bool(segunda_noite),
+            },
+            'terca': {
+                'manha': bool(terca_manha),
+                'tarde': bool(terca_tarde),
+                'noite': bool(terca_noite),
+            },
+            'quarta': {
+                'manha': bool(quarta_manha),
+                'tarde': bool(quarta_tarde),
+                'noite': bool(quarta_noite),
+            },
+            'quinta': {
+                'manha': bool(quinta_manha),
+                'tarde': bool(quinta_tarde),
+                'noite': bool(quinta_noite),
+            },
+            'sexta': {
+                'manha': bool(sexta_manha),
+                'tarde': bool(sexta_tarde),
+                'noite': bool(sexta_noite),
+            },
+            'sabado': {
+                'manha': bool(sabado_manha),
+                'tarde': bool(sabado_tarde),
+                'noite': bool(sabado_noite),
+            },
+            'domingo': {
+                'manha': bool(domingo_manha),
+                'tarde': bool(domingo_tarde),
+                'noite': bool(domingo_noite),
+            },
+        }
+        address = None
+        if cep and num:
+            try:
+                cep = str(cep).replace('-', '').replace('.', '')
+                try:
+                    address = self.get_complete_address(cep, str(num))
+                except TypeError:
+                    if not address:
+                        messages.error(request, 'CEP ou número inválidos!!!')
+                        return render(
+                            request, 'Informacoes_de_usuario.html', {'nome_completo': nome_completo, 
+                                     'cep': cep, 'num': num, 'email': email, 'usuario': usuario})
+            except IndexError:
+                messages.error(request, 'CEP ou número inválidos!!!')
+                return redirect('detalhe-usuario')
+
+        address = self.valida_address(cep, num)
+        if not address:
+            messages.error(request, 'Endereço incorreto!!!')
+            data = {
+                'nome_completo': nome_completo,
+                'cep': cep,
+                'rua': rua,
+                'num': num,
+                'bairro': bairro,
+                'cidade': cidade,
+                'complemento': complemento,
+                'estado': estado,
+                'tel': tel,
+                'cel': cel
+            }
+            return render(request, 'Informacoes_de_usuario.html', {'dados': data})
+
+        user = User.objects.create_user(username=usuario, email=email, password=senha)
+
+        DadosUsuarios.objects.create(id=user.id, nome_usuario=nome_completo, cep=cep, 
+        num=num,rua=address[0], bairro=address[1], cidade=address[2], estado=address[3], 
+        disponibilidade=disponibilidades, tel=tel, cel=cel, complemento=complemento)
+
+        messages.success(request, 'Usuário Cadastrado com Sucesso!!!')
+        
+        return redirect('home-usuario')
 
 class DeletarUsuario(View):
     @staticmethod
