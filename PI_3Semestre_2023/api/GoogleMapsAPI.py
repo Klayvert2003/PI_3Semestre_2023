@@ -2,7 +2,7 @@ import googlemaps
 # from PI_3Semestre_2023.settings import API_KEY
 class GoogleMapsAPI():
     def __buscar_endereco(self, address):
-        gmaps = googlemaps.Client(key='AIzaSyBeah7e05jIyAyfdwqhwOKobmW56OiFDDE')
+        gmaps = googlemaps.Client(key='API')
         geocode_result = gmaps.geocode(address)
 
         results = []
