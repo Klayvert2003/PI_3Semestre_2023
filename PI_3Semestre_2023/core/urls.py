@@ -17,5 +17,5 @@ urlpatterns = [
     path('editar-usuario', EditarUsuario.as_view(), name='editar-usuario'),
     path('contato', ContatoView.as_view(), name='contato'),
     path('sobre', SobreView.as_view(), name='sobre'),
-    path('contatos', ListaContato.as_view(), name='lista_contatos'),
+    path('lista-contatos', ListaContato.as_view(), name='lista-contatos'),
 ]
