@@ -117,7 +117,7 @@ class RegisterInstitutionTest(LiveServerTestCase):
         time.sleep(2)
 
         if self.view_users:
-            sc.get(f'{self.address}/info-usuario')
+            sc.get(f'{self.address}/detalhe-usuario')
 
             for i in range(100, 1000, 100):
                 sc.execute_script(f"""window.scrollTo(0, {i})""")
