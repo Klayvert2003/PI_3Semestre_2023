@@ -25,6 +25,7 @@ class DadosInstituicao(models.Model):
 class DadosUsuarios(models.Model):
     id = models.IntegerField(primary_key=True)
     nome_usuario = models.CharField('Nome_Usuário', max_length=100)
+    email = models.CharField('Email', max_length=100)
     tel = models.CharField('Telefone', max_length=25)
     cel = models.CharField('Celular', max_length=25)
     cep = models.CharField('CEP', max_length=9)
