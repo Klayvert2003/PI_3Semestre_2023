@@ -26,7 +26,10 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
     def get(self, request):
         return render(request, 'cadastro-instituicao.html')
         
-    def post(self, request): 
+    def post(self, request):
+        email = request.POST.get('email')
+        usuario = request.POST.get('usuario')
+        password = request.POST.get('senha')
         infos = None
         nome_instituicao = request.POST.get('nome-completo')
         cnpj = request.POST.get('cnpj')
@@ -39,14 +42,14 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
                 except TypeError:
                     if not infos:
                         messages.error(request, 'CNPJ inválido!!!')
-                        return redirect('cadastro-instituicao')
+                        return render(request, 'cadastro-instituicao.html',
+                            {'nome_instituicao': nome_instituicao, 'cnpj': cnpj, 
+                             'email': email, 'usuario': usuario})
             except AttributeError:
                 messages.error(request, 'CNPJ Inválido!!!')
-                return redirect('cadastro-instituicao')
-
-        email = request.POST.get('email')
-        usuario = request.POST.get('usuario')
-        password = request.POST.get('senha')
+                return render(request, 'cadastro-instituicao.html',
+                            {'nome_instituicao': nome_instituicao, 'cnpj': cnpj, 
+                             'email': email, 'usuario': usuario})
         
         data = {
             'usuario': usuario,
