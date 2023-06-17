@@ -1,0 +1,51 @@
+.conteudo {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: #005000;
+}
+
+table {
+  width: 100%;
+}
+
+
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #005000;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+td ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+td ul li {
+  margin-bottom: 5px;
+}
+
+tr {
+  align-items: center;
+}
+
+td:nth-child(2) {
+  width: 55%;
+  text-align: center;
+}
+
+td:nth-child(3) {
+  width: 17%;
+}

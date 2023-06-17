@@ -1,0 +1,98 @@
+[
+    {
+        "nome": "Maria Oliveira",
+        "disponibilidade": [
+            "sexta_noite",
+            "sexta_manha"
+        ],
+        "email": "Maria@uol.com.br",
+        "phone": "(19) 97761-7539"
+    },
+    {
+        "nome": "João Pereira",
+        "disponibilidade": [
+            "sabado_manha",
+            "quarta_manha",
+            "sexta_manha"
+        ],
+        "email": "João@fatec.sp.gov.br",
+        "phone": "(14) 99597-5567"
+    },
+    {
+        "nome": "Luís Oliveira",
+        "disponibilidade": [
+            "quinta_noite",
+            "quarta_manha",
+            "domingo_noite",
+            "quarta_noite"
+        ],
+        "email": "Luís@fatec.sp.gov.br",
+        "phone": "(19) 98411-8710"
+    },
+    {
+        "nome": "Mariana Ferreira",
+        "disponibilidade": [
+            "sexta_manha",
+            "terca_manha"
+        ],
+        "email": "Mariana@fatec.sp.gov.br",
+        "phone": "(12) 97138-6856"
+    },
+    {
+        "nome": "Pedro Silva",
+        "disponibilidade": [
+            "segunda_manha",
+            "segunda_noite",
+            "domingo_manha",
+            "sabado_tarde"
+        ],
+        "email": "Pedro@fatec.sp.gov.br",
+        "phone": "(11) 98530-7422"
+    },
+    {
+        "nome": "Luís Ferreira",
+        "disponibilidade": [
+            "quarta_manha",
+            "terca_noite",
+            "segunda_tarde"
+        ],
+        "email": "Luís@uol.com.br",
+        "phone": "(12) 98687-3900"
+    },
+    {
+        "nome": "Maria Ferreira",
+        "disponibilidade": [
+            "quarta_noite"
+        ],
+        "email": "Maria@fatec.sp.gov.br",
+        "phone": "(18) 98178-8598"
+    },
+    {
+        "nome": "Pedro Souza",
+        "disponibilidade": [
+            "sabado_tarde"
+        ],
+        "email": "Pedro@fatec.sp.gov.br",
+        "phone": "(19) 98324-7811"
+    },
+    {
+        "nome": "João Santos",
+        "disponibilidade": [
+            "terca_noite",
+            "domingo_noite"
+        ],
+        "email": "João@fatec.sp.gov.br",
+        "phone": "(11) 97586-7020"
+    },
+    {
+        "nome": "Giovane Santos",
+        "disponibilidade": [
+            "sexta_manha",
+            "terca_noite",
+            "domingo_manha",
+            "segunda_manha"
+        ],
+        "email": "Giovane@hotmail.com",
+        "phone": "(12) 99693-9911"
+    }
+]
