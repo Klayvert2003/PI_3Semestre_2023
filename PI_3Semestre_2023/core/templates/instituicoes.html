@@ -44,7 +44,7 @@
     var card = document.getElementById(id);
     var lat = card.getAttribute("lat");
     var lon = card.getAttribute("lon");
-    var url = "{% url 'card-map' %}?latitude=" + lat + "&longitude=" + lon;
+    var url = "{% url 'card-map' %}?latitude=" + lat + "&longitude=" + lon + "&id=" + id;
     window.location.href = url;
   }
 </script>
