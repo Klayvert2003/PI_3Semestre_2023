@@ -9,12 +9,12 @@
   <title>Lista de Contatos</title>
 </head>
 <body>
-  {% include "./header.html" %}
+  {% include "./header_copy.html" %}
   <div class="conteudo">
     <h1>Lista de Contatos</h1>
     <br>
 
-    <table>
+    <table class="contatos-table">
       <thead>
         <tr>
           <th>Nome</th>
@@ -25,15 +25,13 @@
       <tbody>
         {% for contato in contatos %}
           <tr>
-            <td>{{ contato.nome }}</td>
+            <td>{{ contato.nome_usuario }}</td>
             <td>
               <ul>
-                {% for disponibilidade in contato.disponibilidade %}
-                  <li>{{ disponibilidade }}</li>
-                {% endfor %}
+                <li>{{ contato.periodo_disponivel }}</li>
               </ul>
             </td>
-            <td>{{ contato.email }}, {{ contato.phone }}</td>
+            <td>{{ contato.email }} {{ contato.cel }}</td>
           </tr>
         {% endfor %}
       </tbody>
