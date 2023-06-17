@@ -14,7 +14,6 @@ class DadosInstituicao(models.Model):
     tel = models.CharField('Telefone', max_length=25)
     cel = models.CharField('Celular', max_length=25)
     email = models.EmailField('Email', max_length=100)
-    senha = models.CharField('Senha', max_length=100)
     descricao = models.CharField('Descricao', max_length=250)
     forma_ajuda1 = models.CharField('Forma_doacao1', max_length=150)
     forma_ajuda2 =  models.CharField('Forma_doacao2', max_length=150)
@@ -26,7 +25,6 @@ class DadosInstituicao(models.Model):
 class DadosUsuarios(models.Model):
     id = models.IntegerField(primary_key=True)
     nome_usuario = models.CharField('Nome_Usuário', max_length=100)
-    email = models.CharField('Email', max_length=100)
     tel = models.CharField('Telefone', max_length=25)
     cel = models.CharField('Celular', max_length=25)
     cep = models.CharField('CEP', max_length=9)
@@ -36,4 +34,5 @@ class DadosUsuarios(models.Model):
     complemento = models.CharField('Complemento', max_length=100)
     cidade = models.CharField('Cidade', max_length=100)
     estado = models.CharField('Estado', max_length=2)
+    disponibilidade = models.JSONField(default=dict)
     data_hora_cadastro = models.DateTimeField('Data_Hora_Cadastro', auto_now_add=True)
