@@ -87,6 +87,9 @@ class ListaContato(TemplateView):
         contatos_serializados = []
         for contato in dados:
             dias_disponiveis = []
+
+        disponibilidade = contato['disponibilidade']
+        if disponibilidade is not None:
             for dia, horarios in contato['disponibilidade'].items():
                 horarios_disponiveis = [horario for horario, disponivel in horarios.items() if disponivel]
                 if horarios_disponiveis:
