@@ -96,7 +96,7 @@
             <label for="doacao3">Descreva a 3º forma que o público pode ajudar a Instituição</label>
             <input type="text" id="doacao3" name="doacao3" value="{{ dados_instituicao.forma_ajuda3 }}">
           </div>
-          <input type="submit" value="Salvar Dados">
+          <input type="submit" value="Salvar Dados"> 
           {% else %}
           <div>
             <label for="nome">Nome do Usuário:</label>
@@ -157,8 +157,12 @@
             <input type="text" id="senha" name="senha" required value="{{ dados.senha }}">
           </div>-->
           <input type="submit" value="Salvar Dados">
-          {% endif %}
-        </form>
+          {% endif %} 
+          <div class="content">
+            <br>
+            <a href="{% url 'deletar-usuario' %}" class="btn-deleta_edita" method="POST">Deletar</a>                   
+          </div>
+        </form>       
       </div>
     </div>
   </div>
