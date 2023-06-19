@@ -8,6 +8,7 @@ from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.core.mail import send_mail
 
 # My functions
 from core.models import DadosInstituicao, DadosUsuarios
@@ -34,10 +35,29 @@ class HomeInstituicao(TemplateView):
         return render(request, template_name)
 
 
-class ContatoView(TemplateView):
+class ContatoView(View):
+    template_name = 'contato.html'
+
     def get(self, request):
-        template_name='contato.html'
-        return render(request, template_name)
+        return render(request, self.template_name)
+
+    def post(self, request):
+        nome = request.POST.get('name')
+        email = request.POST.get('email')
+        mensagem = request.POST.get('message')
+
+        assunto = f'Contato de {nome}'
+        corpo_email = f'Nome: {nome}\nEmail: {email}\nMensagem: {mensagem}'
+
+        send_mail(
+            assunto,
+            corpo_email,
+            'food.connect.fatec@gmail.com',
+            ['food.connect.fatec@gmail.com']
+        )
+
+        messages.success(request, 'Mensagem enviada com sucesso!!!')
+        return redirect('contato')
 
 class SobreView(TemplateView):
     def get(self, request):
