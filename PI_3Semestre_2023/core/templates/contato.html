@@ -24,7 +24,7 @@
                     contato conosco.
                 </p>
             </div>
-            <form id="contact-form">
+            <form action="{% url 'contato' %}" method="POST" id="contact-form">{% csrf_token %}
                 <div class="form-group">
                     <label for="name">Nome:</label>
                     <input type="text" id="name" name="name" required>
@@ -43,29 +43,6 @@
         <div class="image">
         </div>
     </div>
-    <script>
-        // Script JavaScript
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Impede o envio do formulário
-
-            // Obter os valores dos campos
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var message = document.getElementById('message').value;
-
-            // Aqui você pode adicionar a lógica para processar o formulário, como enviar um e-mail
-
-            // Exemplo de exibição dos valores inseridos no console
-            console.log('Nome:', name);
-            console.log('E-mail:', email);
-            console.log('Mensagem:', message);
-
-            // Limpar os campos após o envio
-            document.getElementById('name').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('message').value = '';
-        });
-    </script>
     {% include "./footer.html" %}
 </body>
 
