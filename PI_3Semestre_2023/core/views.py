@@ -184,19 +184,24 @@ class CadastroInstituicaoView(ValidaCNPJ, GoogleMapsAPI, View):
             'latitude': address[4],
             'longitude': address[5],
         }
-
+        
         request.session['email'] = email
         request.session['usuario'] = usuario
         request.session['senha'] = password
+        request.session['etapa1_instituicao_concluida'] = True
         return render(request, 'detalhes-instituicao.html', {'dados': data})
 
 # Segunda etapa do registro da instituição
 class DetalhesInstituicao(GoogleMapsAPI, ValidaCNPJ, View):
     def get(self, request):
+        if not request.session.get('etapa1_instituicao_concluida'):
+            return redirect('cadastro-instituicao')
         template_name = 'detalhes-instituicao.html'
         return render(request, template_name)
 
     def post(self, request):
+        if not request.session.get('etapa1_instituicao_concluida'):
+            return redirect('cadastro-instituicao')
         email = request.session.get('email')
         usuario = request.session.get('usuario')
         senha = request.session.get('senha')
@@ -318,14 +323,19 @@ class CadastroUsuarioView(GoogleMapsAPI, View):
         request.session['email'] = email
         request.session['usuario'] = usuario
         request.session['senha'] = password
+        request.session['etapa1_usuario_concluida'] = True
         return render(request, 'Informacoes_de_usuario.html', {'dados': data})
 
 # Segunda etapa do cadastro de um usuário doador/voluntário
 class DetalhesUsuario(GoogleMapsAPI, View):
     def get(self, request):
+        if not request.session.get('etapa1_usuario_concluida'):
+            return redirect('cadastro-usuario')
         return render(request, 'Informacoes_de_usuario.html')
     
     def post(self, request):
+        if not request.session.get('etapa1_usuario_concluida'):
+            return redirect('cadastro-usuario')
         email = request.session.get('email')
         usuario = request.session.get('usuario')
         senha = request.session.get('senha')
