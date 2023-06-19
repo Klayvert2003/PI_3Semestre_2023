@@ -88,29 +88,29 @@ class ListaContato(TemplateView):
         for contato in dados:
             dias_disponiveis = []
 
-        disponibilidade = contato['disponibilidade']
-        if disponibilidade is not None:
-            for dia, horarios in contato['disponibilidade'].items():
-                horarios_disponiveis = [horario for horario, disponivel in horarios.items() if disponivel]
-                if horarios_disponiveis:
-                    dias_disponiveis.append({
-                        'dia': dia,
-                        'horarios': horarios_disponiveis
-                    })
+            disponibilidade = contato['disponibilidade']
+            if disponibilidade is not None:
+                for dia, horarios in contato['disponibilidade'].items():
+                    horarios_disponiveis = [horario for horario, disponivel in horarios.items() if disponivel]
+                    if horarios_disponiveis:
+                        dias_disponiveis.append({
+                            'dia': dia,
+                            'horarios': horarios_disponiveis
+                        })
 
-            periodo_disponivel = ""
-            for dia in dias_disponiveis:
-                nome_dia = dia['dia']
-                horarios = ", ".join(dia['horarios'])
-                periodo_disponivel += f"{nome_dia} no(s) período(s) da(s) {horarios}. "
+                periodo_disponivel = ""
+                for dia in dias_disponiveis:
+                    nome_dia = dia['dia']
+                    horarios = ", ".join(dia['horarios'])
+                    periodo_disponivel += f"{nome_dia} no(s) período(s) da(s) {horarios}. "
 
-            contato_dict = {
-                'nome_usuario': contato['nome_usuario'],
-                'email': contato['email'],
-                'cel': contato['cel'],
-                'periodo_disponivel': periodo_disponivel
-            }
-            contatos_serializados.append(contato_dict)
+                contato_dict = {
+                    'nome_usuario': contato['nome_usuario'],
+                    'email': contato['email'],
+                    'cel': contato['cel'],
+                    'periodo_disponivel': periodo_disponivel
+                }
+                contatos_serializados.append(contato_dict)
 
         with open('core/static/json/dados.json', 'w') as arquivo_json:
             json.dump(contatos_serializados, arquivo_json)
