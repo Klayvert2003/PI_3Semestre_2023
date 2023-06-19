@@ -528,7 +528,10 @@ class EditarUsuario(View):
                     'rua': usuario.rua,
                     'bairro': usuario.bairro,
                     'cidade': usuario.cidade,
+                    'complemento': usuario.complemento,
                     'estado': usuario.estado,
+                    'tel': usuario.tel,
+                    'cel': usuario.cel
                 }
             except DadosUsuarios.DoesNotExist:
                 print("Usuário não é doador/voluntário.")
@@ -559,6 +562,9 @@ class EditarUsuario(View):
                 print("Usuário não é uma instituição.")
                 pass
         finally:
+            if not dados_instituicao and not dados_usuarios:
+                messages.warning(request, 'É necessário estar autenticado para editar seu usuário!!!')
+                return redirect('login')
             return render(request, 'editar-usuario.html', {'dados_usuarios': dados_usuarios, 'dados_instituicao': dados_instituicao})
        
     def post(self, request):
