@@ -83,16 +83,17 @@ header {
 
 .container-menu {
     display: flex;
-    margin-right: 13%;
+    margin-right: 0px;
     flex-direction: column;
     row-gap: 20px;
     flex: 1;
 }
 
 .logo {
-  margin-left: 5%;
+  margin-top: 1%;
   justify-content: flex-end;
   padding-right: 10px;
+  margin-right: 5%;
 }
 
 ol, ul {
