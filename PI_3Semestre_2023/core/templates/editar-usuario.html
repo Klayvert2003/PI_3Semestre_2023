@@ -20,6 +20,10 @@
             <label for="nome">Nome da Instituição:</label>
             <input type="text" id="nome" name="nome" required value="{{ dados_instituicao.nome }}">
           </div>
+          <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required value=" {{ dados_instituicao.email }} ">
+          </div>
           <div class="form-row">
             <div class="row-cep">
               <label for="cep">CEP:</label>
@@ -67,19 +71,6 @@
             <input type="text" id="cnpj" name="cnpj" required value="{{ dados_instituicao.cnpj }}">
           </div>
           <div>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required value=" {{ dados_instituicao.email }} ">
-          </div>
-          <!--
-          <div>
-            <label for="cnpj">usuario:</label>
-            <input type="text" id="usuario" name="usuario" required value="{{ dados.usuario }}">
-          </div>
-          <div>
-            <label for="cnpj">senha:</label>
-            <input type="text" id="senha" name="senha" required value="{{ dados.senha }}">
-          </div>-->
-          <div>
             <label for="descreva">Descreva a Instituição - (Máximo 250 caracteres)</label><br>
             <textarea id="descreva" name="descreva" maxlength="250" rows="4" cols="100">{{ dados_instituicao.descricao }}</textarea>
           </div>
@@ -100,7 +91,11 @@
           {% else %}
           <div>
             <label for="nome">Nome do Usuário:</label>
-            <input type="text" id="nome" name="nome" required value=" {{ dados_usuarios.nome }} "> 
+            <input type="text" id="nome" name="nome" required value="{{ dados_usuarios.nome }}"> 
+          </div>
+          <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required value="{{ dados_usuarios.email }}">
           </div>
           <div class="form-row">
             <div class="row-cep">
@@ -144,18 +139,6 @@
               <input type="text" id="celular" name="celular" value="{{ dados_usuarios.cel }}">
             </div>
           </div>
-          <div>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required value="{{ dados_usuarios.email }}">
-          </div>
-          <!--<div>
-            <label for="cnpj">usuario:</label>
-            <input type="text" id="usuario" name="usuario" required value="{{ dados.usuario }}">
-          </div>
-          <div>
-            <label for="cnpj">senha:</label>
-            <input type="text" id="senha" name="senha" required value="{{ dados.senha }}">
-          </div>-->
           <input type="submit" value="Salvar Dados">
           {% endif %} 
           <div class="content">
@@ -167,6 +150,9 @@
     </div>
   </div>
 {% include "./footer.html" %}
+<script src="{% static 'js/jquery-1.2.6.pack.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/jquery.maskedinput-1.1.4.pack.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/mask_inputs.js' %}" type="text/javascript"></script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </html>
