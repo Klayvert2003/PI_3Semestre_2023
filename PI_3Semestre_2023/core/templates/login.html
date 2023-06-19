@@ -34,15 +34,6 @@
         <button class="login-box-enviar" onclick="login()">Enviar</button>
       </form>
     </div>
-    {% block javascript %}
-    {% if messages %}
-    {% for message in messages %}
-    <script>
-      alert('{{ message }}')
-    </script>
-    {% endfor %}
-    {% endif %}
-    {% endblock %}
   </div>
   {% include "./footer.html" %}
 </body>

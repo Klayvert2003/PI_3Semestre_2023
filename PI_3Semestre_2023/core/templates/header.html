@@ -1,6 +1,7 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'css_header2/style.css' %}">
+<link rel="stylesheet" href="{% static 'css_mensagens/style.css' %}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -22,6 +23,9 @@
             <a href="{% url 'instituicoes' %}" class="nav-link">Instituições</a>
           </li>
           <li>
+            <a href="{% url 'lista-contatos' %}" class="nav-link">Lista Voluntários</a>
+          </li>
+          <li>
             <a href="{% url 'cadastro-instituicao' %}" class="nav-link flex-item">Cadastro</a>
           </li>
           <li>
@@ -40,26 +44,17 @@
                             <a href="{% url 'login' %}">Login</a>
                         </li>
                         <li>
-                            <a href="{% url 'menu-usuario' %}">Edit</a>
+                            <a href="{% url 'editar-usuario' %}">Edit</a>
                         </li>
                         <li>
-                          <a href="{% url 'logout' %}">Logout</a>
-                        </li>
-                        <li>
-                          <a href="#sobre">Sobre</a>
+                          <a href="{%url 'sobre'  %}">Sobre</a>
                         </li>
                         <li>
                           <a href="{% url 'contato' %}">Contato</a>
                         </li>
-                        {% block javascript %}
-                          {% if messages %}
-                            {% for message in messages %}
-                                <script>
-                                    alert('{{ message }}')
-                                </script>
-                            {% endfor %}
-                          {% endif %}
-                        {% endblock %}
+                        <li>
+                          <a href="{% url 'logout' %}">Logout</a>
+                        </li>
                     </ul>
                 </nav>
               </div>
@@ -69,4 +64,27 @@
       </nav>
     </div>
   </header>
+
+  <div id="confirmation-message" class="hidden">{{ message }}</div>
+
 </div>
+
+{% block javascript %}
+      <script>
+        {% if messages %}
+          {% for message in messages %}
+            document.addEventListener("DOMContentLoaded", function () {
+              var confirmationMessage = document.getElementById("confirmation-message");
+              confirmationMessage.textContent = "{{ message }}";
+              confirmationMessage.classList.remove("hidden");
+              confirmationMessage.classList.add("msg");
+
+              setTimeout(function () {
+                confirmationMessage.classList.remove("msg");
+                confirmationMessage.classList.add("hidden");
+              }, 3500); // Tempo em milissegundos
+            });
+          {% endfor %}
+        {% endif %}
+      </script>
+{% endblock %}

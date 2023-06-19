@@ -11,16 +11,16 @@
 </head>
 
 <body>
-	{% include "./header.html" %}
+	{% include "./header_copy.html" %}
 	<div class="conteudo">
 		<div class="row-form">
 			<div class="container">
 				<h1>Dados Usuário</h1>
-				<form action="{% url 'detalhe-instituicao' %}" method="POST">{% csrf_token %}
+				<form action="{% url 'detalhe-usuario' %}" method="POST">{% csrf_token %}
 					<div>
-						<label for="nome-instituicao">Nome do Usuário:</label>
-						<input type="text" id="nome-instituicao" name="nome-instituicao" required
-							value=" {{ dados.nome_instituicao }} ">
+						<label for="nome-completo">Nome do Usuário:</label>
+						<input type="text" id="nome-completo" name="nome-completo" required
+							value="{{ dados.nome_completo }}">
 					</div>
 					<div class="form-row">
 						<div class="row-cep">
@@ -72,18 +72,6 @@
 						</div>
 					</div>
 					<div>
-						<label for="email">E-mail:</label>
-						<input type="email" id="email" name="email" required value=" {{ dados.email }} ">
-					</div>
-					<div>
-						<label for="usuario">Usuário:</label>
-						<input type="text" id="usuario" name="usuario" required value="{{ dados.usuario }}">
-					</div>
-					<div>
-						<label for="senha">Senha:</label>
-						<input type="text" id="senha" name="senha" required value="{{ dados.senha }}">
-					</div>
-					<div>
 						<label for="descreva">Fale sobre você - (Máximo 250 caracteres)</label><br>
 						<textarea id="descreva" name="descreva" maxlength="250" rows="4" cols="100"></textarea>
 					</div>
@@ -104,45 +92,45 @@
 								<tbody type="checkbox">
 									<tr>
 										<td>Segunda-feira</td>
-										<td><input type="checkbox" name="segunda_manha"></td>
-										<td><input type="checkbox" name="segunda_tarde"></td>
-										<td><input type="checkbox" name="segunda_noite"></td>
+										<td><input type="checkbox" name="segunda_manha" id="segunda_manha"></td>
+										<td><input type="checkbox" name="segunda_tarde" id="segunda_tarde"></td>
+										<td><input type="checkbox" name="segunda_noite" id="segunda_noite"></td>
 									</tr>
 									<tr>
 										<td>Terça-feira</td>
-										<td><input type="checkbox" name="terca_manha"></td>
-										<td><input type="checkbox" name="terca_tarde"></td>
-										<td><input type="checkbox" name="terca_noite"></td>
+										<td><input type="checkbox" name="terca_manha" id="terca_manha"></td>
+										<td><input type="checkbox" name="terca_tarde" id="terca_tarde"></td>
+										<td><input type="checkbox" name="terca_noite" id="terca_noite"></td>
 									</tr>
 									<tr>
 										<td>Quarta-feira</td>
-										<td><input type="checkbox" name="quarta_manha"></td>
-										<td><input type="checkbox" name="quarta_tarde"></td>
-										<td><input type="checkbox" name="quarta_noite"></td>
+										<td><input type="checkbox" name="quarta_manha" id="quarta_manha"></td>
+										<td><input type="checkbox" name="quarta_tarde" id="quarta_tarde"></td>
+										<td><input type="checkbox" name="quarta_noite" id="quarta_noite"></td>
 									</tr>
 									<tr>
 										<td>Quinta-feira</td>
-										<td><input type="checkbox" name="quinta_manha"></td>
-										<td><input type="checkbox" name="quinta_tarde"></td>
-										<td><input type="checkbox" name="quinta_noite"></td>
+										<td><input type="checkbox" name="quinta_manha" id="quinta_manha"></td>
+										<td><input type="checkbox" name="quinta_tarde" id="quinta_tarde"></td>
+										<td><input type="checkbox" name="quinta_noite" id="quinta_noite"></td>
 									</tr>
 									<tr>
 										<td>Sexta-feira</td>
-										<td><input type="checkbox" name="sexta_manha"></td>
-										<td><input type="checkbox" name="sexta_tarde"></td>
-										<td><input type="checkbox" name="sexta_noite"></td>
+										<td><input type="checkbox" name="sexta_manha" id="sexta_manha"></td>
+										<td><input type="checkbox" name="sexta_tarde" id="sexta_tarde"></td>
+										<td><input type="checkbox" name="sexta_noite" id="sexta_noite"></td>
 									</tr>
 									<tr>
 										<td>Sábado</td>
-										<td><input type="checkbox" name="sabado_manha"></td>
-										<td><input type="checkbox" name="sabado_tarde"></td>
-										<td><input type="checkbox" name="sabado_noite"></td>
+										<td><input type="checkbox" name="sabado_manha" id="sabado_manha"></td>
+										<td><input type="checkbox" name="sabado_tarde" id="sabado_tarde"></td>
+										<td><input type="checkbox" name="sabado_noite" id="sabado_noite"></td>
 									</tr>
 									<tr>
 										<td>Domingo</td>
-										<td><input type="checkbox" name="domingo_manha"></td>
-										<td><input type="checkbox" name="domingo_tarde"></td>
-										<td><input type="checkbox" name="domingo_noite"></td>
+										<td><input type="checkbox" name="domingo_manha" id="domingo_manha"></td>
+										<td><input type="checkbox" name="domingo_tarde" id="domingo_tarde"></td>
+										<td><input type="checkbox" name="domingo_noite" id="domingo_noite"></td>
 									</tr>
 								</tbody>
 							</table>
@@ -150,7 +138,7 @@
 								<h4>Info:</h4>
 								<ul>
 									<li>
-										<p>Manhão das 9h às 12:30h</p>
+										<p>Manhã das 9h às 12:30h</p>
 									</li>
 									<li>
 										<p>Tarde das 13h às 18h</p>
@@ -164,23 +152,12 @@
 									entrará em contato para informar os horários necessários</p>
 							</div>
 						</div>
-						
-
 					</div>
 					<input type="submit" value="Cadastrar Dados">
 				</form>
 			</div>
 		</div>
 	</div>
-	{% block javascript %}
-	{% if messages %}
-	{% for message in messages %}
-	<script>
-		alert('{{ message }}')
-	</script>
-	{% endfor %}
-	{% endif %}
-	{% endblock %}
 	{% include "./footer.html" %}
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

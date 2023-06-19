@@ -15,11 +15,43 @@
 </head>
 
 <body>
-  {% include "./header.html" %}
+  {% include "./header_copy.html" %}
   <div class="row-form">
     <div class="container-usuario">
       <h1 class="title-form">Cadastro</h1>
       <form id="cadastro-usuario" action="{% url 'cadastro-usuario' %}" method="POST">{% csrf_token %}
+        {% if nome_completo and cep and num and email and usuario %}
+        <div>
+          <label for="nome-completo">Nome Completo:</label>
+          <input type="text" id="nome-completo" name="nome-completo" required value="{{ nome_completo }}">
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required value="{{ cep }}">
+          </div>
+          <div>
+            <label for="num">Número:</label>
+            <input type="text" id="num" name="num" required value="{{ num }}">
+          </div>
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required value="{{ email }}">
+        </div>
+        <div>
+          <label for="usuario">Usuário:</label>
+          <input type="text" id="usuario" name="usuario" required value="{{ usuario }}">
+        </div>
+        <div>
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required>
+        </div>
+        <div>
+          <label for="confirma-senha">Confirmar senha:</label>
+          <input type="password" id="confirma-senha" name="confirma-senha" required>
+        </div>
+        {% else %}
         <div>
           <label for="nome-completo">Nome Completo:</label>
           <input type="text" id="nome-completo" name="nome-completo" required>
@@ -50,19 +82,11 @@
           <label for="confirma-senha">Confirmar senha:</label>
           <input type="password" id="confirma-senha" name="confirma-senha" required>
         </div>
-        <input type="submit" id="submit-button" value="Cadastrar">
+        {% endif %}
+        <input type="submit" id="submit-button" value="Próximo">
       </form>
     </div>
   </div>
-  {% block javascript %}
-  {% if messages %}
-  {% for message in messages %}
-  <script>
-    alert('{{ message }}')
-  </script>
-  {% endfor %}
-  {% endif %}
-  {% endblock %}
   {% include "./footer.html" %}
   <script src="{% static 'js/valida_senha_user.js' %}" type="text/javascript"></script>
 </body>

@@ -18,7 +18,7 @@
           {% if dados %}
           <div>
             <label for="nome-instituicao">Nome da Instituição:</label>
-            <input type="text" id="nome-instituicao" name="nome-instituicao" required value=" {{ dados.nome_instituicao }} "> 
+            <input type="text" id="nome-instituicao" name="nome-instituicao" required value="{{ dados.nome_instituicao }}"> 
           </div>
           <div class="form-row">
             <div class="row-cep">
@@ -70,8 +70,7 @@
             </div>
           </div>
           <div>
-            <label for="cnpj">CNPJ:</label>
-            <input type="text" id="cnpj" name="cnpj" required value="{{ dados.cnpj }}">
+            <input type="hidden" id="cnpj" name="cnpj" value="{{ dados.cnpj }}">
           </div>
           <!--<div>
             <label for="email">E-mail:</label>
@@ -108,16 +107,6 @@
       </div>
     </div>
   </div>
-{% block javascript %}
-  {% if messages %}
-    {% for message in messages %}
-        <script>
-            alert('{{ message }}')
-        </script>
-    {% endfor %}
-  {% endif %}
-{% endblock %}
-  {% include "./footer.html" %}
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </html>
