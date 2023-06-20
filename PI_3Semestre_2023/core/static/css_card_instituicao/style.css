@@ -15,7 +15,9 @@ time, mark, audio, video {
 	margin: 0; 
 	padding: 0;
 	border: 0;
+	font-size: 100%;
 	vertical-align: baseline;
+  font-family: 'Montserrat', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -25,7 +27,6 @@ footer, header, hgroup, menu, nav, section {
 
 .conteudo {
   display: grid;
-  font-size: 40px;
   text-align: center;
   justify-items: center;
 }
@@ -35,6 +36,11 @@ footer, header, hgroup, menu, nav, section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.conteudo h1 {
+  color: #005000;
+  font-size: 60px;
 }
 
 .card {
@@ -86,6 +92,7 @@ footer, header, hgroup, menu, nav, section {
 .card a[type="button"] {
   text-decoration: none;
   color: #005000;
+  font-size: 19px;
 }
 
 .card a[type="button"]:hover {
@@ -105,5 +112,5 @@ footer, header, hgroup, menu, nav, section {
 .frase {
   height: 130px; 
   width: 300px;
-  font-size: 18px;
+  font-size: 19px;
 }

@@ -1,20 +1,23 @@
-.conteudo {
+.container {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0px;
 }
-
-h1 {
+ 
+.container h1 {
   text-align: center;
   font-size: 60px;
   color: #005000;
+  margin-bottom: 3%;
 }
 
-table {
+table { 
   width: 100%;
 }
 
-
+.contatos-table {
+  font-size: 19px;
+}
 
 th, td {
   padding: 10px;
@@ -41,10 +44,12 @@ tr {
   align-items: center;
 }
 
+
 td:nth-child(2) {
   width: 55%;
   text-align: center;
 }
+
 
 td:nth-child(3) {
   width: 17%;

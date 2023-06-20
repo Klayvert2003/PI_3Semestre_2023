@@ -41,7 +41,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   background: #fff;
-  font-family: sans-serif;
 }
 
 .login-box {
@@ -52,6 +51,7 @@ body {
   box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
   border-radius: 10px;
   padding: 30px 30px;
+
 }
 
 .title-card {
@@ -71,7 +71,7 @@ body {
   height: 40px;
   width: 250px;
   color: #005000;
-  font-size: 16px;
+  font-size: 19px;
 }
 
 .login-box input[type="text"]:focus,
@@ -89,7 +89,7 @@ body {
   top: 0;
   left: 0;
   padding: 10px 0;
-  font-size: 16px;
+  font-size: 19px;
   color: #005000;
   pointer-events: none;
   transition: 0.5s;
@@ -131,6 +131,7 @@ body {
   padding: 0 0 20px;
   text-align: center;
   display: inline-block;
-  font-size: small;
+  font-size: 13px;
+  font-weight: bold;
   
 }
