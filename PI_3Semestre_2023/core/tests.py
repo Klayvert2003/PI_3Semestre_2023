@@ -208,6 +208,197 @@ class RegisterInstitutionTest(LiveServerTestCase):
         # test_case = RegisterInstitutionTest(view_users=True)
         # test_case.test_register_institution()
 
+
+class RegisterUserTest(LiveServerTestCase):
+    def __init__(self, *args, **kwargs):
+        self.register_user = kwargs.pop('register_user', False)
+        self.address = kwargs.pop('address', 'http://127.0.0.1:8000')
+        super().__init__(*args, **kwargs)
+
+    def test_register_user(self):
+        #cadastro de usuário
+        sc = webdriver.Chrome()
+        sc.get(self.address)
+        sc.maximize_window()
+        time.sleep(3)
+
+        ususario = sc.find_element(By.XPATH, '//a[text()="Doador/Voluntário"]')
+        ususario.click()
+        time.sleep(3)
+
+        for i in range(500, 3000, 500):
+            sc.execute_script(f"""window.scrollTo(0, {i})""")
+            time.sleep(2)
+
+        quero_colaborar = sc.find_element(By.XPATH, '//a[@class="btn_quero_doar"]')
+        quero_colaborar.click()
+        time.sleep(2)
+
+        nome = sc.find_element(By.XPATH, '//input[@id="nome-completo"]')
+        time.sleep(2)
+        nome.send_keys('teste_cadastro_usuario')
+        time.sleep(2)
+
+        cnpj = sc.find_element(By.XPATH, '//input[@id="cep"]')
+        cnpj.send_keys(13617060)
+        time.sleep(2)
+
+        num = sc.find_element(By.XPATH, '//input[@id="num"]')
+        num.send_keys(240)
+        time.sleep(2)
+
+        email = sc.find_element(By.XPATH, '//input[@id="email"]')
+        email.send_keys('teste_cadastro_usuario_selenium@gmail.com')
+        time.sleep(2)
+
+        usuario = sc.find_element(By.XPATH, '//input[@id="usuario"]')
+        usuario.send_keys('teste_cadastro_usuario_selenium') 
+        time.sleep(2)
+
+        senha = sc.find_element(By.XPATH, '//input[@id="senha"]')
+        senha.send_keys(123)
+        time.sleep(2)
+
+        senhadnv = sc.find_element(By.XPATH, '//input[@id="confirma-senha"]')
+        senhadnv.send_keys(123)
+        time.sleep(2)
+
+        botao = sc.find_element(By.XPATH, '//input[@id="submit-button"]')
+        botao.click()
+        time.sleep(5)
+
+
+        telefone = sc.find_element(By.XPATH, '//input[@id="telefone"]')
+        telefone.click()
+        time.sleep(2)
+        telefone.send_keys(19997961491)
+        time.sleep(2)
+        celular = sc.find_element(By.XPATH, '//input[@id="celular"]')
+        celular.click()
+        time.sleep(2)
+        celular.send_keys(19997961491)
+        time.sleep(2)
+        sobre_usuario = sc.find_element(By.XPATH, '//textarea[@id="descreva"]')
+        sobre_usuario.click()
+        time.sleep(2)
+        sobre_usuario.send_keys('Isso é um texto de testes do cadastro do usuário')
+        time.sleep(2)
+        
+        cadastrar_dados = sc.find_element(By.XPATH, '//input[@type="submit" and @value="Cadastrar Dados"]')
+        segunda_manha = sc.find_element(By.XPATH, '//input[@id="segunda_manha"]')
+        segunda_manha.click()
+        time.sleep(2)
+        terca_tarde = sc.find_element(By.XPATH, '//input[@id="terca_tarde"]')
+        terca_tarde.click()
+        time.sleep(2)
+        quarta_noite = sc.find_element(By.XPATH, '//input[@id="quarta_noite"]')
+        quarta_noite.click() 
+        time.sleep(2)
+        quinta_tarde = sc.find_element(By.XPATH, '//input[@id="quinta_tarde"]')
+        quinta_tarde.click()
+        time.sleep(2)
+
+        cadastrar_dados.click()
+        time.sleep(5)     
+                
+
+class TestLoginEditContato(TestCase):
+    def setUp(self):
+        self.address = 'http://127.0.0.1:8000/index'
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
+
+    def test_Login_Edit_Contato_user(self):
+        self.driver.get(self.address)
+        self.driver.implicitly_wait(50)
+
+        # Fazendo login
+        menu_hamburguer = self.driver.find_element(By.XPATH, '//label[@for="toggle"]')
+        menu_hamburguer.click()
+        time.sleep(3)
+
+        Login = self.driver.find_element(By.XPATH, '//a[text()="Login"]')
+        Login.click()
+        self.driver.implicitly_wait(50)
+
+        username = self.driver.find_element(By.XPATH, '//input[@id="username"]')
+        username.click()
+        username.send_keys('teste_cadastro_usuario')
+        time.sleep(2)
+
+        password = self.driver.find_element(By.XPATH, '//input[@id="password"]')        
+        password.click()
+        password.send_keys(123)
+
+        botao = self.driver.find_element(By.CSS_SELECTOR, ".login-box-enviar")
+        botao.click()
+        time.sleep(3)
+
+        menu_hamburguer = self.driver.find_element(By.XPATH, '//label[@for="toggle"]')
+        menu_hamburguer.click()
+        time.sleep(3)
+
+        Edit = self.driver.find_element(By.XPATH, '//a[text()="Edit"]')
+        Edit.click()
+        time.sleep(3)
+
+        complemento = self.driver.find_element(By.XPATH, '//input[@id="complemento"]')
+        complemento.click()
+        time.sleep(3)
+        complemento.clear()
+        complemento.send_keys('teste123')
+        time.sleep(3)
+
+        botao = self.driver.find_element(By.XPATH, '//input[@type="submit" and @value="Salvar Dados"]')
+        botao.click()
+        time.sleep(3)
+
+        # Mostrando a aba contato
+        label_element = self.driver.find_element(By.XPATH, '//label[@for="toggle"]')
+        label_element.click()
+        time.sleep(3)
+
+        passeio = self.driver.find_element(By.XPATH, '//a[text()="Contato"]')
+        passeio.click()
+        self.driver.implicitly_wait(50)
+        time.sleep(3)
+
+        name = self.driver.find_element(By.XPATH, '//input[@id="name"]')
+        name.click()
+        name.send_keys('teste_cadastro_usuario2')
+        time.sleep(3)
+
+        email = self.driver.find_element(By.XPATH, '//input[@id="email"]')        
+        email.click()
+        email.send_keys('teste_cadastro_usuario2@testecadastrousuario2.com')
+        time.sleep(3)
+
+        message = self.driver.find_element(By.XPATH, '//textarea[@id="message"]')
+        message.click()
+        message.send_keys('isso aqui é um teste')
+        time.sleep(3)
+
+        button = self.driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
+        button.click()
+        time.sleep(3)
+
+        #mostrando a aba sobre
+        label_elementdnv = self.driver.find_element(By.XPATH, '//label[@for="toggle"]')
+        label_elementdnv.click()
+        time.sleep(3)
+
+        sobre = self.driver.find_element(By.XPATH, '//a[text()="Sobre"]')
+        sobre.click()
+        self.driver.implicitly_wait(50)
+        time.sleep(3)
+        for i in range(500, 3000, 500):
+            self.driver.execute_script(f"""window.scrollTo(0, {i})""")
+            time.sleep(2)
+
+        btn = self.driver.find_element(By.XPATH, '//a[text()="Doe e faça história"]')
+        btn.click()
+        time.sleep(3)
+
 class StatusCodeHomeUsuarioTestCase(TestCase):
     def setUp(self):
         self.resp = self.client.get('/home-usuario')
