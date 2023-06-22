@@ -239,8 +239,8 @@ class CadastroUsuarioTest(LiveServerTestCase):
         nome.send_keys('teste_cadastro_usuario_automatizado')
         time.sleep(2)
 
-        cnpj = sc.find_element(By.XPATH, '//input[@id="cep"]')
-        cnpj.send_keys(13617060)
+        cep = sc.find_element(By.XPATH, '//input[@id="cep"]')
+        cep.send_keys(13617060)
         time.sleep(2)
 
         num = sc.find_element(By.XPATH, '//input[@id="num"]')
@@ -248,11 +248,11 @@ class CadastroUsuarioTest(LiveServerTestCase):
         time.sleep(2)
 
         email = sc.find_element(By.XPATH, '//input[@id="email"]')
-        email.send_keys('teste_cadastro_usuario_selenium_automatizado@gmail.com')
+        email.send_keys('teste_cadastro_usuario_selenium_automatizado1@gmail.com')
         time.sleep(2)
 
         usuario = sc.find_element(By.XPATH, '//input[@id="usuario"]')
-        usuario.send_keys('teste_cadastro_usuario_automatizado') 
+        usuario.send_keys('teste_cadastro_usuario_automatizado1') 
         time.sleep(2)
         try:
             senha = sc.find_element(By.XPATH, '//input[@id="senha"]')
