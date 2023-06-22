@@ -55,10 +55,10 @@ class RegisterUserTest(LiveServerTestCase):
                 time.sleep(2)
             except:
                 senha = sc.find_element(By.XPATH, '//input[@id="senha"]')
-                senha.send_keys('123')
+                senha.send_keys('12345678')
                 time.sleep(2)
                 senhadnv = sc.find_element(By.XPATH, '//input[@id="confirma-senha"]')
-                senhadnv.send_keys('123')
+                senhadnv.send_keys('12345678')
                 time.sleep(2)
                 sc.execute_script(f"""window.scrollTo(0, 200)""")    
             finally:
@@ -144,10 +144,10 @@ class RegisterInstitutionTest(LiveServerTestCase):
             time.sleep(2)
         except:
             senha = sc.find_element(By.XPATH, '//input[@id="senha"]')
-            senha.send_keys('123')
+            senha.send_keys('12345678')
             time.sleep(2)
             senhadnv = sc.find_element(By.XPATH, '//input[@id="confirma-senha"]')
-            senhadnv.send_keys('123')
+            senhadnv.send_keys('12345678')
             time.sleep(2)
             sc.execute_script(f"""window.scrollTo(0, 200)""")
 
@@ -209,7 +209,7 @@ class RegisterInstitutionTest(LiveServerTestCase):
         # test_case.test_register_institution()
 
 
-class RegisterUserTest(LiveServerTestCase):
+class CadastroUsuarioTest(LiveServerTestCase):
     def __init__(self, *args, **kwargs):
         self.register_user = kwargs.pop('register_user', False)
         self.address = kwargs.pop('address', 'http://127.0.0.1:8000')
@@ -236,7 +236,7 @@ class RegisterUserTest(LiveServerTestCase):
 
         nome = sc.find_element(By.XPATH, '//input[@id="nome-completo"]')
         time.sleep(2)
-        nome.send_keys('teste_cadastro_usuario')
+        nome.send_keys('teste_cadastro_usuario_automatizado')
         time.sleep(2)
 
         cnpj = sc.find_element(By.XPATH, '//input[@id="cep"]')
@@ -248,24 +248,36 @@ class RegisterUserTest(LiveServerTestCase):
         time.sleep(2)
 
         email = sc.find_element(By.XPATH, '//input[@id="email"]')
-        email.send_keys('teste_cadastro_usuario_selenium@gmail.com')
+        email.send_keys('teste_cadastro_usuario_selenium_automatizado@gmail.com')
         time.sleep(2)
 
         usuario = sc.find_element(By.XPATH, '//input[@id="usuario"]')
-        usuario.send_keys('teste_cadastro_usuario_selenium') 
+        usuario.send_keys('teste_cadastro_usuario_automatizado') 
         time.sleep(2)
+        try:
+            senha = sc.find_element(By.XPATH, '//input[@id="senha"]')
+            senha.send_keys(123)
+            time.sleep(2)
 
-        senha = sc.find_element(By.XPATH, '//input[@id="senha"]')
-        senha.send_keys(123)
-        time.sleep(2)
+            senhadnv = sc.find_element(By.XPATH, '//input[@id="confirma-senha"]')
+            senhadnv.send_keys(123)
+            time.sleep(2)
 
-        senhadnv = sc.find_element(By.XPATH, '//input[@id="confirma-senha"]')
-        senhadnv.send_keys(123)
-        time.sleep(2)
+            botao = sc.find_element(By.XPATH, '//input[@id="submit-button"]')
+            botao.click()
+            time.sleep(5)
+        except:
+            senha = sc.find_element(By.XPATH, '//input[@id="senha"]')
+            senha.send_keys(123455678)
+            time.sleep(2)
 
-        botao = sc.find_element(By.XPATH, '//input[@id="submit-button"]')
-        botao.click()
-        time.sleep(5)
+            senhadnv = sc.find_element(By.XPATH, '//input[@id="confirma-senha"]')
+            senhadnv.send_keys(123455678)
+            time.sleep(2)
+
+            botao = sc.find_element(By.XPATH, '//input[@id="submit-button"]')
+            botao.click()
+            time.sleep(5)                
 
 
         telefone = sc.find_element(By.XPATH, '//input[@id="telefone"]')
@@ -299,10 +311,10 @@ class RegisterUserTest(LiveServerTestCase):
         time.sleep(2)
 
         cadastrar_dados.click()
-        time.sleep(5)     
+        time.sleep(5)      
                 
 
-class TestLoginEditContato(TestCase):
+class TestLoginEdit(TestCase):
     def setUp(self):
         self.address = 'http://127.0.0.1:8000/index'
         self.driver = webdriver.Chrome()
@@ -323,12 +335,16 @@ class TestLoginEditContato(TestCase):
 
         username = self.driver.find_element(By.XPATH, '//input[@id="username"]')
         username.click()
-        username.send_keys('teste_cadastro_usuario')
+        username.send_keys('teste_cadastro_usuario_automatizado')
         time.sleep(2)
-
-        password = self.driver.find_element(By.XPATH, '//input[@id="password"]')        
-        password.click()
-        password.send_keys(123)
+        try: 
+            password = self.driver.find_element(By.XPATH, '//input[@id="password"]')        
+            password.click()
+            password.send_keys(123)
+        except: 
+            password = self.driver.find_element(By.XPATH, '//input[@id="password"]')        
+            password.click()
+            password.send_keys(12345678)
 
         botao = self.driver.find_element(By.CSS_SELECTOR, ".login-box-enviar")
         botao.click()
@@ -353,7 +369,17 @@ class TestLoginEditContato(TestCase):
         botao.click()
         time.sleep(3)
 
-        # Mostrando a aba contato
+class TestSobreContato(TestCase):
+    def setUp(self):
+        self.address = 'http://127.0.0.1:8000/index'
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
+
+    def test_Login_Edit_Contato_user(self):
+        self.driver.get(self.address)
+        self.driver.implicitly_wait(50)
+
+    # Mostrando a aba contato
         label_element = self.driver.find_element(By.XPATH, '//label[@for="toggle"]')
         label_element.click()
         time.sleep(3)
