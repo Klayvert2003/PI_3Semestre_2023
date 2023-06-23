@@ -59,7 +59,7 @@ class RegisterInstitutionTest(LiveServerTestCase):
 
         # 2º Etapa do Cadastro
         complemento = sc.find_element(By.XPATH, '//input[@id="complemento"]')
-        complemento.send_keys('rua exemplo')
+        complemento.send_keys('Sem complemento.')
         time.sleep(2)
 
         telefone = sc.find_element(By.XPATH, '//input[@id="telefone"]')
@@ -100,9 +100,9 @@ class RegisterInstitutionTest(LiveServerTestCase):
         time.sleep(2)
         sc.execute_script("""window.scrollTo(0, 500)""")
         time.sleep(2)
-        vermapa = sc.find_element(By.XPATH, '//a[@onclick="verMapa(2)"]')
+        vermapa = sc.find_element(By.XPATH, '//a[@onclick="verMapa(22)"]')
         vermapa.click()
-        for i in range(500, 1500, 500):
+        for i in range(0, 1200, 300):
             sc.execute_script(f"""window.scrollTo(0, {i})""")
             time.sleep(4)
 
