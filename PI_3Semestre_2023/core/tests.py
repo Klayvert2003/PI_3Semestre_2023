@@ -46,21 +46,13 @@ class RegisterInstitutionTest(LiveServerTestCase):
         usuario = sc.find_element(By.XPATH, '//input[@id="usuario"]')
         usuario.send_keys('InstituicaoTeste')
         time.sleep(2)
-        try:
-            senha = sc.find_element(By.XPATH, '//input[@id="senha"]')
-            senha.send_keys('123')
-            time.sleep(2)
-            senhadnv = sc.find_element(By.XPATH, '//input[@id="confirma-senha"]')
-            senhadnv.send_keys('123')
-            time.sleep(2)
-        except:
-            senha = sc.find_element(By.XPATH, '//input[@id="senha"]')
-            senha.send_keys('12345678')
-            time.sleep(2)
-            senhadnv = sc.find_element(By.XPATH, '//input[@id="confirma-senha"]')
-            senhadnv.send_keys('12345678')
-            time.sleep(2)
-            sc.execute_script(f"""window.scrollTo(0, 200)""")
+        
+        senha = sc.find_element(By.XPATH, '//input[@id="senha"]')
+        senha.send_keys('12345678')
+        time.sleep(2)
+        senhadnv = sc.find_element(By.XPATH, '//input[@id="confirma-senha"]')
+        senhadnv.send_keys('12345678')
+        time.sleep(2)
 
         cadastro = sc.find_element(By.XPATH, '//input[@value="Próximo"]').click()
         time.sleep(5)
@@ -106,16 +98,11 @@ class RegisterInstitutionTest(LiveServerTestCase):
 
         sc.execute_script("""window.scrollTo(0, 0)""")
         time.sleep(2)
-
-        try:
-            sc.execute_script("""document.querySelector("#\\31  > button > a").click()""")
-            time.sleep(10)
-        except:
-            sc.execute_script("""window.scrollTo(0, 500)""")
-            time.sleep(2)
-            vermapa = sc.find_element(By.XPATH, '//a[@onclick="verMapa(4)"]')
-            vermapa.click()
-            time.sleep(20)
+        sc.execute_script("""window.scrollTo(0, 500)""")
+        time.sleep(2)
+        vermapa = sc.find_element(By.XPATH, '//a[@onclick="verMapa(2)"]')
+        vermapa.click()
+        time.sleep(20)
         # test_case = RegisterInstitutionTest(view_users=True)
         # test_case.test_register_institution()
 
