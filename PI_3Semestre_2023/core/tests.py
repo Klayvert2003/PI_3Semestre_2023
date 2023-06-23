@@ -102,9 +102,9 @@ class RegisterInstitutionTest(LiveServerTestCase):
         time.sleep(2)
         vermapa = sc.find_element(By.XPATH, '//a[@onclick="verMapa(2)"]')
         vermapa.click()
-        time.sleep(20)
-        # test_case = RegisterInstitutionTest(view_users=True)
-        # test_case.test_register_institution()
+        for i in range(500, 1500, 500):
+            sc.execute_script(f"""window.scrollTo(0, {i})""")
+            time.sleep(4)
 
 
 class CadastroUsuarioTest(LiveServerTestCase):
@@ -154,11 +154,11 @@ class CadastroUsuarioTest(LiveServerTestCase):
         time.sleep(2)
         try:
             senha = sc.find_element(By.XPATH, '//input[@id="senha"]')
-            senha.send_keys(123)
+            senha.send_keys(12345678)
             time.sleep(2)
 
             senhadnv = sc.find_element(By.XPATH, '//input[@id="confirma-senha"]')
-            senhadnv.send_keys(123)
+            senhadnv.send_keys(12345678)
             time.sleep(2)
 
             botao = sc.find_element(By.XPATH, '//input[@id="submit-button"]')
