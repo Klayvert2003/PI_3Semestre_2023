@@ -326,6 +326,11 @@ class CadastroUsuarioView(GoogleMapsAPI, View):
             return render(
                 request, 'cadastro-usuario.html', {'nome_completo': nome_completo, 
                          'cep': cep, 'num': num, 'email': email, 'usuario': usuario})
+            
+        elif len(password) < 8 and len(confirm_password) < 8:
+            messages.warning(request, 'Senha fraca! Digite ao menos 8 caracteres!')
+            return render(request, 'cadastro-usuario.html', {'nome_completo': nome_completo, 
+                         'cep': cep, 'num': num, 'email': email, 'usuario': usuario})
         
         if password != confirm_password:
             messages.warning(request, 'Senhas divergentes!!!')
