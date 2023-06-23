@@ -99,6 +99,12 @@ class CardMapView(View):
 # Página que retorna uma tabela com as informações de todos os contatos cadastrados no sistema 
 class ListaContato(TemplateView):
     template_name = 'lista-contato.html'
+    
+    def dispatch(self, request, *args, **kwargs):
+        if not request.session.get('user_id'):
+            messages.warning(request, 'É necessário estar autenticado para visualizar a lista de contatos')
+            return redirect('login')
+        return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
