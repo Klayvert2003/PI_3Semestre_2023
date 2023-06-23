@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Google Maps API</title>
+  {% if dados %}
+  <title>{{ dados.nome_instituicao }}</title>
+  {% endif %}
   <meta name="viewport" content="initial-scale=1.0">
   <meta charset="utf-8">
   <link rel="stylesheet" href="../static/css_card_map/style.css">
