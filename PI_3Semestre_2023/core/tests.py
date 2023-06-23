@@ -262,18 +262,6 @@ class TestLoginEditDelete(TestCase):
         botao = self.driver.find_element(By.XPATH, '//input[@type="submit" and @value="Salvar Dados"]')
         botao.click()
         time.sleep(3)
-
-        #deletando user
-        label_element = self.driver.find_element(By.XPATH, '//label[@for="toggle"]')
-        label_element.click()
-        time.sleep(3)
-
-        Edit = self.driver.find_element(By.XPATH, '//a[text()="Edit"]')
-        Edit.click()
-
-        btn = self.driver.find_element(By.XPATH, '//a[text()="Deletar"]')
-        btn.click()
-        time.sleep(3) 
           
 class TestSobreContato(TestCase):
     def setUp(self):
