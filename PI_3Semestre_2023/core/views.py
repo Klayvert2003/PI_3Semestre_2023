@@ -102,7 +102,7 @@ class ListaContato(TemplateView):
     
     def dispatch(self, request, *args, **kwargs):
         if not request.session.get('user_id'):
-            messages.warning(request, 'É necessário estar autenticado para visualizar a lista de contatos')
+            messages.warning(request, 'Realize o login para visualizar os voluntários')
             return redirect('login')
         return super().dispatch(request, *args, **kwargs)
 
